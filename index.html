@@ -6,96 +6,98 @@
   
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- ===== GOOGLE FONTS ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- ===== THEME INIT: Prevent flash of wrong theme ===== -->
   
 
   
 
 <!-- SEO Meta Tags -->
-<title>Landing Page - Mar 16, 2026</title>
-<meta property="og:title" content="Landing Page - Mar 16, 2026" />
+<title>What if your business could respond to everything automatically?</title>
+<meta name="description" content="YOUgent helps your business answer questions, capture requests, and stay organized—both for your customers and your team." />
+<meta name="keywords" content="AI for Business Operations" />
+<meta property="og:title" content="What if your business could respond to everything automatically?" />
+<meta property="og:description" content="YOUgent helps your business answer questions, capture requests, and stay organized—both for your customers and your team." />
+<meta property="og:image" content="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773952608139_blob.jpeg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Landing Page - Mar 16, 2026" />
+<meta name="twitter:title" content="What if your business could respond to everything automatically?" />
+<meta name="twitter:description" content="YOUgent helps your business answer questions, capture requests, and stay organized—both for your customers and your team." />
+<meta name="twitter:image" content="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773952608139_blob.jpeg" />
+<link rel="icon" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773952570124_blob.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773952570124_blob.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773952570124_blob.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773952570124_blob.png" />
 <!-- End SEO Meta Tags -->
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="antialiased bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+<body class="antialiased bg-[#F8FAFC] text-[#1F2A44] dark:bg-[#0F172A] dark:text-[#F8FAFC] transition-colors duration-300">
 
 <!-- ============================================================================ -->
-<!-- STICKY HEADER: Navigation with logo, links, CTA, and theme toggle           -->
-<!-- Features: Mobile hamburger menu, dark/light toggle, sticky positioning      -->
-<!-- Mobile: Hamburger collapses all nav links into dropdown                     -->
+<!-- STICKY HEADER                                                                -->
 <!-- ============================================================================ -->
-<header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-slate-950/90 border-b border-slate-200/80 dark:border-slate-800/80 shadow-soft">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-[#0F172A]/90 border-b border-[#E5E7EB] dark:border-[#334155] shadow-soft">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 sm:h-18">
 
-      <!-- ===== LOGO ===== -->
+      <!-- LOGO -->
       <a href="#" class="flex items-center gap-2 group" aria-label="YOUgent Home">
-        <div class="h-8 w-8 rounded-lg bg-brand-500 flex items-center justify-center shadow-sm">
+        <div class="h-8 w-8 rounded-lg bg-[#2FA4A9] flex items-center justify-center shadow-sm">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-white">
-            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
             <path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.93V21H9v2h6v-2h-2v-3.07A7 7 0 0 0 19 11h-2Z"/>
           </svg>
         </div>
-        <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YOU<span class="text-brand-500">gent</span></span>
+        <span class="text-xl font-bold tracking-tight">
+          <span class="logo-you">YOU</span><span class="logo-gent">gent</span>
+        </span>
       </a>
 
-      <!-- ===== DESKTOP NAVIGATION ===== -->
+      <!-- DESKTOP NAVIGATION -->
       <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
-        <a href="#what-it-is"   class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">What It Is</a>
-        <a href="#what-it-does" class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">What It Does</a>
-        <a href="#examples"     class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">Examples</a>
-        <a href="#internal-use" class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">Internal Use</a>
-        <a href="#tools"        class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">Tools</a>
-        <a href="#pricing"      class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">Pricing</a>
-        <a href="#contact"      class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-900 transition">Contact</a>
+        <a href="#what-it-is"   class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] rounded-lg hover:bg-slate-50 dark:hover:bg-[#1E293B] transition">What It Is</a>
+        <a href="#what-it-does" class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] rounded-lg hover:bg-slate-50 dark:hover:bg-[#1E293B] transition">What It Does</a>
+        <a href="#examples"     class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] rounded-lg hover:bg-slate-50 dark:hover:bg-[#1E293B] transition">Examples</a>
+        <a href="#internal-use" class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] rounded-lg hover:bg-slate-50 dark:hover:bg-[#1E293B] transition">Internal Use</a>
+        <a href="#tools"        class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] rounded-lg hover:bg-slate-50 dark:hover:bg-[#1E293B] transition">Tools</a>
+        <a href="#pricing"      class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] rounded-lg hover:bg-slate-50 dark:hover:bg-[#1E293B] transition">Pricing</a>
+        <a href="#contact"      class="px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] rounded-lg hover:bg-slate-50 dark:hover:bg-[#1E293B] transition">Contact</a>
       </nav>
 
-      <!-- ===== HEADER ACTIONS ===== -->
+      <!-- HEADER ACTIONS -->
       <div class="flex items-center gap-2">
-        <!-- Primary CTA - desktop -->
-        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-4 py-2 rounded-xl shadow-sm transition-all duration-200 hover:shadow-md">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-[#2FA4A9] hover:bg-[#268a8f] text-white text-sm font-semibold px-4 py-2 rounded-xl shadow-sm transition-all duration-200 hover:shadow-md">
           Ask the YOUgent
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
         </a>
 
-        <!-- Theme Toggle -->
-        <button id="themeToggle" class="rounded-xl border border-slate-200 dark:border-slate-700 p-2 text-sm hover:bg-slate-50 dark:hover:bg-slate-900 transition" aria-label="Toggle dark/light mode">
-          <!-- Sun icon (shown in dark mode) -->
+        <button id="themeToggle" class="rounded-xl border border-[#E5E7EB] dark:border-[#334155] p-2 text-sm hover:bg-slate-50 dark:hover:bg-[#1E293B] transition" aria-label="Toggle dark/light mode">
           <svg class="hidden dark:block w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1Zm0-14a1 1 0 0 1-1-1V3a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1ZM4.22 5.64a1 1 0 0 1 1.42-1.42l.7.71a1 1 0 0 1-1.41 1.41l-.71-.7Zm13.44 12.72a1 1 0 0 1 1.41 1.41l-.7.71a1 1 0 0 1-1.42-1.42l.71-.7ZM3 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3Zm18 0h-1a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2ZM4.93 18.36l.7-.71a1 1 0 1 1 1.42 1.42l-.71.7a1 1 0 0 1-1.41-1.41Zm13.44-12.72-.71.7a1 1 0 1 1-1.41-1.41l.7-.71a1 1 0 0 1 1.42 1.42Z"/></svg>
-          <!-- Moon icon (shown in light mode) -->
-          <svg class="block dark:hidden w-4 h-4 text-slate-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          <svg class="block dark:hidden w-4 h-4 text-[#1F2A44]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
         </button>
 
-        <!-- Hamburger - mobile only -->
-        <button id="menuToggle" class="lg:hidden rounded-xl border border-slate-200 dark:border-slate-700 p-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition" aria-label="Open navigation menu" aria-expanded="false">
-          <svg id="menuIconOpen" class="w-5 h-5 text-slate-600 dark:text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="menuIconClose" class="w-5 h-5 text-slate-600 dark:text-slate-300 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
+        <button id="menuToggle" class="lg:hidden rounded-xl border border-[#E5E7EB] dark:border-[#334155] p-2 hover:bg-slate-50 dark:hover:bg-[#1E293B] transition" aria-label="Open navigation menu" aria-expanded="false">
+          <svg id="menuIconOpen" class="w-5 h-5 text-[#1F2A44] dark:text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menuIconClose" class="w-5 h-5 text-[#1F2A44] dark:text-slate-300 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
     </div>
 
-    <!-- ===== MOBILE NAVIGATION MENU ===== -->
+    <!-- MOBILE NAVIGATION MENU -->
     <div id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-      <div class="pb-4 pt-2 space-y-1 border-t border-slate-100 dark:border-slate-800 mt-1">
-        <a href="#what-it-is"   class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl transition">What It Is</a>
-        <a href="#what-it-does" class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl transition">What It Does</a>
-        <a href="#examples"     class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl transition">Examples</a>
-        <a href="#internal-use" class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl transition">Internal Use</a>
-        <a href="#tools"        class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl transition">Tools</a>
-        <a href="#pricing"      class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl transition">Pricing</a>
-        <a href="#contact"      class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-xl transition">Contact</a>
+      <div class="pb-4 pt-2 space-y-1 border-t border-[#E5E7EB] dark:border-[#334155] mt-1">
+        <a href="#what-it-is"   class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-[#1F2A44] dark:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-[#1E293B] rounded-xl transition">What It Is</a>
+        <a href="#what-it-does" class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-[#1F2A44] dark:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-[#1E293B] rounded-xl transition">What It Does</a>
+        <a href="#examples"     class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-[#1F2A44] dark:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-[#1E293B] rounded-xl transition">Examples</a>
+        <a href="#internal-use" class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-[#1F2A44] dark:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-[#1E293B] rounded-xl transition">Internal Use</a>
+        <a href="#tools"        class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-[#1F2A44] dark:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-[#1E293B] rounded-xl transition">Tools</a>
+        <a href="#pricing"      class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-[#1F2A44] dark:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-[#1E293B] rounded-xl transition">Pricing</a>
+        <a href="#contact"      class="mobile-nav-link block px-4 py-2.5 text-sm font-medium text-[#1F2A44] dark:text-[#F8FAFC] hover:bg-slate-50 dark:hover:bg-[#1E293B] rounded-xl transition">Contact</a>
         <div class="px-4 pt-2">
-          <a href="#contact" class="mobile-nav-link flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-4 py-3 rounded-xl transition">
+          <a href="#contact" class="mobile-nav-link flex items-center justify-center gap-2 bg-[#2FA4A9] hover:bg-[#268a8f] text-white text-sm font-semibold px-4 py-3 rounded-xl transition">
             Ask the YOUgent
           </a>
         </div>
@@ -105,34 +107,30 @@
 </header>
 
 <!-- ============================================================================ -->
-<!-- HERO SECTION: Main headline, subtext, dual CTA, and visual card             -->
-<!-- Features: Dot grid texture, ambient glow, responsive two-column layout      -->
-<!-- Mobile Padding: px-4 ensures text never touches viewport edges              -->
+<!-- HERO SECTION                                                                 -->
 <!-- ============================================================================ -->
-<section data-section="hero" class="relative overflow-hidden bg-white dark:bg-slate-950">
-  <!-- Dot grid texture -->
-  <div class="absolute inset-0 bg-dot-grid text-slate-900 dark:text-white pointer-events-none"></div>
-  <!-- Ambient glow -->
+<section data-section="hero" class="relative overflow-hidden bg-[#F8FAFC] dark:bg-[#0F172A]">
+  <div class="absolute inset-0 bg-dot-grid text-[#1F2A44] dark:text-white pointer-events-none"></div>
   <div class="absolute inset-0 hero-glow pointer-events-none"></div>
 
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-      <!-- ===== HERO TEXT COLUMN ===== -->
+      <!-- HERO TEXT COLUMN -->
       <div class="text-center lg:text-left">
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-700 dark:text-brand-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-6">
-          <span class="h-1.5 w-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 bg-[#d0eeef] dark:bg-[#2FA4A9]/20 border border-[#a2dcde] dark:border-[#2FA4A9]/40 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-4 py-1.5 text-xs font-semibold mb-6">
+          <span class="h-1.5 w-1.5 rounded-full bg-[#2FA4A9] animate-pulse"></span>
           Built for Your Business
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-[#1F2A44] dark:text-[#F8FAFC]">
           Not just another<br class="hidden sm:block" />
           AI agent.<br />
           It's a <span class="text-gradient">YOUgent.</span>
         </h1>
 
-        <p class="mt-5 text-xl font-medium text-slate-700 dark:text-slate-200">
+        <p class="mt-5 text-xl font-medium text-[#1F2A44] dark:text-[#F8FAFC]">
           A custom digital concierge built specifically for your business.
         </p>
 
@@ -142,11 +140,11 @@
 
         <!-- CTAs -->
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-          <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-xl shadow-medium hover:shadow-lg transition-all duration-200">
+          <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#2FA4A9] hover:bg-[#268a8f] text-white font-semibold px-6 py-3.5 rounded-xl shadow-medium hover:shadow-lg transition-all duration-200">
             Ask the YOUgent
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
           </a>
-          <a href="#what-it-does" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-semibold px-6 py-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200">
+          <a href="#what-it-does" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#E5E7EB] dark:border-[#334155] bg-white dark:bg-[#1E293B] text-[#1F2A44] dark:text-[#F8FAFC] font-semibold px-6 py-3.5 rounded-xl hover:bg-slate-50 dark:hover:bg-[#334155] transition-all duration-200">
             See What It Can Do
           </a>
         </div>
@@ -156,20 +154,18 @@
         </p>
       </div>
 
-      <!-- ===== HERO VISUAL COLUMN ===== -->
+      <!-- HERO VISUAL COLUMN -->
       <div class="relative">
-        <!-- Glow behind card -->
-        <div class="absolute -inset-6 bg-brand-500/10 blur-3xl rounded-3xl pointer-events-none"></div>
+        <div class="absolute -inset-6 bg-[#2FA4A9]/10 blur-3xl rounded-3xl pointer-events-none"></div>
 
-        <!-- Chat demo card -->
-        <div class="relative bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-medium p-6 sm:p-8">
+        <div class="relative bg-white dark:bg-[#1E293B] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] shadow-medium p-6 sm:p-8">
           <!-- Card header -->
-          <div class="flex items-center gap-3 pb-5 border-b border-slate-100 dark:border-slate-800">
-            <div class="h-10 w-10 rounded-xl bg-brand-500 flex items-center justify-center shadow-sm">
+          <div class="flex items-center gap-3 pb-5 border-b border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-10 w-10 rounded-xl bg-[#2FA4A9] flex items-center justify-center shadow-sm">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.93V21H9v2h6v-2h-2v-3.07A7 7 0 0 0 19 11h-2Z"/></svg>
             </div>
             <div>
-              <div class="font-semibold text-sm text-slate-900 dark:text-white">Sunrise Wellness YOUgent</div>
+              <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Sunrise Wellness YOUgent</div>
               <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
                 <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
                 Online now
@@ -180,7 +176,7 @@
           <!-- Chat messages -->
           <div class="py-5 space-y-4">
             <div class="flex justify-end">
-              <div class="bubble-user px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 max-w-[75%]">
+              <div class="bubble-user px-4 py-2.5 text-sm text-[#1F2A44] dark:text-[#F8FAFC] max-w-[75%]">
                 Do you have any openings this weekend?
               </div>
             </div>
@@ -190,7 +186,7 @@
               </div>
             </div>
             <div class="flex justify-end">
-              <div class="bubble-user px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 max-w-[75%]">
+              <div class="bubble-user px-4 py-2.5 text-sm text-[#1F2A44] dark:text-[#F8FAFC] max-w-[75%]">
                 Saturday works. What's included?
               </div>
             </div>
@@ -202,23 +198,23 @@
           </div>
 
           <!-- Input bar -->
-          <div class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800 rounded-2xl px-4 py-3">
+          <div class="flex items-center gap-2 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl px-4 py-3">
             <span class="text-sm text-slate-400 dark:text-slate-500 flex-1">Type a message…</span>
-            <button class="h-8 w-8 bg-brand-500 rounded-xl flex items-center justify-center flex-shrink-0" aria-label="Send message">
+            <button class="h-8 w-8 bg-[#2FA4A9] rounded-xl flex items-center justify-center flex-shrink-0" aria-label="Send message">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg>
             </button>
           </div>
 
           <!-- Feature pills -->
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
-              <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>Works 24/7
+            <span class="inline-flex items-center gap-1.5 bg-[#F8FAFC] dark:bg-[#0F172A] border border-[#E5E7EB] dark:border-[#334155] rounded-full px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#2FA4A9]"></span>Works 24/7
             </span>
-            <span class="inline-flex items-center gap-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
-              <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>Saves every lead
+            <span class="inline-flex items-center gap-1.5 bg-[#F8FAFC] dark:bg-[#0F172A] border border-[#E5E7EB] dark:border-[#334155] rounded-full px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#2FA4A9]"></span>Saves every lead
             </span>
-            <span class="inline-flex items-center gap-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
-              <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>Built for you
+            <span class="inline-flex items-center gap-1.5 bg-[#F8FAFC] dark:bg-[#0F172A] border border-[#E5E7EB] dark:border-[#334155] rounded-full px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#2FA4A9]"></span>Built for you
             </span>
           </div>
         </div>
@@ -230,17 +226,15 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 2 — WHAT IS A YOUGENT                                               -->
-<!-- Features: Section intro, 4 feature cards, plain language explanation        -->
 <!-- ============================================================================ -->
-<section id="what-it-is" data-section="what-it-is" class="bg-slate-50 dark:bg-slate-900/50 py-16 sm:py-24">
+<section id="what-it-is" data-section="what-it-is" class="bg-white dark:bg-[#1E293B] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
     <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-      <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-700 dark:text-brand-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+      <div class="inline-flex items-center gap-2 bg-[#d0eeef] dark:bg-[#2FA4A9]/20 border border-[#a2dcde] dark:border-[#2FA4A9]/40 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
         The Basics
       </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
         So… what is a YOUgent?
       </h2>
       <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -251,58 +245,57 @@
       </p>
     </div>
 
-    <!-- 4 Feature cards -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
       <!-- Card 1 -->
-      <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-card">
-        <div class="h-11 w-11 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-brand-500">
+      <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-6 shadow-card">
+        <div class="h-11 w-11 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]">
             <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Zm-2 12H6v-2h12v2Zm0-3H6V9h12v2Zm0-3H6V6h12v2Z"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Answers Questions</h3>
+        <h3 class="font-semibold text-[#1F2A44] dark:text-[#F8FAFC] mb-2">Answers Questions</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
           Gives accurate, helpful answers about your business any time someone asks — day or night.
         </p>
       </div>
 
       <!-- Card 2 -->
-      <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-card">
-        <div class="h-11 w-11 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-brand-500">
+      <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-6 shadow-card">
+        <div class="h-11 w-11 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]">
             <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14H9V8h2v8Zm4 0h-2V8h2v8Z"/>
             <path fill="currentColor" d="M13 17h-2v2h2v-2Zm0-8h-2v6h2V9Z"/>
             <path fill="currentColor" d="M8 5.5l-1.5 1.5 5.5 5.5 5.5-5.5L16 5.5l-4 4z"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Guides People Forward</h3>
+        <h3 class="font-semibold text-[#1F2A44] dark:text-[#F8FAFC] mb-2">Guides People Forward</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
           Walks customers through their options and moves them to the next step without you lifting a finger.
         </p>
       </div>
 
       <!-- Card 3 -->
-      <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-card">
-        <div class="h-11 w-11 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-brand-500">
+      <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-6 shadow-card">
+        <div class="h-11 w-11 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]">
             <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2Zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6Zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19Z"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Saves Information</h3>
+        <h3 class="font-semibold text-[#1F2A44] dark:text-[#F8FAFC] mb-2">Saves Information</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
           Captures names, questions, and details automatically — nothing gets lost or forgotten.
         </p>
       </div>
 
       <!-- Card 4 -->
-      <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-card">
-        <div class="h-11 w-11 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-brand-500">
+      <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-6 shadow-card">
+        <div class="h-11 w-11 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]">
             <path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2ZM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8Zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7Z"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Works Around the Clock</h3>
+        <h3 class="font-semibold text-[#1F2A44] dark:text-[#F8FAFC] mb-2">Works Around the Clock</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
           Always on. Whether it's 2pm on a Tuesday or 11pm on a Sunday, your YOUgent is ready.
         </p>
@@ -314,88 +307,84 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 3 — WHAT IT DOES                                                    -->
-<!-- Features: Two-column layout, customer vs team cards, closing statement      -->
 <!-- ============================================================================ -->
-<section id="what-it-does" data-section="what-it-does" class="bg-white dark:bg-slate-950 py-16 sm:py-24">
+<section id="what-it-does" data-section="what-it-does" class="bg-[#F8FAFC] dark:bg-[#0F172A] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
     <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-      <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-700 dark:text-brand-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+      <div class="inline-flex items-center gap-2 bg-[#d0eeef] dark:bg-[#2FA4A9]/20 border border-[#a2dcde] dark:border-[#2FA4A9]/40 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
         Capabilities
       </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
         What can a YOUgent do?
       </h2>
     </div>
 
-    <!-- Two-column grid -->
     <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
 
       <!-- Column 1: For customers -->
-      <div class="bg-slate-50 dark:bg-slate-900/60 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8">
+      <div class="bg-white dark:bg-[#1E293B] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] p-6 sm:p-8">
         <div class="flex items-center gap-3 mb-6">
-          <div class="h-10 w-10 rounded-xl bg-brand-500 flex items-center justify-center">
+          <div class="h-10 w-10 rounded-xl bg-[#2FA4A9] flex items-center justify-center">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/></svg>
           </div>
           <div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white">For Customers</h3>
+            <h3 class="font-bold text-lg text-[#1F2A44] dark:text-[#F8FAFC]">For Customers</h3>
             <p class="text-sm text-slate-500 dark:text-slate-400">What visitors and clients experience</p>
           </div>
         </div>
         <div class="space-y-3">
-          <!-- Customer capability items -->
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Answer common questions</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Answer common questions</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Hours, location, services, policies</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Provide pricing or package info</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Provide pricing or package info</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Clear, consistent answers every time</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Guide customers through decisions</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Guide customers through decisions</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Help them find the right option</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Schedule appointments or reservations</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Schedule appointments or reservations</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Book directly in the conversation</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Provide estimates</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Provide estimates</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Give ballpark figures based on their needs</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Capture leads</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Capture leads</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Collect contact info before they leave</div>
             </div>
           </div>
@@ -403,69 +392,68 @@
       </div>
 
       <!-- Column 2: For your team -->
-      <div class="bg-slate-50 dark:bg-slate-900/60 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8">
+      <div class="bg-white dark:bg-[#1E293B] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] p-6 sm:p-8">
         <div class="flex items-center gap-3 mb-6">
-          <div class="h-10 w-10 rounded-xl bg-slate-700 dark:bg-slate-700 flex items-center justify-center">
+          <div class="h-10 w-10 rounded-xl bg-[#1F2A44] dark:bg-[#334155] flex items-center justify-center">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
           </div>
           <div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white">For Your Team</h3>
+            <h3 class="font-bold text-lg text-[#1F2A44] dark:text-[#F8FAFC]">For Your Team</h3>
             <p class="text-sm text-slate-500 dark:text-slate-400">Internal support for staff and managers</p>
           </div>
         </div>
         <div class="space-y-3">
-          <!-- Team capability items -->
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-[#334155] flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-slate-500 dark:text-slate-400"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Onboarding support</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Onboarding support</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Help new hires get up to speed fast</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-[#334155] flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-slate-500 dark:text-slate-400"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">HR questions</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">HR questions</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Consistent answers to common HR topics</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-[#334155] flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-slate-500 dark:text-slate-400"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Policies and procedures</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Policies and procedures</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Find the right policy without digging through files</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-[#334155] flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-slate-500 dark:text-slate-400"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Payroll / PTO basics</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Payroll / PTO basics</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Quick answers to common payroll questions</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-[#334155] flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-slate-500 dark:text-slate-400"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Provider directories</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Provider directories</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Look up contacts and vendors instantly</div>
             </div>
           </div>
-          <div class="flex items-start gap-3 bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-800">
-            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div class="flex items-start gap-3 bg-[#F8FAFC] dark:bg-[#0F172A] rounded-xl p-4 border border-[#E5E7EB] dark:border-[#334155]">
+            <div class="h-6 w-6 rounded-full bg-slate-100 dark:bg-[#334155] flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" class="text-slate-500 dark:text-slate-400"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <div>
-              <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Internal resource guides</div>
+              <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Internal resource guides</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">One place for all internal knowledge</div>
             </div>
           </div>
@@ -475,7 +463,7 @@
 
     <!-- Closing statement -->
     <div class="mt-8 text-center">
-      <p class="text-base text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl px-6 py-4 inline-block max-w-2xl">
+      <p class="text-base text-slate-600 dark:text-slate-300 bg-white dark:bg-[#1E293B] border border-[#E5E7EB] dark:border-[#334155] rounded-2xl px-6 py-4 inline-block max-w-2xl">
         A YOUgent can support the outside of your business, the inside of your business, or both.
       </p>
     </div>
@@ -485,17 +473,15 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 4 — REAL EXAMPLES                                                   -->
-<!-- Features: 3 polished example cards showing chat, summary, and spreadsheet   -->
 <!-- ============================================================================ -->
-<section id="examples" data-section="examples" class="bg-slate-50 dark:bg-slate-900/50 py-16 sm:py-24">
+<section id="examples" data-section="examples" class="bg-white dark:bg-[#1E293B] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
     <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-      <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-700 dark:text-brand-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+      <div class="inline-flex items-center gap-2 bg-[#d0eeef] dark:bg-[#2FA4A9]/20 border border-[#a2dcde] dark:border-[#2FA4A9]/40 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
         See It in Action
       </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
         What this can actually look like
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-300">
@@ -506,8 +492,8 @@
     <div class="grid md:grid-cols-3 gap-6">
 
       <!-- Example 1: Customer Chat -->
-      <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-card overflow-hidden">
-        <div class="bg-slate-50 dark:bg-slate-800/60 px-5 py-4 border-b border-slate-100 dark:border-slate-800">
+      <div class="bg-[#F8FAFC] dark:bg-[#0F172A] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] shadow-card overflow-hidden">
+        <div class="bg-white dark:bg-[#1E293B] px-5 py-4 border-b border-[#E5E7EB] dark:border-[#334155]">
           <div class="flex items-center gap-2">
             <div class="h-2.5 w-2.5 rounded-full bg-red-400"></div>
             <div class="h-2.5 w-2.5 rounded-full bg-amber-400"></div>
@@ -517,7 +503,7 @@
         </div>
         <div class="p-5 space-y-3">
           <div class="flex justify-end">
-            <div class="bubble-user px-3.5 py-2.5 text-sm text-slate-700 dark:text-slate-200 max-w-[80%]">
+            <div class="bubble-user px-3.5 py-2.5 text-sm text-[#1F2A44] dark:text-[#F8FAFC] max-w-[80%]">
               Do you have openings this weekend?
             </div>
           </div>
@@ -527,7 +513,7 @@
             </div>
           </div>
           <div class="flex justify-end">
-            <div class="bubble-user px-3.5 py-2.5 text-sm text-slate-700 dark:text-slate-200 max-w-[80%]">
+            <div class="bubble-user px-3.5 py-2.5 text-sm text-[#1F2A44] dark:text-[#F8FAFC] max-w-[80%]">
               Saturday at 1pm is perfect!
             </div>
           </div>
@@ -538,15 +524,15 @@
           </div>
         </div>
         <div class="px-5 pb-5">
-          <div class="bg-brand-50 dark:bg-brand-900/30 rounded-xl px-4 py-2.5 text-xs text-brand-700 dark:text-brand-300 font-medium">
+          <div class="bg-[#d0eeef] dark:bg-[#2FA4A9]/20 rounded-xl px-4 py-2.5 text-xs text-[#1F2A44] dark:text-[#6ED3CF] font-medium">
             ✓ Lead captured and appointment held
           </div>
         </div>
       </div>
 
       <!-- Example 2: Manager Summary -->
-      <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-card overflow-hidden">
-        <div class="bg-slate-50 dark:bg-slate-800/60 px-5 py-4 border-b border-slate-100 dark:border-slate-800">
+      <div class="bg-[#F8FAFC] dark:bg-[#0F172A] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] shadow-card overflow-hidden">
+        <div class="bg-white dark:bg-[#1E293B] px-5 py-4 border-b border-[#E5E7EB] dark:border-[#334155]">
           <div class="flex items-center gap-2">
             <div class="h-2.5 w-2.5 rounded-full bg-red-400"></div>
             <div class="h-2.5 w-2.5 rounded-full bg-amber-400"></div>
@@ -559,27 +545,27 @@
             <div class="h-7 w-7 rounded-lg bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-amber-500"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
             </div>
-            <span class="text-sm font-semibold text-slate-900 dark:text-white">New Customer Inquiry</span>
+            <span class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">New Customer Inquiry</span>
           </div>
           <div class="space-y-3">
             <div class="flex justify-between items-start">
               <span class="text-xs text-slate-500 dark:text-slate-400 w-28 flex-shrink-0">Requested service</span>
-              <span class="text-xs font-medium text-slate-800 dark:text-slate-200 text-right">Lawn maintenance — full yard</span>
+              <span class="text-xs font-medium text-[#1F2A44] dark:text-[#F8FAFC] text-right">Lawn maintenance — full yard</span>
             </div>
-            <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+            <div class="h-px bg-[#E5E7EB] dark:bg-[#334155]"></div>
             <div class="flex justify-between items-start">
               <span class="text-xs text-slate-500 dark:text-slate-400 w-28 flex-shrink-0">Preferred time</span>
-              <span class="text-xs font-medium text-slate-800 dark:text-slate-200 text-right">Saturday morning</span>
+              <span class="text-xs font-medium text-[#1F2A44] dark:text-[#F8FAFC] text-right">Saturday morning</span>
             </div>
-            <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+            <div class="h-px bg-[#E5E7EB] dark:bg-[#334155]"></div>
             <div class="flex justify-between items-start">
               <span class="text-xs text-slate-500 dark:text-slate-400 w-28 flex-shrink-0">Customer notes</span>
-              <span class="text-xs font-medium text-slate-800 dark:text-slate-200 text-right">Has a gate — needs code access</span>
+              <span class="text-xs font-medium text-[#1F2A44] dark:text-[#F8FAFC] text-right">Has a gate — needs code access</span>
             </div>
-            <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+            <div class="h-px bg-[#E5E7EB] dark:bg-[#334155]"></div>
             <div class="flex justify-between items-start">
               <span class="text-xs text-slate-500 dark:text-slate-400 w-28 flex-shrink-0">Suggested next step</span>
-              <span class="text-xs font-medium text-brand-600 dark:text-brand-400 text-right">Call to confirm estimate</span>
+              <span class="text-xs font-medium text-[#2FA4A9] dark:text-[#6ED3CF] text-right">Call to confirm estimate</span>
             </div>
           </div>
         </div>
@@ -591,8 +577,8 @@
       </div>
 
       <!-- Example 3: Saved to Spreadsheet -->
-      <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-card overflow-hidden">
-        <div class="bg-slate-50 dark:bg-slate-800/60 px-5 py-4 border-b border-slate-100 dark:border-slate-800">
+      <div class="bg-[#F8FAFC] dark:bg-[#0F172A] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] shadow-card overflow-hidden">
+        <div class="bg-white dark:bg-[#1E293B] px-5 py-4 border-b border-[#E5E7EB] dark:border-[#334155]">
           <div class="flex items-center gap-2">
             <div class="h-2.5 w-2.5 rounded-full bg-red-400"></div>
             <div class="h-2.5 w-2.5 rounded-full bg-amber-400"></div>
@@ -605,37 +591,36 @@
             <div class="h-7 w-7 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="text-emerald-500"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2Zm-7 14H7v-2h5v2Zm5-4H7v-2h10v2Zm0-4H7V7h10v2Z"/></svg>
             </div>
-            <span class="text-sm font-semibold text-slate-900 dark:text-white">Lead Tracker</span>
+            <span class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Lead Tracker</span>
           </div>
-          <!-- Spreadsheet visual -->
           <div class="overflow-x-auto -mx-1">
             <table class="w-full text-xs">
               <thead>
-                <tr class="bg-slate-50 dark:bg-slate-800">
+                <tr class="bg-[#F8FAFC] dark:bg-[#1E293B]">
                   <th class="text-left px-2 py-1.5 font-semibold text-slate-500 dark:text-slate-400 rounded-l-lg">Name</th>
                   <th class="text-left px-2 py-1.5 font-semibold text-slate-500 dark:text-slate-400">Service</th>
                   <th class="text-left px-2 py-1.5 font-semibold text-slate-500 dark:text-slate-400">Time</th>
                   <th class="text-left px-2 py-1.5 font-semibold text-slate-500 dark:text-slate-400 rounded-r-lg">Status</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              <tbody class="divide-y divide-[#E5E7EB] dark:divide-[#334155]">
                 <tr>
-                  <td class="px-2 py-2 text-slate-700 dark:text-slate-300 font-medium">Sarah M.</td>
+                  <td class="px-2 py-2 text-[#1F2A44] dark:text-slate-300 font-medium">Sarah M.</td>
                   <td class="px-2 py-2 text-slate-600 dark:text-slate-400">Massage</td>
                   <td class="px-2 py-2 text-slate-600 dark:text-slate-400">Sat 1pm</td>
                   <td class="px-2 py-2"><span class="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400 rounded-full px-2 py-0.5">Booked</span></td>
                 </tr>
                 <tr>
-                  <td class="px-2 py-2 text-slate-700 dark:text-slate-300 font-medium">James T.</td>
+                  <td class="px-2 py-2 text-[#1F2A44] dark:text-slate-300 font-medium">James T.</td>
                   <td class="px-2 py-2 text-slate-600 dark:text-slate-400">Lawn</td>
                   <td class="px-2 py-2 text-slate-600 dark:text-slate-400">Sat AM</td>
                   <td class="px-2 py-2"><span class="bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 rounded-full px-2 py-0.5">Follow up</span></td>
                 </tr>
                 <tr>
-                  <td class="px-2 py-2 text-slate-700 dark:text-slate-300 font-medium">Linda R.</td>
+                  <td class="px-2 py-2 text-[#1F2A44] dark:text-slate-300 font-medium">Linda R.</td>
                   <td class="px-2 py-2 text-slate-600 dark:text-slate-400">Consult</td>
                   <td class="px-2 py-2 text-slate-600 dark:text-slate-400">Sun AM</td>
-                  <td class="px-2 py-2"><span class="bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-400 rounded-full px-2 py-0.5">New</span></td>
+                  <td class="px-2 py-2"><span class="bg-[#d0eeef] dark:bg-[#2FA4A9]/30 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-2 py-0.5">New</span></td>
                 </tr>
               </tbody>
             </table>
@@ -654,19 +639,18 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 5 — INTERNAL USE                                                    -->
-<!-- Features: Team-focused explanation, 5 internal use case cards               -->
 <!-- ============================================================================ -->
-<section id="internal-use" data-section="internal-use" class="bg-white dark:bg-slate-950 py-16 sm:py-24">
+<section id="internal-use" data-section="internal-use" class="bg-[#F8FAFC] dark:bg-[#0F172A] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
       <!-- Left: Text -->
       <div>
-        <div class="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+        <div class="inline-flex items-center gap-2 bg-[#E5E7EB] dark:bg-[#334155] text-[#1F2A44] dark:text-slate-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
           Internal Use
         </div>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
           It can help your team too
         </h2>
         <p class="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -675,10 +659,10 @@
         <p class="mt-3 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
           Instead of digging through files or waiting for a manager to respond, employees can just ask and get a clear, accurate answer right away.
         </p>
-        <div class="mt-6 bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
+        <div class="mt-6 bg-white dark:bg-[#1E293B] border border-[#E5E7EB] dark:border-[#334155] rounded-2xl p-5">
           <div class="flex items-start gap-3">
-            <div class="h-8 w-8 rounded-lg bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg>
+            <div class="h-8 w-8 rounded-lg bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg>
             </div>
             <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               Think of it as an always-available assistant who knows your business inside and out — and never gets tired of answering the same question.
@@ -689,48 +673,48 @@
 
       <!-- Right: Use case cards -->
       <div class="space-y-4">
-        <div class="card-hover flex items-start gap-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"/></svg>
+        <div class="card-hover flex items-start gap-4 bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-10 w-10 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"/></svg>
           </div>
           <div>
-            <div class="font-semibold text-sm text-slate-900 dark:text-white">New Employee Onboarding</div>
+            <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">New Employee Onboarding</div>
             <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">New hires can ask questions and get answers without feeling like a burden to their manager.</p>
           </div>
         </div>
-        <div class="card-hover flex items-start gap-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6Zm4 18H6V4h7v5h5v11Zm-9-3h6v-2H9v2Zm0-4h6v-2H9v2Zm0-4h4V7H9v2Z"/></svg>
+        <div class="card-hover flex items-start gap-4 bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-10 w-10 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6Zm4 18H6V4h7v5h5v11Zm-9-3h6v-2H9v2Zm0-4h6v-2H9v2Zm0-4h4V7H9v2Z"/></svg>
           </div>
           <div>
-            <div class="font-semibold text-sm text-slate-900 dark:text-white">HR Policy Questions</div>
+            <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">HR Policy Questions</div>
             <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Instant, consistent answers about benefits, schedules, and workplace policies.</p>
           </div>
         </div>
-        <div class="card-hover flex items-start gap-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4Z"/></svg>
+        <div class="card-hover flex items-start gap-4 bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-10 w-10 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4Z"/></svg>
           </div>
           <div>
-            <div class="font-semibold text-sm text-slate-900 dark:text-white">Payroll &amp; PTO Information</div>
+            <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Payroll &amp; PTO Information</div>
             <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Quick answers to common payroll questions so managers aren't interrupted.</p>
           </div>
         </div>
-        <div class="card-hover flex items-start gap-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25S13.24 11.25 12 11.25 9.75 10.24 9.75 9 10.76 6.75 12 6.75ZM17 17H7v-.75c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17Z"/></svg>
+        <div class="card-hover flex items-start gap-4 bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-10 w-10 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25S13.24 11.25 12 11.25 9.75 10.24 9.75 9 10.76 6.75 12 6.75ZM17 17H7v-.75c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17Z"/></svg>
           </div>
           <div>
-            <div class="font-semibold text-sm text-slate-900 dark:text-white">Provider Directory Lookup</div>
+            <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Provider Directory Lookup</div>
             <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Find vendor contacts, supplier info, and key people without searching through spreadsheets.</p>
           </div>
         </div>
-        <div class="card-hover flex items-start gap-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1Zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7Z"/></svg>
+        <div class="card-hover flex items-start gap-4 bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-10 w-10 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1Zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7Z"/></svg>
           </div>
           <div>
-            <div class="font-semibold text-sm text-slate-900 dark:text-white">Internal Knowledge Assistant</div>
+            <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Internal Knowledge Assistant</div>
             <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">One place your whole team can go to find answers, guides, and procedures.</p>
           </div>
         </div>
@@ -742,17 +726,15 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 6 — CUSTOM DIGITAL TOOLS                                            -->
-<!-- Features: Tool types, simple flow visual showing the process                -->
 <!-- ============================================================================ -->
-<section id="tools" data-section="tools" class="bg-slate-50 dark:bg-slate-900/50 py-16 sm:py-24">
+<section id="tools" data-section="tools" class="bg-white dark:bg-[#1E293B] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
     <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-      <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-700 dark:text-brand-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+      <div class="inline-flex items-center gap-2 bg-[#d0eeef] dark:bg-[#2FA4A9]/20 border border-[#a2dcde] dark:border-[#2FA4A9]/40 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
         Smart Tools
       </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
         It can also power smart digital tools
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -764,91 +746,87 @@
 
       <!-- Tool type cards -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 text-center shadow-card">
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 text-center shadow-card">
           <div class="h-10 w-10 rounded-xl bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-purple-500"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2Zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6Zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19Z"/></svg>
           </div>
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Assessments</div>
+          <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Assessments</div>
           <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Help people understand their situation</div>
         </div>
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 text-center shadow-card">
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 text-center shadow-card">
           <div class="h-10 w-10 rounded-xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center mx-auto mb-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-amber-500"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2ZM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8Zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5 14.67 11 15.5 11Zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11Zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5Z"/></svg>
           </div>
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Quizzes</div>
+          <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Quizzes</div>
           <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Engage and educate at the same time</div>
         </div>
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 text-center shadow-card">
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 text-center shadow-card">
           <div class="h-10 w-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center mx-auto mb-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-blue-500"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Zm-7 12H7v-2h6v2Zm3-4H7V8h9v2Z"/></svg>
           </div>
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Surveys</div>
+          <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Surveys</div>
           <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Gather feedback automatically</div>
         </div>
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 text-center shadow-card">
-          <div class="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-3">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6Zm4 18H6V4h7v5h5v11ZM8 15h8v2H8v-2Zm0-4h8v2H8v-2Z"/></svg>
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 text-center shadow-card">
+          <div class="h-10 w-10 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mx-auto mb-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6Zm4 18H6V4h7v5h5v11ZM8 15h8v2H8v-2Zm0-4h8v2H8v-2Z"/></svg>
           </div>
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Intake Forms</div>
+          <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Intake Forms</div>
           <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Collect the right info upfront</div>
         </div>
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 text-center shadow-card col-span-2 sm:col-span-1">
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 text-center shadow-card col-span-2 sm:col-span-1">
           <div class="h-10 w-10 rounded-xl bg-rose-50 dark:bg-rose-900/30 flex items-center justify-center mx-auto mb-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-rose-500"><path fill="currentColor" d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1Zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7Z"/></svg>
           </div>
-          <div class="text-sm font-semibold text-slate-800 dark:text-slate-100">Recommendation Tools</div>
+          <div class="text-sm font-semibold text-[#1F2A44] dark:text-[#F8FAFC]">Recommendation Tools</div>
           <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Guide customers to the right choice</div>
         </div>
       </div>
 
       <!-- Flow visual -->
-      <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-card">
-        <h3 class="font-bold text-base text-slate-900 dark:text-white mb-6">How it works</h3>
+      <div class="bg-[#F8FAFC] dark:bg-[#0F172A] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] p-6 sm:p-8 shadow-card">
+        <h3 class="font-bold text-base text-[#1F2A44] dark:text-[#F8FAFC] mb-6">How it works</h3>
         <div class="space-y-4">
 
-          <!-- Step 1 -->
           <div class="flex items-start gap-4">
             <div class="flex flex-col items-center">
-              <div class="h-9 w-9 rounded-full bg-brand-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
-              <div class="w-px h-8 bg-slate-200 dark:bg-slate-700 mt-1"></div>
+              <div class="h-9 w-9 rounded-full bg-[#2FA4A9] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+              <div class="w-px h-8 bg-[#E5E7EB] dark:bg-[#334155] mt-1"></div>
             </div>
             <div class="pt-1">
-              <div class="font-semibold text-sm text-slate-900 dark:text-white">User answers questions</div>
+              <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">User answers questions</div>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">The YOUgent walks them through a simple, conversational process.</p>
             </div>
           </div>
 
-          <!-- Step 2 -->
           <div class="flex items-start gap-4">
             <div class="flex flex-col items-center">
-              <div class="h-9 w-9 rounded-full bg-brand-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
-              <div class="w-px h-8 bg-slate-200 dark:bg-slate-700 mt-1"></div>
+              <div class="h-9 w-9 rounded-full bg-[#2FA4A9] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+              <div class="w-px h-8 bg-[#E5E7EB] dark:bg-[#334155] mt-1"></div>
             </div>
             <div class="pt-1">
-              <div class="font-semibold text-sm text-slate-900 dark:text-white">YOUgent recommends an option</div>
+              <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">YOUgent recommends an option</div>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Based on their answers, it suggests the right service, product, or next step.</p>
             </div>
           </div>
 
-          <!-- Step 3 -->
           <div class="flex items-start gap-4">
             <div class="flex flex-col items-center">
-              <div class="h-9 w-9 rounded-full bg-brand-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
-              <div class="w-px h-8 bg-slate-200 dark:bg-slate-700 mt-1"></div>
+              <div class="h-9 w-9 rounded-full bg-[#2FA4A9] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+              <div class="w-px h-8 bg-[#E5E7EB] dark:bg-[#334155] mt-1"></div>
             </div>
             <div class="pt-1">
-              <div class="font-semibold text-sm text-slate-900 dark:text-white">Business receives a summary</div>
+              <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Business receives a summary</div>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Your team gets a clear recap of what the customer said and what they need.</p>
             </div>
           </div>
 
-          <!-- Step 4 -->
           <div class="flex items-start gap-4">
             <div class="flex flex-col items-center">
               <div class="h-9 w-9 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
             </div>
             <div class="pt-1">
-              <div class="font-semibold text-sm text-slate-900 dark:text-white">Data saved to Google Sheets</div>
+              <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Data saved to Google Sheets</div>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Every response is stored automatically — organized and ready to use.</p>
             </div>
           </div>
@@ -862,17 +840,15 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 7 — CUSTOMIZATION                                                   -->
-<!-- Features: Tone cards, personality examples, brand alignment messaging       -->
 <!-- ============================================================================ -->
-<section data-section="customization" class="bg-white dark:bg-slate-950 py-16 sm:py-24">
+<section data-section="customization" class="bg-[#F8FAFC] dark:bg-[#0F172A] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
     <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-      <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-700 dark:text-brand-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+      <div class="inline-flex items-center gap-2 bg-[#d0eeef] dark:bg-[#2FA4A9]/20 border border-[#a2dcde] dark:border-[#2FA4A9]/40 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
         Made for You
       </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
         Built to fit your business
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -884,64 +860,64 @@
 
       <!-- Customization cards -->
       <div class="grid grid-cols-2 gap-4">
-        <div class="card-hover bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-9 w-9 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Z"/></svg>
+        <div class="card-hover bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-9 w-9 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Tone</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Tone</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Warm, professional, casual — however you speak to customers.</p>
         </div>
-        <div class="card-hover bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-9 w-9 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"/></svg>
+        <div class="card-hover bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-9 w-9 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Personality</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Personality</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Give it a character that matches your brand.</p>
         </div>
-        <div class="card-hover bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-9 w-9 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        <div class="card-hover bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-9 w-9 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Brand Voice</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Brand Voice</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sounds like you — not like a robot.</p>
         </div>
-        <div class="card-hover bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
-          <div class="h-9 w-9 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2Zm-7 3l5 5-1.41 1.41L13 9.83V17h-2V9.83l-2.59 2.58L7 11l5-5Z"/></svg>
+        <div class="card-hover bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5">
+          <div class="h-9 w-9 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2Zm-7 3l5 5-1.41 1.41L13 9.83V17h-2V9.83l-2.59 2.58L7 11l5-5Z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Workflows</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Workflows</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Built around how your business actually works.</p>
         </div>
-        <div class="card-hover bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 col-span-2">
-          <div class="h-9 w-9 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        <div class="card-hover bg-white dark:bg-[#1E293B] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 col-span-2">
+          <div class="h-9 w-9 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Knowledge Sources</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Knowledge Sources</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Trained on your website, documents, FAQs, pricing, and anything else that matters.</p>
         </div>
       </div>
 
       <!-- Tone examples -->
-      <div class="bg-slate-50 dark:bg-slate-900/60 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8">
-        <h3 class="font-bold text-base text-slate-900 dark:text-white mb-2">Example tone variations</h3>
+      <div class="bg-white dark:bg-[#1E293B] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] p-6 sm:p-8">
+        <h3 class="font-bold text-base text-[#1F2A44] dark:text-[#F8FAFC] mb-2">Example tone variations</h3>
         <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Same question. Different personalities.</p>
 
         <div class="space-y-4">
-          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-4">
+          <div class="bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-4">
             <div class="flex items-center gap-2 mb-2">
               <span class="text-xs font-bold uppercase tracking-wide text-slate-400 dark:text-slate-500">Professional</span>
             </div>
             <p class="text-sm text-slate-700 dark:text-slate-300 italic">"Thank you for reaching out. Our standard service window is 8am to 5pm, Monday through Friday. Would you like to schedule a consultation?"</p>
           </div>
 
-          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-4">
+          <div class="bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-4">
             <div class="flex items-center gap-2 mb-2">
               <span class="text-xs font-bold uppercase tracking-wide text-slate-400 dark:text-slate-500">Friendly</span>
             </div>
             <p class="text-sm text-slate-700 dark:text-slate-300 italic">"Hey there! We're open Monday through Friday, 8 to 5. Want me to help you set something up?"</p>
           </div>
 
-          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-4">
+          <div class="bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-4">
             <div class="flex items-center gap-2 mb-2">
               <span class="text-xs font-bold uppercase tracking-wide text-slate-400 dark:text-slate-500">Southern Hospitality</span>
             </div>
@@ -956,19 +932,18 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 8 — HUMAN HANDOFF                                                   -->
-<!-- Features: Reassurance messaging, 4 handoff capability cards                 -->
 <!-- ============================================================================ -->
-<section data-section="human-handoff" class="bg-slate-50 dark:bg-slate-900/50 py-16 sm:py-24">
+<section data-section="human-handoff" class="bg-white dark:bg-[#1E293B] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
       <!-- Text -->
       <div>
-        <div class="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+        <div class="inline-flex items-center gap-2 bg-[#E5E7EB] dark:bg-[#334155] text-[#1F2A44] dark:text-slate-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
           Always in Control
         </div>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
           Humans still stay in the loop
         </h2>
         <p class="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -978,7 +953,7 @@
           You stay informed, in control, and ready to step in whenever it matters most.
         </p>
         <div class="mt-6">
-          <a href="#contact" class="inline-flex items-center gap-2 text-brand-500 dark:text-brand-400 font-semibold text-sm hover:gap-3 transition-all">
+          <a href="#contact" class="inline-flex items-center gap-2 text-[#2FA4A9] dark:text-[#6ED3CF] font-semibold text-sm hover:gap-3 transition-all">
             Learn how it works for your business
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
           </a>
@@ -987,32 +962,32 @@
 
       <!-- Handoff cards -->
       <div class="grid grid-cols-2 gap-4">
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-card">
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 shadow-card">
           <div class="h-10 w-10 rounded-xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center mb-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-amber-500"><path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2Zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2Z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Alert Staff</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Alert Staff</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">Get notified when something important happens in a conversation.</p>
         </div>
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-card">
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 shadow-card">
           <div class="h-10 w-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center mb-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-blue-500"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Zm-2 12H6v-2h12v2Zm0-3H6V9h12v2Zm0-3H6V6h12v2Z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Transfer to a Human</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Transfer to a Human</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">Seamlessly hand off a conversation when a real person is needed.</p>
         </div>
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-card">
-          <div class="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center mb-3">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 shadow-card">
+          <div class="h-10 w-10 rounded-xl bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center mb-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Send Summaries</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Send Summaries</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">Receive a clean recap of conversations — automatically, on your schedule.</p>
         </div>
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-card">
+        <div class="card-hover bg-[#F8FAFC] dark:bg-[#0F172A] rounded-2xl border border-[#E5E7EB] dark:border-[#334155] p-5 shadow-card">
           <div class="h-10 w-10 rounded-xl bg-rose-50 dark:bg-rose-900/30 flex items-center justify-center mb-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-rose-500"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm1 15h-2v-2h2v2Zm0-4h-2V7h2v6Z"/></svg>
           </div>
-          <div class="font-semibold text-sm text-slate-900 dark:text-white">Flag Urgent Issues</div>
+          <div class="font-semibold text-sm text-[#1F2A44] dark:text-[#F8FAFC]">Flag Urgent Issues</div>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">Certain keywords or situations can trigger immediate alerts to your team.</p>
         </div>
       </div>
@@ -1023,17 +998,15 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 9 — PRICING                                                         -->
-<!-- Features: Two pricing cards (build + monthly), honest range-based pricing   -->
 <!-- ============================================================================ -->
-<section id="pricing" data-section="pricing" class="bg-white dark:bg-slate-950 py-16 sm:py-24">
+<section id="pricing" data-section="pricing" class="bg-[#F8FAFC] dark:bg-[#0F172A] py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-    <!-- Section header -->
     <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-      <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-700 dark:text-brand-300 rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+      <div class="inline-flex items-center gap-2 bg-[#d0eeef] dark:bg-[#2FA4A9]/20 border border-[#a2dcde] dark:border-[#2FA4A9]/40 text-[#1F2A44] dark:text-[#6ED3CF] rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
         Pricing
       </div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2A44] dark:text-[#F8FAFC]">
         Simple pricing
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mx-auto">
@@ -1044,63 +1017,61 @@
       </p>
     </div>
 
-    <!-- Pricing cards -->
     <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
       <!-- Card 1: Build Fee -->
-      <div class="relative bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-medium">
+      <div class="relative bg-white dark:bg-[#1E293B] rounded-3xl border border-[#E5E7EB] dark:border-[#334155] p-8 shadow-medium">
         <div class="flex items-center gap-3 mb-6">
-          <div class="h-11 w-11 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-slate-600 dark:text-slate-300"><path fill="currentColor" d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4Z"/></svg>
+          <div class="h-11 w-11 rounded-xl bg-[#E5E7EB] dark:bg-[#334155] flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-[#1F2A44] dark:text-slate-300"><path fill="currentColor" d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4Z"/></svg>
           </div>
           <div>
-            <h3 class="font-bold text-xl text-slate-900 dark:text-white">Build Fee</h3>
+            <h3 class="font-bold text-xl text-[#1F2A44] dark:text-[#F8FAFC]">Build Fee</h3>
             <p class="text-sm text-slate-500 dark:text-slate-400">One-time setup cost</p>
           </div>
         </div>
 
         <div class="mb-6">
-          <div class="text-3xl font-extrabold text-slate-900 dark:text-white">$1,500 – $7,500<span class="text-lg font-semibold text-slate-400">+</span></div>
+          <div class="text-3xl font-extrabold text-[#1F2A44] dark:text-[#F8FAFC]">$1,500 – $7,500<span class="text-lg font-semibold text-slate-400">+</span></div>
           <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Depending on complexity and features</p>
         </div>
 
         <div class="space-y-3">
           <div class="flex items-start gap-3">
-            <div class="h-5 w-5 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <div class="h-5 w-5 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <span class="text-sm text-slate-600 dark:text-slate-300">Designing the YOUgent structure</span>
           </div>
           <div class="flex items-start gap-3">
-            <div class="h-5 w-5 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <div class="h-5 w-5 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <span class="text-sm text-slate-600 dark:text-slate-300">Training it on your business</span>
           </div>
           <div class="flex items-start gap-3">
-            <div class="h-5 w-5 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <div class="h-5 w-5 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <span class="text-sm text-slate-600 dark:text-slate-300">Setting up workflows and knowledge</span>
           </div>
           <div class="flex items-start gap-3">
-            <div class="h-5 w-5 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <div class="h-5 w-5 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <span class="text-sm text-slate-600 dark:text-slate-300">Connecting tools like Google Sheets</span>
           </div>
           <div class="flex items-start gap-3">
-            <div class="h-5 w-5 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-brand-500"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <div class="h-5 w-5 rounded-full bg-[#d0eeef] dark:bg-[#2FA4A9]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="text-[#2FA4A9]"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
             <span class="text-sm text-slate-600 dark:text-slate-300">Testing and launching the system</span>
           </div>
         </div>
       </div>
 
-      <!-- Card 2: Monthly Support -->
+      <!-- Card 2: Monthly Support — navy to teal gradient -->
       <div class="relative pricing-highlight rounded-3xl p-8 shadow-medium text-white overflow-hidden">
-        <!-- Subtle texture -->
         <div class="absolute inset-0 bg-dot-grid text-white pointer-events-none"></div>
 
         <div class="relative">
@@ -1150,7 +1121,6 @@
 
     </div>
 
-    <!-- Pricing note -->
     <p class="mt-8 text-center text-sm text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
       Larger or more advanced systems may include additional features and integrations. Every quote is tailored to what your business actually needs.
     </p>
@@ -1160,19 +1130,19 @@
 
 <!-- ============================================================================ -->
 <!-- SECTION 10 — FINAL CTA                                                      -->
-<!-- Features: Gradient background, strong headline, prominent CTA button        -->
 <!-- ============================================================================ -->
 <section id="contact" data-section="contact" class="py-16 sm:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="relative bg-slate-900 dark:bg-slate-800 rounded-3xl overflow-hidden">
-      <!-- Background texture -->
+    <div class="relative bg-[#1F2A44] dark:bg-[#1E293B] rounded-3xl overflow-hidden">
       <div class="absolute inset-0 bg-dot-grid text-white pointer-events-none"></div>
-      <!-- Ambient glow -->
+      <!-- Teal ambient glow -->
       <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+      <!-- Subtle teal gradient accent at top -->
+      <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#2FA4A9] via-[#6ED3CF] to-[#2FA4A9]"></div>
 
       <div class="relative px-6 sm:px-12 lg:px-16 py-14 sm:py-20 text-center">
         <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 rounded-full px-4 py-1.5 text-xs font-semibold mb-6">
-          <span class="h-1.5 w-1.5 rounded-full bg-brand-400 animate-pulse"></span>
+          <span class="h-1.5 w-1.5 rounded-full bg-[#6ED3CF] animate-pulse"></span>
           Ready When You Are
         </div>
 
@@ -1185,7 +1155,7 @@
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-bold px-8 py-4 rounded-2xl shadow-medium hover:shadow-lg transition-all duration-200 text-base">
+          <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#2FA4A9] hover:bg-[#6ED3CF] text-white font-bold px-8 py-4 rounded-2xl shadow-medium hover:shadow-lg transition-all duration-200 text-base">
             Ask the YOUgent
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
           </a>
@@ -1200,19 +1170,21 @@
 </section>
 
 <!-- ============================================================================ -->
-<!-- FOOTER: Simple premium footer with logo, nav links, and copyright           -->
+<!-- FOOTER                                                                       -->
 <!-- ============================================================================ -->
-<footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+<footer class="bg-white dark:bg-[#0F172A] border-t border-[#E5E7EB] dark:border-[#334155]">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 
       <!-- Brand column -->
       <div class="sm:col-span-2 lg:col-span-1">
         <div class="flex items-center gap-2 mb-3">
-          <div class="h-8 w-8 rounded-lg bg-brand-500 flex items-center justify-center">
+          <div class="h-8 w-8 rounded-lg bg-[#2FA4A9] flex items-center justify-center">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.93V21H9v2h6v-2h-2v-3.07A7 7 0 0 0 19 11h-2Z"/></svg>
           </div>
-          <span class="text-lg font-bold text-slate-900 dark:text-white">YOU<span class="text-brand-500">gent</span></span>
+          <span class="text-lg font-bold">
+            <span class="logo-you">YOU</span><span class="logo-gent">gent</span>
+          </span>
         </div>
         <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs">
           Custom digital concierge systems built for businesses that want to do more without adding overhead.
@@ -1223,32 +1195,32 @@
       <div>
         <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">Product</h4>
         <ul class="space-y-2.5">
-          <li><a href="#what-it-is"   class="text-sm text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 transition">What It Is</a></li>
-          <li><a href="#what-it-does" class="text-sm text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 transition">What It Does</a></li>
-          <li><a href="#examples"     class="text-sm text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 transition">Examples</a></li>
-          <li><a href="#tools"        class="text-sm text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 transition">Tools</a></li>
+          <li><a href="#what-it-is"   class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] transition">What It Is</a></li>
+          <li><a href="#what-it-does" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] transition">What It Does</a></li>
+          <li><a href="#examples"     class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] transition">Examples</a></li>
+          <li><a href="#tools"        class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] transition">Tools</a></li>
         </ul>
       </div>
 
       <div>
         <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">Company</h4>
         <ul class="space-y-2.5">
-          <li><a href="#internal-use" class="text-sm text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 transition">Internal Use</a></li>
-          <li><a href="#pricing"      class="text-sm text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 transition">Pricing</a></li>
-          <li><a href="#contact"      class="text-sm text-slate-600 dark:text-slate-400 hover:text-brand-500 dark:hover:text-brand-400 transition">Contact</a></li>
+          <li><a href="#internal-use" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] transition">Internal Use</a></li>
+          <li><a href="#pricing"      class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] transition">Pricing</a></li>
+          <li><a href="#contact"      class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#2FA4A9] dark:hover:text-[#6ED3CF] transition">Contact</a></li>
         </ul>
       </div>
 
     </div>
 
     <!-- Bottom bar -->
-    <div class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="pt-8 border-t border-[#E5E7EB] dark:border-[#334155] flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-sm text-slate-400 dark:text-slate-500">
         © 2025 YOUgent. All rights reserved.
       </p>
       <div class="flex items-center gap-4">
-        <a href="#" class="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition">Privacy</a>
-        <a href="#" class="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition">Terms</a>
+        <a href="#" class="text-sm text-slate-500 dark:text-slate-400 hover:text-[#1F2A44] dark:hover:text-[#F8FAFC] transition">Privacy</a>
+        <a href="#" class="text-sm text-slate-500 dark:text-slate-400 hover:text-[#1F2A44] dark:hover:text-[#F8FAFC] transition">Terms</a>
       </div>
     </div>
 
@@ -1256,7 +1228,7 @@
 </footer>
 
 <!-- ============================================================================ -->
-<!-- JAVASCRIPT: Theme toggle, mobile menu, smooth scroll                        -->
+<!-- JAVASCRIPT                                                                   -->
 <!-- ============================================================================ -->
 
 
