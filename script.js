@@ -1,30 +1,40 @@
-// ===== TAILWIND CONFIGURATION =====
-    // Custom brand colors, shadows, and typography extensions
-    tailwind.config = {
+tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
             brand: {
-              50:  '#f0faf7',
-              100: '#d9f4ec',
-              200: '#b4e8da',
-              300: '#7dd4c0',
-              400: '#45b9a1',
-              500: '#2a9d85',
-              600: '#1f7f6b',
-              700: '#1a6557',
-              800: '#185147',
-              900: '#16433b',
+              50:  '#f0fafa',
+              100: '#d0eeef',
+              200: '#a2dcde',
+              300: '#6ED3CF',
+              400: '#4bbec0',
+              500: '#2FA4A9',
+              600: '#268a8f',
+              700: '#1F2A44',
+              800: '#1a2238',
+              900: '#141b2d',
+            },
+            navy: {
+              50:  '#f0f2f7',
+              100: '#d6dbe8',
+              200: '#adb7d1',
+              300: '#7d8fb5',
+              400: '#546a98',
+              500: '#1F2A44',
+              600: '#1a2439',
+              700: '#151d2e',
+              800: '#101623',
+              900: '#0F172A',
             }
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
           },
           boxShadow: {
-            soft:   '0 4px 24px rgba(0,0,0,.06)',
-            medium: '0 8px 40px rgba(0,0,0,.10)',
-            card:   '0 2px 12px rgba(0,0,0,.07)',
+            soft:   '0 4px 24px rgba(31,42,68,.07)',
+            medium: '0 8px 40px rgba(31,42,68,.12)',
+            card:   '0 2px 12px rgba(31,42,68,.08)',
           }
         }
       }
@@ -161,19 +171,12 @@
   else{run();}
 })();
 
-// ===== THEME TOGGLE =====
-  // Function: Toggles dark/light mode and persists preference to localStorage
-  // Triggers: Click on #themeToggle button in header
-  document.getElementById('themeToggle').addEventListener('click', () => {
+document.getElementById('themeToggle').addEventListener('click', () => {
     const root = document.documentElement;
     const isDark = root.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 
-  // ===== MOBILE MENU TOGGLE =====
-  // Function: Shows/hides mobile navigation menu
-  // Triggers: Click on hamburger button (#menuToggle)
-  // Also closes menu when a nav link is clicked
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIconOpen = document.getElementById('menuIconOpen');
@@ -198,14 +201,10 @@
     isOpen ? closeMenu() : openMenu();
   });
 
-  // Close mobile menu when a nav link is clicked
   document.querySelectorAll('.mobile-nav-link').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 
-  // ===== SMOOTH SCROLLING =====
-  // Handles smooth scroll for all anchor links on the page
-  // Accounts for sticky header height offset
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
