@@ -1,55 +1,47 @@
-/* ===== BASE TYPOGRAPHY ===== */
-    body { font-family: 'Inter', system-ui, sans-serif; }
+body { font-family: 'Inter', system-ui, sans-serif; }
 
-    /* ===== SUBTLE DOT GRID BACKGROUND ===== */
-    /* Used in hero section for premium texture */
     .bg-dot-grid {
       background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
       background-size: 24px 24px;
-      opacity: .045;
+      opacity: .04;
       pointer-events: none;
     }
 
-    /* ===== GRADIENT TEXT UTILITY ===== */
+    /* Gradient text using teal palette */
     .text-gradient {
-      background: linear-gradient(135deg, #2a9d85 0%, #45b9a1 50%, #1f7f6b 100%);
+      background: linear-gradient(135deg, #2FA4A9 0%, #6ED3CF 50%, #2FA4A9 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    /* ===== HERO GRADIENT BLOB ===== */
-    /* Soft ambient glow behind hero card */
+    /* Hero glow using teal */
     .hero-glow {
-      background: radial-gradient(ellipse at center, rgba(42,157,133,.18) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(47,164,169,.13) 0%, transparent 70%);
     }
 
-    /* ===== CARD HOVER LIFT ===== */
-    /* Subtle elevation on hover for feature cards */
     .card-hover {
       transition: transform .2s ease, box-shadow .2s ease;
     }
     .card-hover:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(0,0,0,.12);
+      box-shadow: 0 12px 40px rgba(31,42,68,.13);
     }
 
-    /* ===== CHAT BUBBLE STYLES ===== */
-    /* Used in example conversation cards */
+    /* Chat bubbles updated to teal */
     .bubble-user {
       background: #f1f5f9;
       border-radius: 18px 18px 4px 18px;
     }
     .dark .bubble-user {
-      background: #1e293b;
+      background: #1E293B;
     }
     .bubble-agent {
-      background: linear-gradient(135deg, #2a9d85, #45b9a1);
+      background: linear-gradient(135deg, #2FA4A9, #6ED3CF);
       border-radius: 18px 18px 18px 4px;
       color: #fff;
     }
 
-    /* ===== MOBILE MENU TRANSITION ===== */
     #mobile-menu {
       transition: max-height .3s ease, opacity .3s ease;
       max-height: 0;
@@ -61,8 +53,6 @@
       opacity: 1;
     }
 
-    /* ===== SECTION FADE-IN ANIMATION ===== */
-    /* Subtle entrance for sections as they scroll into view */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -71,17 +61,20 @@
       animation: fadeUp .6s ease both;
     }
 
-    /* ===== PRICING CARD HIGHLIGHT ===== */
+    /* Pricing highlight using navy-to-teal gradient */
     .pricing-highlight {
-      background: linear-gradient(135deg, #2a9d85 0%, #1f7f6b 100%);
+      background: linear-gradient(135deg, #1F2A44 0%, #2FA4A9 100%);
     }
 
-    /* ===== FLOW ARROW ===== */
     .flow-arrow {
-      color: #2a9d85;
+      color: #2FA4A9;
       font-size: 1.5rem;
       line-height: 1;
     }
 
-    /* ===== SMOOTH SCROLL OFFSET FOR STICKY HEADER ===== */
     [id] { scroll-margin-top: 80px; }
+
+    /* Logo YOU text in deep navy, gent in teal */
+    .logo-you { color: #1F2A44; }
+    .dark .logo-you { color: #F8FAFC; }
+    .logo-gent { color: #2FA4A9; }
