@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="FairBridge gives every job fair attendee a free personal AI guide. Navigate smarter, connect faster, and follow up easier." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+
+<!-- SEO Meta Tags -->
+<title>Landing Page - Mar 27, 2026</title>
+<meta property="og:title" content="Landing Page - Mar 27, 2026" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Landing Page - Mar 27, 2026" />
+<!-- End SEO Meta Tags -->
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-brand">🌉 FairBridge</a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">For Organizers</a></li>
+      <li><a href="#">For Vendors</a></li>
+      <li><a href="#" class="active">For Attendees</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-theme" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+      <a href="#find-event" class="btn-primary nav-event-btn">Find an Event →</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Home</a>
+    <a href="#">For Organizers</a>
+    <a href="#">For Vendors</a>
+    <a href="#">For Attendees</a>
+    <a href="#">Pricing</a>
+    <a href="#find-event" style="color: var(--primary); font-weight: 700;">Find an Event →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-aurora"></div>
+    <div class="hero-inner">
+      <div class="reveal">
+        <div class="hero-badge">🎯 Free for Job Seekers</div>
+        <h1 class="hero-headline">
+          Stop Wandering.<br>
+          Start <span class="accent">Finding.</span>
+        </h1>
+        <p class="hero-sub">FairBridge gives you a personal AI guide at every job fair — so you spend less time wandering and more time connecting with the right employers.</p>
+        <div class="hero-ctas">
+          <a href="#find-event" class="btn-hero-primary">Find a FairBridge Event →</a>
+          <a href="#how" class="btn-ghost">See How It Works</a>
+        </div>
+        <div class="hero-trust">
+          <span><span class="check">✓</span> Completely free for attendees</span>
+          <span><span class="check">✓</span> No app download required</span>
+          <span><span class="check">✓</span> Works at any FairBridge-powered event</span>
+        </div>
+      </div>
+
+      <div class="chat-mockup-wrap reveal">
+        <div style="position: relative; width: 100%; max-width: 420px;">
+          <div class="float-card float-card-2">
+            <div class="float-card-success">📧 Summary email sent!</div>
+            <div class="float-card-sub">Everything you need, in your inbox</div>
+          </div>
+          <div class="chat-card">
+            <div class="chat-header">
+              <div class="chat-header-logo">🌉 FairBridge</div>
+              <div class="chat-header-title">Spring Career Fair 2026</div>
+              <div class="chat-live-badge"><div class="live-dot"></div> Live</div>
+            </div>
+            <div class="chat-messages" id="heroChat">
+              <div class="msg-agent">Hi! I'm your personal guide for today's fair. I know every company, every open role, and every apply link here. What are you looking for? 👋</div>
+              <div class="msg-user">I'm a recent nursing grad looking for hospital roles</div>
+              <div class="msg-agent">Perfect! I found 3 hospitals hiring new grads today — Memorial Health (Booth #3), Riverside Medical (#11), and City Hospital (#18). Memorial Health has the best new grad program and is actively interviewing on-site. Want me to tell you more? 🏥</div>
+              <div class="typing-indicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+              </div>
+            </div>
+            <div class="chat-input-bar">
+              <input type="text" placeholder="Ask about any company or role..." readonly />
+              <button class="chat-send-btn">➤</button>
+            </div>
+          </div>
+          <div class="float-card float-card-1">
+            <div class="float-card-success">✓ 3 matches found</div>
+            <div class="float-card-avatars">
+              <div class="avatar-sm" style="background:#0F172A; margin-right: -4px;">M</div>
+              <div class="avatar-sm" style="background:#1E3A5F; margin-right: -4px;">R</div>
+              <div class="avatar-sm" style="background:#0F2744;">C</div>
+            </div>
+            <div class="float-card-sub">Based on your background</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="how-inner">
+      <div class="reveal">
+        <div class="section-label">The Experience</div>
+        <h2 class="section-h2">Your Fair. Your Guide. Your Way.</h2>
+        <p class="section-p">FairBridge works in three simple steps — before, during, and after the fair.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <span class="step-emoji">🗓️</span>
+          <div class="step-title">Get Ready Before You Arrive</div>
+          <p class="step-desc">Once your event is powered by FairBridge, log in before the fair starts. Tell the AI what you're looking for — your industry, role type, experience level — and it builds your personalized agenda before you walk in the door.</p>
+          <span class="step-chip">No app download · Works in your browser</span>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-emoji">🤖</span>
+          <div class="step-title">Your Personal AI Guide</div>
+          <p class="step-desc">Ask the AI anything — which companies are hiring for your role, where a specific booth is, what benefits a company offers, or who the HR contact is. Get instant accurate answers without waiting in line at any booth.</p>
+          <span class="step-chip">Powered by real vendor data</span>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-emoji">📝</span>
+          <div class="step-title">Save Notes as You Go</div>
+          <p class="step-desc">Jot quick notes about companies as you visit each booth. Save the ones you're most interested in. Everything is organized and waiting for you after the fair.</p>
+          <span class="step-chip">All your notes in one place</span>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-emoji">📧</span>
+          <div class="step-title">Full Summary in Your Inbox</div>
+          <p class="step-desc">After the fair ends, FairBridge emails you a complete summary — every company you talked to, every job you showed interest in, every apply link, and every HR contact. Everything you need to follow up, delivered to your inbox.</p>
+          <span class="step-chip">Sent automatically after the event</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="features-inner">
+      <div class="features-header reveal">
+        <div class="section-label">What You Get</div>
+        <h2 class="section-h2">Everything You Need to Make<br>the Most of Your Job Fair</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-list reveal">
+          <div class="feature-row">
+            <div class="feature-emoji">🤖</div>
+            <div>
+              <div class="feature-title">Personal AI Guide</div>
+              <p class="feature-desc">Your AI knows every vendor, every open position, and every apply link at the fair. Ask it anything and get instant answers.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-emoji">🗺️</div>
+            <div>
+              <div class="feature-title">Navigate by Industry or Role</div>
+              <p class="feature-desc">Filter booths by industry, role type, or hiring status. Your AI highlights the most relevant companies before you even walk in the door.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-emoji">💬</div>
+            <div>
+              <div class="feature-title">Ask Anything About Any Company</div>
+              <p class="feature-desc">Curious about a company's culture, salary range, benefits, or open roles? Ask the AI and get accurate answers — no waiting in line required.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-emoji">📝</div>
+            <div>
+              <div class="feature-title">Save Notes at Every Booth</div>
+              <p class="feature-desc">Jot quick notes as you visit each booth. Rate companies, save contacts, flag roles you want to apply to.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-emoji">🔗</div>
+            <div>
+              <div class="feature-title">Direct Apply Links</div>
+              <p class="feature-desc">Skip the friction. Apply directly from FairBridge to any open role at the fair — no hunting for the right website.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-emoji">📧</div>
+            <div>
+              <div class="feature-title">Post-Fair Summary Email</div>
+              <p class="feature-desc">Receive a complete summary email after the fair — every company, every job, every contact you interacted with, all in one place.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="email-mockup">
+            <div class="email-header">
+              <div class="email-from">From: FairBridge &lt;hello@fairbridge.io&gt;</div>
+              <div class="email-subject">Your Spring Career Fair 2026 Summary 🎉</div>
+            </div>
+            <div class="email-body">
+              <div class="email-stat-row">
+                <div class="email-stat">
+                  <span class="email-stat-num">7</span>
+                  <div class="email-stat-label">Booths visited</div>
+                </div>
+                <div class="email-stat">
+                  <span class="email-stat-num">3</span>
+                  <div class="email-stat-label">Companies flagged</div>
+                </div>
+                <div class="email-stat">
+                  <span class="email-stat-num">2</span>
+                  <div class="email-stat-label">Apply links saved</div>
+                </div>
+              </div>
+              <div class="email-company-list">
+                <div class="email-company-row">
+                  <span>Memorial Health</span>
+                  <span class="email-company-check">✓ Interested</span>
+                </div>
+                <div class="email-company-row">
+                  <span>TechCorp</span>
+                  <span class="email-company-check">✓ Interested</span>
+                </div>
+                <div class="email-company-row">
+                  <span>DataFlow</span>
+                  <span class="email-company-flag">⭐ Flagged</span>
+                </div>
+              </div>
+              <a href="#" class="email-view-all">View all companies →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI IN ACTION -->
+  <section class="demo-section">
+    <div class="demo-inner">
+      <div class="reveal">
+        <div class="section-label">See It in Action</div>
+        <h2 class="section-h2">What Can You Ask the AI?</h2>
+        <p class="section-p">FairBridge AI knows everything about every vendor at the fair. Here are some of the things attendees ask most.</p>
+      </div>
+
+      <div class="chips-row reveal">
+        <button class="demo-chip" data-key="remote">Which companies are hiring remote?</button>
+        <button class="demo-chip" data-key="tech">Where is the tech sector booth?</button>
+        <button class="demo-chip" data-key="benefits">What benefits does TechCorp offer?</button>
+        <button class="demo-chip" data-key="visa">Which companies sponsor visas?</button>
+        <button class="demo-chip" data-key="contact">Who should I talk to at Memorial Health?</button>
+        <button class="demo-chip" data-key="grads">Which companies hire recent grads?</button>
+      </div>
+
+      <div class="demo-response-wrap reveal">
+        <div class="demo-response">
+          <div class="demo-agent-header">
+            <div class="demo-agent-avatar">🤖</div>
+            <div>
+              <div class="demo-agent-name">FairBridge AI</div>
+              <div class="demo-agent-sub">Spring Career Fair 2026 · Live</div>
+            </div>
+          </div>
+          <div class="demo-bubble" id="demoBubble">
+            Hi! I'm your personal guide for today's fair. I know every company, every open role, and every apply link here. What are you looking for? 👋
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE SECTION -->
+  <section class="free-section">
+    <div class="reveal">
+      <h2>Free for Every Job Seeker. Always.</h2>
+      <p>FairBridge is 100% free for attendees. No app download. No account required. No catch. Just show up to any FairBridge-powered job fair and your AI guide is ready.</p>
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-card-num">$0</div>
+          <div class="stat-card-label">Always free for attendees</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-num">0</div>
+          <div class="stat-card-label">Apps to download</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-num">∞</div>
+          <div class="stat-card-label">Questions you can ask the AI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="testimonials-inner">
+      <div class="reveal">
+        <div class="section-label">Real Experiences</div>
+        <h2 class="section-h2">What Job Seekers Are Saying</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"I walked into the fair with no plan and left with 4 companies I was genuinely excited about. The AI knew exactly which booths matched my background without me having to explain myself to every recruiter."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A.K.</div>
+            <div>
+              <div class="author-name">Aisha K.</div>
+              <div class="author-role">Recent Graduate · Computer Science</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"The summary email was a game changer. I completely forgot about two companies I visited and the email had all their info and apply links waiting for me when I got home. I applied that same night and got an interview."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M.R.</div>
+            <div>
+              <div class="author-name">Marcus R.</div>
+              <div class="author-role">Career Changer · Healthcare → Tech</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"As an international student worried about visa sponsorship, the AI instantly told me which companies sponsor visas and who to talk to. That alone saved me hours of awkward conversations."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P.L.</div>
+            <div>
+              <div class="author-name">Priya L.</div>
+              <div class="author-role">Graduate Student · Engineering</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner reveal">
+      <h2>Common Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">Do I need to download an app?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>No. FairBridge works entirely in your browser on any device — phone, tablet, or laptop. Just scan the QR code at the event or visit the link your organizer shares and you're in instantly.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">Do I need to create an account?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>You just need to provide your name and email when you arrive at the fair so we know where to send your post-fair summary. That's it — no passwords, no lengthy signup.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">How does the AI know about the companies at my fair?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>Every vendor at a FairBridge-powered event fills out a detailed profile before the fair — their open roles, HR contacts, culture, benefits, and more. The AI reads all of that data so it can answer your questions accurately in real time.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">What if my job fair isn't using FairBridge?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>You can still use FairBridge at any event that is powered by our platform. If your fair isn't using FairBridge yet, share this page with your organizer — it's free for them to get started.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-q-text">Is my information shared with the companies at the fair?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>Your basic info (name and email) is only shared with vendors you explicitly express interest in — and only if you choose to connect. We never sell or share your data without your permission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / FIND AN EVENT -->
+  <section class="cta-section" id="find-event">
+    <div class="reveal">
+      <h2>Ready to Experience a <span class="accent">Smarter</span><br>Job Fair?</h2>
+      <p>Enter your email and we'll notify you when a FairBridge-powered event is coming to your area.</p>
+
+      <div class="cta-form" id="ctaForm">
+        <input type="email" id="ctaEmail" placeholder="your@email.com" autocomplete="email" />
+        <button class="btn-cta-submit" id="ctaSubmit">Notify Me When Events Are Near You →</button>
+        <p class="cta-privacy">No spam. Unsubscribe anytime. Your email is never shared.</p>
+      </div>
+
+      <div class="cta-success" id="ctaSuccess">
+        ✓ You're on the list! We'll email you when a FairBridge event is near you.
+      </div>
+
+      <div class="social-proof-row">
+        <div class="social-proof-item">
+          <span class="social-proof-num">500+</span>
+          <div class="social-proof-label">Job seekers guided</div>
+        </div>
+        <div class="social-proof-item">
+          <span class="social-proof-num">50+</span>
+          <div class="social-proof-label">Events powered by FairBridge</div>
+        </div>
+        <div class="social-proof-item">
+          <span class="social-proof-num accent">4.9★</span>
+          <div class="social-proof-label">Average attendee rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">🌉 FairBridge</div>
+        <div class="footer-tagline">Bridging Opportunity.</div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">For Organizers</a></li>
+          <li><a href="#">For Vendors</a></li>
+          <li><a href="#">For Attendees</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FairBridge. All rights reserved.</span>
+      <span>Made with ❤️ for job seekers everywhere.</span>
+    </div>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
