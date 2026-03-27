@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="Sign up to run your job fair on FairBridge. Automate vendor payments, promote your event, and give attendees an AI-powered experience." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+
+<!-- SEO Meta Tags -->
+<title>Landing Page - Mar 27, 2026</title>
+<meta property="og:title" content="Landing Page - Mar 27, 2026" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Landing Page - Mar 27, 2026" />
+<!-- End SEO Meta Tags -->
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header" id="page-header">
+    <div class="header-logo">
+      <span style="font-size:22px;">🌉</span>
+      <div>
+        <span class="header-logo-name">FairBridge</span>
+        <span class="header-logo-sub"> for Organizers</span>
+      </div>
+    </div>
+    <div class="header-center" id="form-header-center" style="display:none;">
+      <span class="plan-badge-pill" id="plan-badge">🎪 Free Plan — $0</span>
+      <a class="change-plan-link" onclick="showPlans()">← Change Plan</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleDarkMode()">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </header>
+
+  <!-- PROGRESS BAR (form only) -->
+  <div id="form-progress-header" style="display:none; background:var(--surface); border-bottom:1px solid var(--border); padding:8px 32px;">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-labels">
+        <span>Profile Completion</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRESS STEPS (form only) -->
+  <div class="progress-steps" id="progress-steps" style="display:none;">
+    <div class="step-item">
+      <div class="step-circle active" id="step-1" onclick="scrollToSection('section-1')">1</div>
+      <span class="step-label">Your Info</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step-item">
+      <div class="step-circle" id="step-2" onclick="scrollToSection('section-2')">2</div>
+      <span class="step-label">Event Details</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step-item">
+      <div class="step-circle" id="step-3" onclick="scrollToSection('section-3')">3</div>
+      <span class="step-label">Payment Setup</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step-item">
+      <div class="step-circle" id="step-4" onclick="scrollToSection('section-4')">4</div>
+      <span class="step-label" id="step-4-label">Promotion & Branding</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step-item">
+      <div class="step-circle" id="step-5" onclick="scrollToSection('section-5')">🔒</div>
+      <span class="step-label">Event Agent</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step-item">
+      <div class="step-circle" id="step-6" onclick="scrollToSection('section-6')">6</div>
+      <span class="step-label">Review & Launch</span>
+    </div>
+  </div>
+
+  <!-- ===== VIEW 1: PLAN SELECTION ===== -->
+  <div id="view-plans" class="view">
+
+    <!-- HERO -->
+    <div class="hero-section">
+      <div class="badge-pill">🎪 Built for Event Organizers</div>
+      <h1 class="hero-h1">Run a <span class="accent">Better</span> Job Fair.</h1>
+      <p class="hero-p">FairBridge handles vendor registrations, collects booth fees on your behalf, and gives every attendee a personalized AI guide. Free to start. Upgrade when you're ready.</p>
+    </div>
+
+    <!-- BILLING TOGGLE -->
+    <div class="billing-toggle-wrap">
+      <span class="billing-label">Per Event</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="billing-toggle" onchange="toggleBilling()">
+        <div class="toggle-track"></div>
+      </label>
+      <span class="billing-label">Annual</span>
+      <span class="save-badge">Save up to 75%</span>
+    </div>
+
+    <!-- PLAN CARDS -->
+    <div class="plans-grid">
+
+      <!-- FREE CARD -->
+      <div class="plan-card free">
+        <div class="plan-label">FREE</div>
+        <div class="plan-price-block">
+          <div class="per-event-price">
+            <span class="price-amount">$0</span>
+            <div style="font-size:14px;color:var(--text-muted);">forever</div>
+          </div>
+          <div class="annual-price">
+            <span class="price-amount">$0</span>
+            <div style="font-size:14px;color:var(--text-muted);">always free</div>
+          </div>
+        </div>
+        <p class="plan-tagline">Get your first event live today</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>✅ Create and manage your event</li>
+          <li>✅ Set your own vendor booth fee</li>
+          <li>✅ Unique vendor invite link</li>
+          <li>✅ Vendors register and pay themselves</li>
+          <li>✅ Automatic Stripe payouts to you</li>
+          <li>✅ Basic event dashboard</li>
+          <li>✅ Up to 25 vendors per event</li>
+          <li>❌ Public event landing page</li>
+          <li>❌ Attendee registration system</li>
+          <li>❌ Email reminders to attendees</li>
+          <li>❌ Vendor directory for attendees</li>
+          <li>❌ Post-event analytics report</li>
+          <li>❌ FairBridge Event AI Agent</li>
+          <li>❌ Pre-event lead capture</li>
+          <li>❌ Priority support</li>
+        </ul>
+        <div class="plan-divider"></div>
+        <button class="btn btn-outline btn-full" onclick="selectPlan('free'); showForm();">Get Started Free</button>
+      </div>
+
+      <!-- GROWTH CARD -->
+      <div class="plan-card growth">
+        <div class="card-badge growth-badge">⭐ MOST POPULAR</div>
+        <div class="plan-label growth-label">GROWTH</div>
+        <div class="plan-price-block">
+          <div class="per-event-price">
+            <span class="price-amount growth-price">$49</span>
+            <span class="price-period">/event</span>
+          </div>
+          <div class="annual-price">
+            <span class="price-amount growth-annual-price">$199</span>
+            <span class="price-period">/year</span>
+            <div class="price-sub">Just $16.58/month · Unlimited events</div>
+            <div class="price-strike">vs $49/event</div>
+          </div>
+        </div>
+        <p class="plan-tagline">Promote your event and manage attendees professionally</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>✅ Everything in Free</li>
+          <li>✅ Unlimited vendors per event</li>
+          <li>✅ Public event landing page on FairBridge</li>
+          <li>✅ Attendee registration with confirmation emails</li>
+          <li>✅ Automated email reminders to attendees</li>
+          <li>✅ Vendor directory visible to attendees before the fair</li>
+          <li>✅ Post-event analytics report</li>
+          <li>✅ Custom event branding (logo + colors)</li>
+          <li>✅ Email support</li>
+          <li>❌ FairBridge Event AI Agent</li>
+          <li>❌ Pre-event attendee lead capture</li>
+          <li>❌ Appointment booking / pre-screening</li>
+          <li>❌ Priority support</li>
+        </ul>
+        <div class="plan-divider"></div>
+        <button class="btn btn-primary btn-full" onclick="selectPlan('growth'); showForm();">Choose Growth</button>
+      </div>
+
+      <!-- PRO CARD -->
+      <div class="plan-card pro">
+        <div class="card-badge pro-badge">🚀 PREMIUM</div>
+        <div class="plan-label pro-label">PRO</div>
+        <div class="plan-price-block">
+          <div class="per-event-price">
+            <span class="price-amount">$199</span>
+            <span class="price-period">/event</span>
+          </div>
+          <div class="annual-price">
+            <span class="price-amount pro-annual-price">$599</span>
+            <span class="price-period">/year</span>
+            <div class="price-sub">Just $49.92/month · Unlimited events</div>
+            <div class="price-strike">vs $199/event</div>
+          </div>
+        </div>
+        <p class="plan-tagline">Your own AI agent that fills seats and captures leads</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>✅ Everything in Growth</li>
+          <li>✅ FairBridge Event AI Agent — branded to your event</li>
+          <li>✅ Agent answers fair questions 24/7</li>
+          <li>✅ Pre-event lead capture — interested attendees register through the agent</li>
+          <li>✅ Appointment booking and pre-screening through agent</li>
+          <li>✅ Post-fair attendee lead report</li>
+          <li>✅ Conversation summaries per lead</li>
+          <li>✅ Priority support from FairBridge team</li>
+          <li>✅ Early access to new features</li>
+          <li>⚡ Requires a 30-minute onboarding call with the FairBridge team to configure your event agent</li>
+        </ul>
+        <div class="plan-divider"></div>
+        <button class="btn btn-secondary btn-full" onclick="selectPlan('pro'); showForm();">Go Pro</button>
+      </div>
+
+    </div>
+
+    <!-- COMPARE TABLE TOGGLE -->
+    <div class="compare-toggle-wrap">
+      <button class="btn btn-outline" id="compare-btn" onclick="toggleCompare()">Compare all features ▾</button>
+    </div>
+
+    <div class="compare-table-wrap" id="compare-table">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Free</th>
+            <th class="growth-col">Growth</th>
+            <th class="pro-col">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Create and manage events</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Set your own vendor booth fee</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Unique vendor invite link</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Vendors register and pay themselves</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Automatic Stripe payouts</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Basic event dashboard</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Vendors per event</td><td>Up to 25</td><td>Unlimited</td><td>Unlimited</td></tr>
+          <tr><td>Public event landing page</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Attendee registration system</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Email reminders to attendees</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Vendor directory for attendees</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Post-event analytics report</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Custom event branding</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Email support</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr><td>FairBridge Event AI Agent</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Pre-event lead capture</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Appointment booking / pre-screening</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Post-fair attendee lead report</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Priority support</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td>Early access to new features</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          <tr><td style="font-weight:700;">Per Event Price</td><td>Free</td><td>$49</td><td>$199</td></tr>
+          <tr><td style="font-weight:700;">Annual Price</td><td>Free</td><td>$199/yr</td><td>$599/yr</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TRUST BADGES -->
+    <div class="trust-badges">
+      <div class="trust-badge">🔒 Stripe-secured payments</div>
+      <div class="trust-badge">⚡ Setup in under 10 minutes</div>
+      <div class="trust-badge">🎯 Free forever for basic events</div>
+      <div class="trust-badge">💳 No credit card for Free plan</div>
+      <div class="trust-badge">🌍 Used by organizers worldwide</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-h2">Common Questions</h2>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>How does FairBridge collect booth fees for me?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">When you create your event and set your booth fee, FairBridge generates a unique vendor invite link. Vendors click that link, choose their FairBridge tier, and pay both their booth fee and platform fee in one Stripe checkout. The booth fee is automatically deposited to your connected Stripe account. You never have to chase a payment.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>What does FairBridge charge vendors?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">Vendors pay a separate FairBridge platform fee on top of your booth fee — Basic ($49), Enhanced ($149), or Custom Agent ($349). This is how FairBridge makes money. Your booth fee goes entirely to you.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Can I upgrade my plan later?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">Yes — you can upgrade from Free to Growth or Pro at any time. If you upgrade mid-event, the new features activate immediately for that event.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>What is the onboarding call for Pro plans?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">The FairBridge Event AI Agent is configured specifically for your event — we need to understand your fair, your attendees, and your goals before we build it. The 30-minute call takes care of all of that. Most organizers say it was the most valuable 30 minutes they spent on their event.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Is the annual plan really unlimited events?</span>
+          <span class="faq-chevron">▾</span>
+        </div>
+        <div class="faq-answer">Yes. Pay once per year and run as many events as you want — one per month, one per week, whatever you need. The annual plan is designed for organizers who run recurring or multiple fairs throughout the year.</div>
+      </div>
+    </div>
+
+    <!-- FOOTER CTA -->
+    <div class="footer-cta">
+      <h2>Ready to Run a Better Fair?</h2>
+      <p>Join organizers using FairBridge to automate payments, promote their events, and give attendees an AI-powered experience.</p>
+      <div class="footer-cta-btns">
+        <button class="btn btn-primary btn-large" onclick="selectPlan('free'); showForm();">Get Started Free</button>
+        <button class="btn-white-outline">Book a Demo</button>
+      </div>
+    </div>
+
+    <div class="site-footer">Powered by FairBridge 🌉</div>
+
+  </div><!-- end view-plans -->
+
+  <!-- ===== VIEW 2: REGISTRATION FORM ===== -->
+  <div id="view-form" class="view hidden">
+
+    <div class="form-body">
+
+      <!-- SECTION 1: YOUR INFORMATION -->
+      <div class="form-section" id="section-1">
+        <div class="section-header" onclick="toggleSection('section-1')">
+          <div class="section-header-left">
+            <div class="section-check" id="s1-check">1</div>
+            <span class="section-title">1. Your Information</span>
+          </div>
+          <span class="section-collapse-icon">▾</span>
+        </div>
+        <div class="section-body">
+          <p class="section-intro">Tell us about yourself. This is the primary account holder for your FairBridge organizer account.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First Name <span class="required-star">*</span></label>
+              <input type="text" id="first-name" placeholder="e.g. Marcus" required>
+              <div class="error-msg" id="err-first-name">First name is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Last Name <span class="required-star">*</span></label>
+              <input type="text" id="last-name" placeholder="e.g. Thompson" required>
+              <div class="error-msg" id="err-last-name">Last name is required.</div>
+            </div>
+            <div class="form-group full-width">
+              <label>Email Address <span class="required-star">*</span></label>
+              <input type="email" id="organizer-email" placeholder="you@yourorganization.com" required>
+              <div class="label-sub">This becomes your FairBridge login email</div>
+              <div class="error-msg" id="err-email">Valid email address is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" placeholder="(555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label>Job Title / Role <span class="required-star">*</span></label>
+              <input type="text" id="job-title" placeholder="e.g. Career Services Director, HR Manager" required>
+              <div class="error-msg" id="err-job-title">Job title is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Organization Name <span class="required-star">*</span></label>
+              <input type="text" id="org-name" placeholder="e.g. University of Michigan, City of Chicago" required>
+              <div class="error-msg" id="err-org-name">Organization name is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Organization Type <span class="required-star">*</span></label>
+              <select id="org-type" required>
+                <option value="" disabled selected>Select organization type</option>
+                <option>University / College</option>
+                <option>High School</option>
+                <option>Nonprofit Organization</option>
+                <option>Government Agency</option>
+                <option>Private Company</option>
+                <option>Staffing / Recruiting Agency</option>
+                <option>Community Organization</option>
+                <option>Professional Association</option>
+                <option>Other</option>
+              </select>
+              <div class="error-msg" id="err-org-type">Please select an organization type.</div>
+            </div>
+            <div class="form-group">
+              <label>Organization Website</label>
+              <input type="url" id="org-website" placeholder="https://yourorganization.com">
+            </div>
+            <div class="form-group full-width">
+              <label>How did you hear about FairBridge?</label>
+              <select id="referral">
+                <option value="" disabled selected>Select one</option>
+                <option>Google Search</option>
+                <option>LinkedIn</option>
+                <option>Word of Mouth / Referral</option>
+                <option>Social Media</option>
+                <option>Conference or Event</option>
+                <option>Email or Newsletter</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: YOUR FIRST EVENT -->
+      <div class="form-section" id="section-2">
+        <div class="section-header" onclick="toggleSection('section-2')">
+          <div class="section-header-left">
+            <div class="section-check" id="s2-check">2</div>
+            <span class="section-title">2. Your First Event</span>
+          </div>
+          <span class="section-collapse-icon">▾</span>
+        </div>
+        <div class="section-body">
+          <p class="section-intro">Tell us about the job fair you want to run on FairBridge. You can create more events later from your dashboard.</p>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Event Name <span class="required-star">*</span></label>
+              <input type="text" id="event-name" placeholder="e.g. Spring Career Fair 2026, Annual Tech Hiring Expo" required>
+              <div class="error-msg" id="err-event-name">Event name is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Event Date <span class="required-star">*</span></label>
+              <input type="date" id="event-date" required>
+              <div class="label-sub">When is your job fair?</div>
+              <div class="error-msg" id="err-event-date">Event date is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Event Start Time <span class="required-star">*</span></label>
+              <input type="time" id="event-start" required>
+              <div class="error-msg" id="err-event-start">Start time is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Event End Time</label>
+              <input type="time" id="event-end">
+            </div>
+            <div class="form-group">
+              <label>Venue Name <span class="required-star">*</span></label>
+              <input type="text" id="venue-name" placeholder="e.g. Michigan Union, Chicago Convention Center" required>
+              <div class="error-msg" id="err-venue-name">Venue name is required.</div>
+            </div>
+            <div class="form-group full-width">
+              <label>Venue Address <span class="required-star">*</span></label>
+              <input type="text" id="venue-address" placeholder="Full address of the venue" required>
+              <div class="error-msg" id="err-venue-address">Venue address is required.</div>
+            </div>
+            <div class="form-group">
+              <label>City <span class="required-star">*</span></label>
+              <input type="text" id="city" placeholder="e.g. Ann Arbor" required>
+              <div class="error-msg" id="err-city">City is required.</div>
+            </div>
+            <div class="form-group">
+              <label>State <span class="required-star">*</span></label>
+              <input type="text" id="state" placeholder="e.g. MI" required>
+              <div class="error-msg" id="err-state">State is required.</div>
+            </div>
+            <div class="form-group">
+              <label>Expected Number of Attendees</label>
+              <select id="attendee-count">
+                <option value="" disabled selected>Select range</option>
+                <option>Under 50</option>
+                <option>50–100</option>
+                <option>101–250</option>
+                <option>251–500</option>
+                <option>501–1,000</option>
+                <option>1,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Expected Number of Vendors</label>
+              <select id="vendor-count">
+                <option value="" disabled selected>Select range</option>
+                <option>Under 10</option>
+                <option>10–25</option>
+                <option>26–50</option>
+                <option>51–100</option>
+                <option>100+</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label>Event Description</label>
+              <textarea id="event-desc" rows="3" maxlength="500" placeholder="Brief description of your job fair — used in public listings and attendee communications" oninput="updateCharCount('event-desc', 'event-desc-count', 500)"></textarea>
+              <div class="char-counter" id="event-desc-count">0 / 500</div>
+            </div>
+            <div class="form-group full-width">
+              <label>What industries will be represented?</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-label"><input type="checkbox" value="Healthcare"> Healthcare</label>
+                <label class="checkbox-label"><input type="checkbox" value="Technology"> Technology</label>
+                <label class="checkbox-label"><input type="checkbox" value="Finance"> Finance & Banking</label>
+                <label class="checkbox-label"><input type="checkbox" value="Education"> Education</label>
+                <label class="checkbox-label"><input type="checkbox" value="Government"> Government</label>
+                <label class="checkbox-label"><input type="checkbox" value="Nonprofit"> Nonprofit</label>
+                <label class="checkbox-label"><input type="checkbox" value="Retail"> Retail</label>
+                <label class="checkbox-label"><input type="checkbox" value="Manufacturing"> Manufacturing</label>
+                <label class="checkbox-label"><input type="checkbox" value="Hospitality"> Hospitality</label>
+                <label class="checkbox-label"><input type="checkbox" value="Marketing"> Marketing & Advertising</label>
+                <label class="checkbox-label"><input type="checkbox" value="Legal"> Legal Services</label>
+                <label class="checkbox-label"><input type="checkbox" value="Construction"> Construction</label>
+                <label class="checkbox-label"><input type="checkbox" value="Transportation"> Transportation</label>
+                <label class="checkbox-label"><input type="checkbox" value="Energy"> Energy</label>
+                <label class="checkbox-label"><input type="checkbox" value="Other"> Other</label>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label>Vendor Booth Fee <span class="required-star">*</span></label>
+              <div class="input-prefix-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="booth-fee" placeholder="e.g. 75" min="0" required>
+              </div>
+              <div class="label-sub">This is what vendors pay you for a table at your fair. FairBridge collects it automatically. You keep 100%.</div>
+              <div class="error-msg" id="err-booth-fee">Booth fee is required (enter 0 if free).</div>
+              <div class="gold-note">💡 FairBridge charges vendors a separate platform fee ($49–$349) on top of your booth fee. This is how we make money — your booth fee goes entirely to you.</div>
+            </div>
+            <div class="form-group full-width">
+              <label>Is this a recurring event?</label>
+              <div class="radio-row">
+                <label class="radio-label"><input type="radio" name="recurring" value="one-time" checked> One-time event</label>
+                <label class="radio-label"><input type="radio" name="recurring" value="recurring"> Recurring (monthly, quarterly, annually)</label>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label>Event Format</label>
+              <div class="radio-row">
+                <label class="radio-label"><input type="radio" name="format" value="in-person" checked> In-Person</label>
+                <label class="radio-label"><input type="radio" name="format" value="virtual"> Virtual</label>
+                <label class="radio-label"><input type="radio" name="format" value="hybrid"> Hybrid</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: PAYMENT SETUP -->
+      <div class="form-section" id="section-3">
+        <div class="section-header" onclick="toggleSection('section-3')">
+          <div class="section-header-left">
+            <div class="section-check" id="s3-check">3</div>
+            <span class="section-title">3. Payment Setup</span>
+          </div>
+          <span class="section-collapse-icon">▾</span>
+        </div>
+        <div class="section-body">
+          <p class="section-intro">Connect your Stripe account so FairBridge can collect vendor booth fees and deposit them directly to you. This takes about 2 minutes.</p>
+
+          <!-- Shown for Growth + Pro -->
+          <div id="stripe-full-setup">
+            <div class="info-card">
+              <div class="info-card-row">
+                <span class="stripe-logo">Stripe</span>
+                <span style="font-weight:600; font-size:15px;">Secure Payouts</span>
+              </div>
+              <p style="font-size:14px; color:var(--text-muted); line-height:1.7;">FairBridge uses Stripe Connect to split payments automatically. Vendor booth fees go directly to your account. No invoicing. No chasing payments. No delays.</p>
+              <div class="stripe-mini-cards">
+                <div class="stripe-mini-card">⚡ Instant<br><span style="font-size:11px;color:var(--text-muted);">booth fees deposited</span></div>
+                <div class="stripe-mini-card">🔒 Secure<br><span style="font-size:11px;color:var(--text-muted);">bank-level encryption</span></div>
+                <div class="stripe-mini-card">📊 Trackable<br><span style="font-size:11px;color:var(--text-muted);">full payment history</span></div>
+              </div>
+            </div>
+            <button class="btn-stripe">→ Connect with Stripe</button>
+            <p style="font-size:13px; color:var(--text-muted); text-align:center; margin-top:10px;">Already have Stripe? We'll link your existing account — no new account needed.</p>
+          </div>
+
+          <!-- Shown for Free plan -->
+          <div id="stripe-free-note" style="display:none;">
+            <div class="info-card" style="border:1px solid var(--border);">
+              <p style="font-size:14px; color:var(--text-muted); line-height:1.7;">ℹ️ You can connect Stripe later from your dashboard. You will need to connect before your first vendor can register.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: PROMOTION & BRANDING -->
+      <div class="form-section" id="section-4" style="position:relative;">
+        <div class="section-header" onclick="toggleSection('section-4')">
+          <div class="section-header-left">
+            <div class="section-check" id="s4-check">4</div>
+            <span class="section-title">4. Promotion & Branding</span>
+          </div>
+          <span class="section-collapse-icon">▾</span>
+        </div>
+        <div class="section-body">
+          <!-- Lock overlay for Free -->
+          <div class="lock-overlay" id="s4-lock">
+            <div class="lock-icon">🎨</div>
+            <div class="lock-title">Unlock Event Promotion & Branding</div>
+            <div class="lock-desc">Growth and Pro plans get a public event landing page, custom branding, attendee registration, and automated email reminders.</div>
+            <button class="btn btn-primary" onclick="selectPlan('growth'); updateLockOverlays();">Upgrade to Growth — $49/event</button>
+          </div>
+
+          <p class="section-intro">Customize how your event appears to vendors and attendees. The more detail you provide, the more professional your event page looks.</p>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>Event Logo / Banner Image</label>
+              <input type="file" id="event-logo" accept="image/*" onchange="previewImage(this, 'logo-preview')">
+              <div class="label-sub">Used on your public event page and attendee emails. Recommended: 1200x400px</div>
+              <img id="logo-preview" class="img-preview" alt="Logo preview">
+            </div>
+            <div class="form-group">
+              <label>Event Primary Color</label>
+              <input type="color" id="event-color" value="#F5A623">
+              <div class="label-sub">Used for your event page and communications</div>
+            </div>
+            <div class="form-group">
+              <label>Tagline / Short Description</label>
+              <input type="text" id="tagline" maxlength="100" placeholder="e.g. Michigan's Premier Annual Career Fair" oninput="updateCharCount('tagline', 'tagline-count', 100)">
+              <div class="char-counter" id="tagline-count">0 / 100</div>
+            </div>
+            <div class="form-group">
+              <label>Event Website (if you have one)</label>
+              <input type="url" id="event-website" placeholder="https://careerfair.umich.edu">
+            </div>
+            <div class="form-group full-width">
+              <label>Social Media (Optional)</label>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <input type="url" id="social-linkedin" placeholder="LinkedIn Event URL">
+                <input type="text" id="social-instagram" placeholder="Instagram Handle (@username)">
+                <input type="text" id="social-twitter" placeholder="Twitter/X Handle (@username)">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Will you provide food or refreshments?</label>
+              <div class="radio-row">
+                <label class="radio-label"><input type="radio" name="food" value="yes"> Yes</label>
+                <label class="radio-label"><input type="radio" name="food" value="no" checked> No</label>
+                <label class="radio-label"><input type="radio" name="food" value="tbd"> TBD</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Is there parking available?</label>
+              <div class="radio-row" style="flex-wrap:wrap;">
+                <label class="radio-label"><input type="radio" name="parking" value="free"> Yes — Free</label>
+                <label class="radio-label"><input type="radio" name="parking" value="paid"> Yes — Paid</label>
+                <label class="radio-label"><input type="radio" name="parking" value="no"> No</label>
+                <label class="radio-label"><input type="radio" name="parking" value="tbd" checked> TBD</label>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label>Special Accommodations Available?</label>
+              <div class="checkbox-grid cols-2">
+                <label class="checkbox-label"><input type="checkbox"> Wheelchair accessible venue</label>
+                <label class="checkbox-label"><input type="checkbox"> ASL interpretation available</label>
+                <label class="checkbox-label"><input type="checkbox"> Quiet room available</label>
+                <label class="checkbox-label"><input type="checkbox"> Dietary accommodations for food</label>
+                <label class="checkbox-label"><input type="checkbox"> Other</label>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label>Attendee Registration Instructions</label>
+              <textarea id="reg-instructions" rows="2" placeholder="e.g. Register in advance to guarantee entry. Walk-ins welcome based on capacity. Bring a printed resume and dress professionally."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <label>Automated Attendee Email Reminders</label>
+              <div class="label-sub">FairBridge sends these automatically to registered attendees</div>
+              <div style="display:flex; flex-direction:column; gap:6px; margin-top:8px;">
+                <label class="checkbox-label"><input type="checkbox" checked> 1 week before the event</label>
+                <label class="checkbox-label"><input type="checkbox" checked> 3 days before the event</label>
+                <label class="checkbox-label"><input type="checkbox" checked> Day before the event</label>
+                <label class="checkbox-label"><input type="checkbox"> Morning of the event</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: EVENT AI AGENT SETUP -->
+      <div class="form-section" id="section-5" style="position:relative;">
+        <div class="section-header secondary-border" onclick="toggleSection('section-5')">
+          <div class="section-header-left">
+            <div class="section-check" id="s5-check">5</div>
+            <span class="section-title">5. Event AI Agent Setup</span>
+          </div>
+          <span class="section-collapse-icon">▾</span>
+        </div>
+        <div class="section-body">
+          <!-- Lock overlay for Free + Growth -->
+          <div class="lock-overlay" id="s5-lock">
+            <div class="lock-icon">🤖</div>
+            <div class="lock-title">Get Your FairBridge Event Agent</div>
+            <div class="lock-desc">Your own AI agent — branded to your event — that answers attendee questions 24/7, captures pre-event leads, and books appointments before the fair even starts.</div>
+            <div style="font-weight:700; font-size:13px; color:var(--text-muted); margin-bottom:12px;">Pro Plan Required</div>
+            <button class="btn btn-secondary" onclick="selectPlan('pro'); updateLockOverlays();">Upgrade to Pro — $199/event</button>
+          </div>
+
+          <div class="pro-note-card">
+            ⚡ <strong>This section will be completed during your onboarding call with the FairBridge team.</strong> We just need a few details now to prepare.
+          </div>
+
+          <p class="section-intro">Tell us about your event agent. Our team will use this to configure your AI before the fair. The 30-minute onboarding call will finalize everything.</p>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>What should your agent be called?</label>
+              <input type="text" id="agent-name" placeholder="e.g. FairBot for Spring Career Fair 2026, Michigan Career AI">
+              <div class="label-sub">What attendees see when chatting with your event assistant</div>
+            </div>
+            <div class="form-group full-width">
+              <label>Agent Primary Goal</label>
+              <div class="agent-goal-grid">
+                <label class="agent-goal-card">
+                  <input type="radio" name="agent-goal" value="navigation" checked>
+                  <div class="agent-goal-icon">🗺️</div>
+                  <div class="agent-goal-title">Event Navigation</div>
+                  <div class="agent-goal-desc">Help attendees find the right booths and companies</div>
+                </label>
+                <label class="agent-goal-card">
+                  <input type="radio" name="agent-goal" value="lead-capture">
+                  <div class="agent-goal-icon">📋</div>
+                  <div class="agent-goal-title">Lead Capture</div>
+                  <div class="agent-goal-desc">Collect attendee info for pre-event outreach</div>
+                </label>
+                <label class="agent-goal-card">
+                  <input type="radio" name="agent-goal" value="booking">
+                  <div class="agent-goal-icon">📅</div>
+                  <div class="agent-goal-title">Appointment Booking</div>
+                  <div class="agent-goal-desc">Let attendees book slots with specific vendors before the fair</div>
+                </label>
+                <label class="agent-goal-card">
+                  <input type="radio" name="agent-goal" value="all">
+                  <div class="agent-goal-icon">🎯</div>
+                  <div class="agent-goal-title">All of the Above</div>
+                  <div class="agent-goal-desc">Full-service agent handling navigation, leads, and bookings</div>
+                </label>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label>What questions do you expect attendees to ask most?</label>
+              <textarea id="agent-questions" rows="3" placeholder="e.g. What companies are hiring? Where is parking? What should I bring? Is there food? How do I register for the fair?"></textarea>
+              <div class="label-sub">Our team will train the agent to answer these perfectly</div>
+            </div>
+            <div class="form-group full-width">
+              <label>What information should the agent always share?</label>
+              <textarea id="agent-info" rows="3" placeholder="e.g. The fair runs 10am-4pm. Parking is free in Lot C. Dress professionally. Bring 5 copies of your resume. Food will be provided."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <label>What info should the agent collect from interested attendees before the fair?</label>
+              <div class="checkbox-grid cols-2">
+                <label class="checkbox-label"><input type="checkbox" checked> Full Name</label>
+                <label class="checkbox-label"><input type="checkbox" checked> Email Address</label>
+                <label class="checkbox-label"><input type="checkbox"> Phone Number</label>
+                <label class="checkbox-label"><input type="checkbox"> Graduation Year</label>
+                <label class="checkbox-label"><input type="checkbox"> Degree / Major</label>
+                <label class="checkbox-label"><input type="checkbox"> Industries of Interest</label>
+                <label class="checkbox-label"><input type="checkbox"> Specific Companies of Interest</label>
+                <label class="checkbox-label"><input type="checkbox"> Resume Upload</label>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label>Lead Report Recipients</label>
+              <input type="text" id="lead-recipients" placeholder="careers@umich.edu, events@umich.edu">
+              <div class="label-sub">Who receives the attendee lead report after the fair?</div>
+            </div>
+            <div class="form-group">
+              <label>Preferred Time for Your 30-Minute Onboarding Call</label>
+              <select id="onboarding-pref">
+                <option value="" disabled selected>Select preference</option>
+                <option>Morning (9am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Evening (5pm–7pm)</option>
+              </select>
+              <div class="label-sub">Our team will confirm within 24 hours</div>
+            </div>
+            <div class="form-group full-width">
+              <label>Any other notes for the FairBridge team?</label>
+              <textarea id="agent-notes" rows="2" placeholder="Anything else we should know about your event before the call?"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6: REVIEW & LAUNCH -->
+      <div class="form-section" id="section-6">
+        <div class="section-header" onclick="toggleSection('section-6')">
+          <div class="section-header-left">
+            <div class="section-check" id="s6-check">6</div>
+            <span class="section-title">6. Review & Launch</span>
+          </div>
+          <span class="section-collapse-icon">▾</span>
+        </div>
+        <div class="section-body">
+          <p class="section-intro">Almost there! Review your details and create your FairBridge account.</p>
+
+          <div class="review-card">
+            <div class="review-row">
+              <span class="review-label">Organizer</span>
+              <span class="review-value" id="review-name">—</span>
+            </div>
+            <div class="review-row">
+              <span class="review-label">Organization</span>
+              <span class="review-value" id="review-org">—</span>
+            </div>
+            <div class="review-row">
+              <span class="review-label">Email</span>
+              <span class="review-value" id="review-email">—</span>
+            </div>
+            <div class="review-row">
+              <span class="review-label">Event</span>
+              <span class="review-value" id="review-event">—</span>
+            </div>
+            <div class="review-row">
+              <span class="review-label">Plan</span>
+              <span class="review-value" id="review-plan">Free</span>
+            </div>
+            <div class="review-row">
+              <span class="review-label">Billing</span>
+              <span class="review-value" id="review-billing">Per Event</span>
+            </div>
+          </div>
+
+          <div class="review-divider"></div>
+
+          <div class="pricing-summary" id="pricing-summary">
+            <!-- Updated by JS -->
+          </div>
+
+          <div class="review-divider"></div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Create Password <span class="required-star">*</span></label>
+              <div class="password-wrap">
+                <input type="password" id="password" placeholder="Min 8 characters" required>
+                <button type="button" class="password-toggle" onclick="togglePassword('password', this)">👁️</button>
+              </div>
+              <div class="error-msg" id="err-password">Password must be at least 8 characters.</div>
+            </div>
+            <div class="form-group">
+              <label>Confirm Password <span class="required-star">*</span></label>
+              <div class="password-wrap">
+                <input type="password" id="confirm-password" placeholder="Re-enter your password" required onblur="checkPasswordMatch()">
+                <button type="button" class="password-toggle" onclick="togglePassword('confirm-password', this)">👁️</button>
+              </div>
+              <div class="error-msg" id="err-confirm-password">Passwords do not match.</div>
+            </div>
+          </div>
+
+          <div class="terms-group">
+            <label class="terms-label">
+              <input type="checkbox" id="terms-check">
+              <span>I agree to FairBridge's <a href="#" style="color:var(--primary);">Terms of Service</a> and <a href="#" style="color:var(--primary);">Privacy Policy</a> <span class="required-star">*</span></span>
+            </label>
+            <label class="terms-label">
+              <input type="checkbox" id="updates-check">
+              <span>I'd like to receive tips and updates from FairBridge via email</span>
+            </label>
+          </div>
+          <div class="error-msg" id="err-terms" style="margin-top:4px;">You must agree to the Terms of Service to continue.</div>
+
+          <button class="btn-submit" id="submit-btn" onclick="validateForm()">Create My Free Account →</button>
+        </div>
+      </div>
+
+    </div><!-- end form-body -->
+
+    <div class="site-footer">Powered by FairBridge 🌉</div>
+
+  </div><!-- end view-form -->
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="success-modal">
+    <div class="confetti-container" id="confetti-container"></div>
+    <div class="modal-card">
+      <svg class="modal-check" width="80" height="80" viewBox="0 0 80 80">
+        <circle cx="40" cy="40" r="38" fill="none" stroke="#10B981" stroke-width="4" stroke-dasharray="239" stroke-dashoffset="239" style="animation: draw-circle 0.6s ease forwards;">
+        </circle>
+        <polyline points="24,40 36,52 56,30" fill="none" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50" stroke-dashoffset="50" style="animation: draw-check 0.4s ease 0.5s forwards;">
+        </polyline>
+      </svg>
+      
+      <div class="modal-title" id="modal-title">Your account is live! 🎉</div>
+      <div class="modal-msg" id="modal-msg">Welcome to FairBridge!</div>
+      <div class="modal-btns">
+        <button class="btn btn-primary btn-full btn-large" id="modal-primary-btn">Go to My Dashboard →</button>
+        <button class="btn btn-outline btn-full" onclick="closeModal()">Back to FairBridge</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
