@@ -174,9 +174,7 @@
   });
 })();
 
-// ============================================================
-    // THEME TOGGLE
-    // ============================================================
+// THEME TOGGLE
     const body = document.body;
     const themeToggle = document.getElementById('themeToggle');
     const sunIcon = themeToggle.querySelector('.sun-icon');
@@ -204,9 +202,7 @@
       localStorage.setItem('fairbridge-theme', isDark ? 'dark' : 'light');
     });
 
-    // ============================================================
     // HAMBURGER MENU
-    // ============================================================
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
@@ -222,9 +218,7 @@
       });
     });
 
-    // ============================================================
     // SCROLL ANIMATIONS
-    // ============================================================
     const animatedEls = document.querySelectorAll('.animate-on-scroll');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -236,17 +230,13 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     animatedEls.forEach(el => observer.observe(el));
 
-    // ============================================================
     // NAV SCROLL SHADOW
-    // ============================================================
     const mainNav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
       mainNav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none';
     }, { passive: true });
 
-    // ============================================================
     // VENDOR MODAL
-    // ============================================================
     let currentVendorPlan = { name: '', price: 0 };
 
     function openVendorModal(planName, amountCents) {
@@ -294,9 +284,7 @@
       }
     }
 
-    // ============================================================
     // ORGANIZER MODAL
-    // ============================================================
     function openOrgModal() {
       document.getElementById('orgModal').classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -329,16 +317,12 @@
       }, 800);
     }
 
-    // ============================================================
     // ESCAPE KEY
-    // ============================================================
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { closeVendorModal(); closeOrgModal(); }
     });
 
-    // ============================================================
     // NOTIFY ME
-    // ============================================================
     function handleNotify() {
       const emailInput = document.getElementById('notifyEmail');
       const email = emailInput.value.trim();
@@ -352,9 +336,7 @@
       form.innerHTML = '<div style="text-align:center;padding:1rem 2rem;background:var(--bg);border:1px solid var(--border);border-radius:10px;font-size:0.95rem;color:var(--text);font-weight:600;">🎉 You\'re on the list! We\'ll be in touch soon.</div>';
     }
 
-    // ============================================================
-    // CHAT UI (Attendees section)
-    // ============================================================
+    // CHAT UI
     const chatInput = document.getElementById('chatInput');
     const chatSend = document.getElementById('chatSend');
     const chatMessages = document.getElementById('chatMessages');
