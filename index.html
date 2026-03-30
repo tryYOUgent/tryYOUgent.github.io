@@ -4,11 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   
 
 <!-- SEO Meta Tags -->
@@ -32,653 +30,437 @@
 
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<!-- ============================================================ -->
-<!-- NAV                                                          -->
-<!-- ============================================================ -->
-<nav>
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo" aria-label="YOUgent Home">
-        <img src="https://paymegpt.com/objects/quick-uploads/189/35c788097e81084f.png" alt="YOUgent" style="aspect-ratio: 1.0000; object-fit: cover; object-position: center;">
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="#what-it-is">What It Is</a></li>
-        <li><a href="#what-it-does">What It Does</a></li>
-        <li><a href="#examples">Examples</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <!-- Try the Chat → filled accent button -->
-        <a href="#contact" class="btn btn-gold" style="padding:10px 20px;font-size:.85rem;">Try the Chat</a>
-        <!-- Book a Call → ghost/outline button -->
-        <button class="btn btn-ghost open-modal" style="padding:10px 20px;font-size:.85rem;">Book a Call</button>
-      </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#what-it-is" class="mobile-link">What It Is</a>
-      <a href="#what-it-does" class="mobile-link">What It Does</a>
-      <a href="#examples" class="mobile-link">Examples</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-      <a href="#contact" class="btn btn-gold mobile-link">Try the Chat</a>
-      <button class="btn btn-ghost open-modal mobile-link">Book a Call</button>
-    </div>
-  </div>
-</nav>
-
-<!-- ============================================================ -->
-<!-- HERO                                                         -->
-<!-- ============================================================ -->
-<section class="hero" style="z-index:1;position:relative;">
-  <div class="hero-glow"></div>
-  <div class="container">
-    <div class="hero-grid">
-
-      <!-- Text -->
-      <div class="hero-text">
-        <div class="eyebrow fade-1">
-          <span class="eyebrow-dot"></span>
-          AI Built for Your Business
-        </div>
-        <h1 class="fade-2">
-          Your business deserves an AI that actually <em>knows</em> your business.
-        </h1>
-        <p class="fade-3">
-          YOUgent builds custom AI agents trained on your services, your voice, and how you actually work — from a simple chat agent for a local service business to full platforms for larger teams.
-        </p>
-        <div class="hero-ctas fade-4">
-          <a href="#contact" class="btn btn-gold">
-            Try the Chat
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"></path></svg>
-          </a>
-          <button class="btn btn-ghost open-modal">Book a Call</button>
-        </div>
-      </div>
-
-      <!-- Chat mockup — Riverside Wellness scenario -->
-      <div class="fade-5">
-        <div class="chat-card">
-          <div class="chat-header">
-            <!-- RW initials avatar in accent color -->
-            <div class="chat-avatar">RW</div>
-            <div>
-              <div class="chat-agent-name">Riverside Wellness</div>
-              <div class="chat-status">
-                <span class="chat-status-dot"></span>
-                Online now
-              </div>
-            </div>
-          </div>
-
-          <div class="chat-body">
-            <!-- Agent message -->
-            <div class="chat-row">
-              <div class="bubble-avatar">RW</div>
-              <div>
-                <div class="bubble bubble-agent">Hey! Welcome to Riverside Wellness. Are you looking to book an appointment or do you have a question I can help with?</div>
-                <div class="chat-time">Just now</div>
-              </div>
-            </div>
-
-            <!-- Customer message -->
-            <div class="chat-row right">
-              <div class="bubble-avatar-user">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"></path></svg>
-              </div>
-              <div>
-                <div class="bubble bubble-user">I'd like to book something for this weekend if possible.</div>
-                <div class="chat-time" style="text-align:right;">Just now</div>
-              </div>
-            </div>
-
-            <!-- Agent message -->
-            <div class="chat-row">
-              <div class="bubble-avatar">RW</div>
-              <div>
-                <div class="bubble bubble-agent">Great timing — we have openings Saturday afternoon and Sunday morning. What service are you interested in?</div>
-                <div class="chat-time">Just now</div>
-              </div>
-            </div>
-
-            <!-- Customer message -->
-            <div class="chat-row right">
-              <div class="bubble-avatar-user">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"></path></svg>
-              </div>
-              <div>
-                <div class="bubble bubble-user">A massage, probably an hour.</div>
-                <div class="chat-time" style="text-align:right;">Just now</div>
-              </div>
-            </div>
-
-            <!-- Agent message -->
-            <div class="chat-row">
-              <div class="bubble-avatar">RW</div>
-              <div>
-                <div class="bubble bubble-agent">Perfect. Can I grab your name and a good phone number or email to hold that spot?</div>
-                <div class="chat-time">Just now</div>
-              </div>
-            </div>
-
-            <!-- Customer message -->
-            <div class="chat-row right">
-              <div class="bubble-avatar-user">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"></path></svg>
-              </div>
-              <div>
-                <div class="bubble bubble-user">Sure — it's Jamie. Jamie.Torres@email.com</div>
-                <div class="chat-time" style="text-align:right;">Just now</div>
-              </div>
-            </div>
-
-            <!-- Agent final message -->
-            <div class="chat-row">
-              <div class="bubble-avatar">RW</div>
-              <div>
-                <div class="bubble bubble-agent">Got it, Jamie! I'll hold Saturday at 2pm for you. Someone from our team will confirm within the hour. ✓</div>
-                <div class="chat-time">Just now</div>
-              </div>
-            </div>
-
-            <!-- Typing indicator -->
-            <div class="chat-row">
-              <div class="bubble-avatar">RW</div>
-              <div class="typing-bubble">
-                <span class="typing-dot"></span>
-                <span class="typing-dot"></span>
-                <span class="typing-dot"></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Confirmation banner -->
-          <div class="chat-confirm-banner">✓ Lead captured and appointment held</div>
-
-          <div class="chat-input-bar">
-            <span class="chat-input-placeholder">Type a message…</span>
-            <div class="chat-send">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- WHAT IT IS                                                   -->
-<!-- ============================================================ -->
-<section id="what-it-is" class="section section-alt" style="padding-bottom: 52px;">
-  <div class="container">
-    <div class="section-header">
-      <div class="eyebrow">The Basics</div>
-      <h2>So… what is a YOUgent?</h2>
-    </div>
-    <div class="what-is-text">
-      <p>A YOUgent is a custom AI agent built specifically for your business. It learns your services, your tone, and your workflows — then handles the conversations you don't have time for, around the clock.</p>
-    </div>
-    <div class="three-cards">
-
-      <div class="card">
-        <div class="icon-box" style="margin-bottom:18px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Zm-2 12H6v-2h12v2Zm0-3H6V9h12v2Zm0-3H6V6h12v2Z"></path></svg>
-        </div>
-        <h3 style="font-size:1.1rem;color:var(--text);margin-bottom:8px;">Answers Questions</h3>
-        <p style="font-size:.87rem;color:var(--text-muted);line-height:1.65;">Accurate, consistent answers about your business — any time someone asks.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon-box" style="margin-bottom:18px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14H9V8h2v8Zm4 0h-2V8h2v8Z"></path><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Z"></path></svg>
-        </div>
-        <h3 style="font-size:1.1rem;color:var(--text);margin-bottom:8px;">Guides People Forward</h3>
-        <p style="font-size:.87rem;color:var(--text-muted);line-height:1.65;">Walks customers through their options and moves them toward the next step — without you having to be there.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon-box" style="margin-bottom:18px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2ZM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8Zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7Z"></path></svg>
-        </div>
-        <h3 style="font-size:1.1rem;color:var(--text);margin-bottom:8px;">Works Around the Clock</h3>
-        <p style="font-size:.87rem;color:var(--text-muted);line-height:1.65;">2pm Tuesday or 11pm Sunday — it's always on, always ready, and never makes you wait.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- WHAT IT DOES                                                 -->
-<!-- ============================================================ -->
-<section id="what-it-does" class="section">
-  <div class="container">
-    <div class="section-header">
-      <div class="eyebrow">Capabilities</div>
-      <h2>What can a YOUgent do?</h2>
-      <p>It can face outward to your customers, inward to your team — or both.</p>
-    </div>
-
-    <div class="two-cols">
-
-      <!-- For Customers -->
-      <div class="capability-card">
-        <div class="capability-card-header">
-          <div class="cap-icon cap-icon-gold">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"></path></svg>
-          </div>
-          <div>
-            <h3>For Customers</h3>
-            <p>What visitors and clients experience</p>
-          </div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">Answer common questions</div><div class="cap-item-sub">Hours, location, services, policies</div></div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">Share pricing and package info</div><div class="cap-item-sub">Clear, consistent answers every time</div></div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">Schedule appointments</div><div class="cap-item-sub">Book directly in the conversation</div></div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">Capture leads</div><div class="cap-item-sub">Collect contact info before they leave</div></div>
-        </div>
-      </div>
-
-      <!-- For Your Team -->
-      <div class="capability-card">
-        <div class="capability-card-header">
-          <div class="cap-icon cap-icon-dark">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="color:var(--text-muted)"><path fill="currentColor" d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path></svg>
-          </div>
-          <div>
-            <h3>For Your Team</h3>
-            <p>Internal support for staff</p>
-          </div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check" style="background:rgba(255,255,255,.05);border-color:var(--border);"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" style="color:var(--text-muted)"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">Onboarding support</div><div class="cap-item-sub">Help new hires get up to speed fast</div></div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check" style="background:rgba(255,255,255,.05);border-color:var(--border);"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" style="color:var(--text-muted)"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">HR &amp; policy questions</div><div class="cap-item-sub">Consistent answers to common topics</div></div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check" style="background:rgba(255,255,255,.05);border-color:var(--border);"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" style="color:var(--text-muted)"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">Payroll &amp; PTO basics</div><div class="cap-item-sub">Quick answers without interrupting managers</div></div>
-        </div>
-        <div class="cap-item">
-          <div class="cap-check" style="background:rgba(255,255,255,.05);border-color:var(--border);"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" style="color:var(--text-muted)"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></div>
-          <div><div class="cap-item-title">Internal knowledge base</div><div class="cap-item-sub">One place for guides, procedures, and resources</div></div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="both-note-wrap">
-      <span class="both-note">A YOUgent can support the outside of your business, the inside, or both.</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- REAL EXAMPLES                                                -->
-<!-- ============================================================ -->
-<section id="examples" class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <div class="eyebrow">See It in Action</div>
-      <h2>What this actually looks like</h2>
-      <p>Three real examples of what a YOUgent does behind the scenes.</p>
-    </div>
-
-    <div class="examples-grid">
-
-      <!-- Card 1: Chat — fixed conversation flow -->
-      <div class="example-card">
-        <div class="example-card-bar">
-          <span class="win-dot win-dot-r"></span>
-          <span class="win-dot win-dot-y"></span>
-          <span class="win-dot win-dot-g"></span>
-          <span class="win-label">Customer Chat</span>
-        </div>
-        <div class="example-chat">
-          <!-- Customer asks first -->
-          <div class="ex-bubble-wrap right">
-            <div class="ex-avatar-user">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"></path></svg>
-            </div>
-            <div class="ex-bubble ex-bubble-u">Do you have openings this weekend?</div>
-          </div>
-          <!-- Agent responds -->
-          <div class="ex-bubble-wrap">
-            <div class="ex-avatar" style="background:rgba(255,255,255,.05);border:1px solid var(--border);">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" style="color:var(--text-muted)"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Z"></path></svg>
-            </div>
-            <div class="ex-bubble ex-bubble-a">Yes — Saturday at 1pm or Sunday morning. Which works better for you?</div>
-          </div>
-          <!-- Customer replies -->
-          <div class="ex-bubble-wrap right">
-            <div class="ex-avatar-user">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"></path></svg>
-            </div>
-            <div class="ex-bubble ex-bubble-u">Saturday at 1pm!</div>
-          </div>
-          <!-- Agent follows up -->
-          <div class="ex-bubble-wrap">
-            <div class="ex-avatar" style="background:rgba(255,255,255,.05);border:1px solid var(--border);">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" style="color:var(--text-muted)"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2Z"></path></svg>
-            </div>
-            <div class="ex-bubble ex-bubble-a">Got it. Can I grab your name and number to hold that spot?</div>
-          </div>
-        </div>
-        <div class="example-badge badge-green">✓ Lead captured and appointment held</div>
-      </div>
-
-      <!-- Card 2: Manager Summary -->
-      <div class="example-card">
-        <div class="example-card-bar">
-          <span class="win-dot win-dot-r"></span>
-          <span class="win-dot win-dot-y"></span>
-          <span class="win-dot win-dot-g"></span>
-          <span class="win-label">Manager Summary</span>
-        </div>
-        <div class="summary-body">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.18);display:flex;align-items:center;justify-content:center;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="color:#fbbf24"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
-            </div>
-            <span style="font-size:.88rem;font-weight:600;color:var(--text);font-family:var(--font-body);">New Customer Inquiry</span>
-          </div>
-          <div class="summary-row"><span class="summary-label">Service requested</span><span class="summary-val">Lawn maintenance — full yard</span></div>
-          <div class="summary-row"><span class="summary-label">Preferred time</span><span class="summary-val">Saturday morning</span></div>
-          <div class="summary-row"><span class="summary-label">Customer notes</span><span class="summary-val">Has a gate — needs code access</span></div>
-          <div class="summary-row"><span class="summary-label">Next step</span><span class="summary-val-gold">Call to confirm estimate</span></div>
-        </div>
-        <div class="example-badge badge-amber">✓ Summary sent to manager automatically</div>
-      </div>
-
-      <!-- Card 3: Leads Table -->
-      <div class="example-card">
-        <div class="example-card-bar">
-          <span class="win-dot win-dot-r"></span>
-          <span class="win-dot win-dot-y"></span>
-          <span class="win-dot win-dot-g"></span>
-          <span class="win-label">Saved to Google Sheets</span>
-        </div>
-        <div style="padding:18px;">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.18);display:flex;align-items:center;justify-content:center;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="color:#4ade80"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2Zm-7 14H7v-2h5v2Zm5-4H7v-2h10v2Zm0-4H7V7h10v2Z"></path></svg>
-            </div>
-            <span style="font-size:.88rem;font-weight:600;color:var(--text);font-family:var(--font-body);">Lead Tracker</span>
-          </div>
-          <table class="leads-table">
-            <thead>
-              <tr>
-                <th>Name</th><th>Service</th><th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Sarah M.</td><td>Massage</td><td><span class="status-pill status-booked">Booked</span></td></tr>
-              <tr><td>James T.</td><td>Lawn</td><td><span class="status-pill status-follow">Follow Up</span></td></tr>
-              <tr><td>Linda R.</td><td>Consult</td><td><span class="status-pill status-new">New</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="example-badge badge-green">✓ Every conversation saved automatically</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- BUILT FOR YOU                                                -->
-<!-- ============================================================ -->
-<section id="built-for-you" class="section">
-  <div class="container">
-    <div class="built-grid">
-
-      <div class="built-text">
-        <div class="eyebrow" style="margin-bottom:20px;">Made for You</div>
-        <div class="gold-line gold-line-left"></div>
-        <h2>Built to fit your business</h2>
-        <p>We've built AI solutions across healthcare, recruiting, and service industries. Every YOUgent is built from scratch — not a template, not generic.</p>
-        <p>It's trained on your services, your tone, and how your business actually works.</p>
-        <div class="feature-tags">
-          <span class="feature-tag">Tone &amp; Personality</span>
-          <span class="feature-tag">Your Brand Voice</span>
-          <span class="feature-tag">Your Workflows</span>
-        </div>
-        <p class="cta-line">
-          <a href="#contact" class="inline-link">Use the chat</a> to see how it would work for yours — or <button class="open-modal" style="background:none;border:none;cursor:pointer;color:var(--gold);font-weight:600;font-family:var(--font-body);font-size:.9rem;padding:0;text-decoration:underline;text-underline-offset:2px;">book a call</button> and we'll map it out together.
-        </p>
-      </div>
-
-      <div class="tone-card">
-        <h3>Same question. Different personalities.</h3>
-        <p class="subtitle">Your YOUgent sounds exactly like you want it to.</p>
-
-        <div class="tone-example">
-          <div class="tone-label">Professional</div>
-          <p class="tone-quote">"Thank you for reaching out. Our service window is 8am–5pm, Monday through Friday. Would you like to schedule a consultation?"</p>
-        </div>
-        <div class="tone-example">
-          <div class="tone-label">Friendly</div>
-          <p class="tone-quote">"Hey! We're open Monday through Friday, 8 to 5. Want me to help you get something set up?"</p>
-        </div>
-        <div class="tone-example">
-          <div class="tone-label">Southern Hospitality</div>
-          <p class="tone-quote">"Well hey, we'd love to help! We're here Monday through Friday, 8 to 5. Y'all want to go ahead and get something on the books?"</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- PRICING                                                      -->
-<!-- ============================================================ -->
-<section id="pricing" class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <div class="eyebrow">Pricing</div>
-    </div>
-    <div class="pricing-box">
-      <div class="gold-line"></div>
-      <h2>Simple, custom pricing</h2>
-      <p>Pricing depends on what you need — from a single customer-facing agent to more advanced tools and full platforms. We keep it competitive and scoped to the value it delivers.</p>
-      <div class="pricing-divider"></div>
-      <!-- Subtext opacity increased to ~70% -->
-      <p style="font-size:.9rem;color:rgba(138,138,150,.75);margin-bottom:28px;">Ask the YOUgent what it could look like for your business.</p>
-      <a href="#contact" class="btn btn-gold" style="font-size:.95rem;padding:14px 32px;">
-        Ask the YOUgent
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"></path></svg>
-      </a>
-      <!-- Secondary CTA -->
-      <div style="margin-top:16px;">
-        <button class="open-modal" style="background:none;border:none;cursor:pointer;font-family:var(--font-body);font-size:.875rem;font-weight:600;color:var(--gold);padding:0;display:inline-flex;align-items:center;gap:5px;transition:opacity .18s;" onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">
-          Prefer to talk? Book a call
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"></path></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- CONTACT / FINAL CTA                                         -->
-<!-- ============================================================ -->
-<section id="contact" class="section contact-section">
-  <div class="container">
-    <div class="contact-grid">
-
-      <div class="contact-text">
-        <div class="eyebrow" style="margin-bottom:20px;">Ready When You Are</div>
-        <div class="gold-line gold-line-left"></div>
-        <h2>Curious what a YOUgent could do for your business?</h2>
-        <p>Use the chat on this page or send us a message — no pressure, no commitment. Just a conversation about what's possible.</p>
-        <div class="book-line">
-          Prefer to talk?
-          <a href="#" class="open-modal-link">
-            Book a call
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h12.17l-4.59-4.59L14 6l7 7-7 7-1.41-1.41L17.17 13H5z"></path></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-form">
-        <form action="https://formsubmit.co/support@tryyougent.com" method="POST">
-          <input type="hidden" name="_subject" value="New YOUgent Inquiry">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Jane Smith" required="">
-            </div>
-            <div class="form-group">
-              <label for="business">Business Name</label>
-              <input type="text" id="business" name="business" placeholder="Acme Co.">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" required="">
-          </div>
-
-          <div class="form-group">
-            <label for="message">What are you hoping a YOUgent could help with?</label>
-            <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you're looking for…"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-gold form-submit">
-            Send Message
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
-          </button>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- FOOTER                                                       -->
-<!-- ============================================================ -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-
-      <div class="footer-brand">
-        <img src="https://paymegpt.com/objects/quick-uploads/189/35c788097e81084f.png" alt="YOUgent" style="aspect-ratio: 1.0000; object-fit: cover; object-position: center;">
-        <p>Custom AI solutions built for businesses that want to do more — without adding overhead.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Product</h4>
-        <ul>
+  <!-- NAV -->
+  <nav data-section="navbar" id="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="YOUgent home">
+          <img src="https://paymegpt.com/objects/quick-uploads/189/35c788097e81084f.png" alt="YOUgent logo" style="aspect-ratio: 1.0000; object-fit: cover; object-position: center;">
+        </a>
+        <ul class="nav-links" role="list">
           <li><a href="#what-it-is">What It Is</a></li>
           <li><a href="#what-it-does">What It Does</a></li>
           <li><a href="#examples">Examples</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#built-for-you">Built for You</a></li>
+          <li><a href="#what-we-build">What We Build</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms</a></li>
         </ul>
+        <div class="nav-right">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+          <button onclick="document.getElementById('ask-yougent-embed').scrollIntoView({behavior: 'smooth'})" class="btn btn-teal">Try the Chat</button>
+          <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <a href="#what-it-is">What It Is</a>
+      <a href="#what-it-does">What It Does</a>
+      <a href="#examples">Examples</a>
+      <a href="#what-we-build">What We Build</a>
+      <a href="#contact">Contact</a>
+      <a href="#ask-yougent-embed" style="color: var(--teal); font-weight: 600;">Try the Chat →</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section data-section="hero" id="hero">
+      <div class="container">
+        <div class="hero-headline">
+          <span class="hero-eyebrow">AI Built for YOUR Business</span>
+          <h1 class="hero-h1">What if YOU really could respond to every customer and employee question?</h1>
+        </div>
+        <p class="hero-sub hero-subline">YOUgent makes that possible. A custom AI that knows YOUR business and never stops working.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-teal">See how it works for YOUR business.</a>
+        </div>
+        <div class="hero-demos-wrapper hero-demos">
+          <p class="hero-demo-label-text hero-demo-label">See it for YOURSELF — interact with two real YOUgents below</p>
+          <div class="demo-grid">
+            <div class="demo-card">
+              <div class="demo-card-header">
+                <p class="demo-card-label">Customer-Facing YOUgent</p>
+                <p class="demo-card-subtitle">Lowcountry Wellness</p>
+              </div>
+              <iframe src="https://paymegpt.com/agents/42085407/lowcountrywellnessdemo" title="Customer-Facing YOUgent — Lowcountry Wellness" loading="lazy"></iframe>
+            </div>
+            <div class="demo-card">
+              <div class="demo-card-header">
+                <p class="demo-card-label">Internal Team YOUgent</p>
+                <p class="demo-card-subtitle">Internal Compass</p>
+              </div>
+              <iframe src="https://paymegpt.com/agents/63252015/internalcompassdemo" title="Internal Team YOUgent — Internal Compass" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section data-section="problem" id="what-it-is">
+      <div class="container">
+        <div class="problem-header">
+          <span class="eyebrow reveal">The Problem</span>
+          <h2 class="section-headline reveal reveal-delay-1">YOUR customers have questions at 9pm on a Sunday. Is YOUR business ready to answer them?</h2>
+          <p class="section-sub reveal reveal-delay-2">Every unanswered question, slow response, and missed call is a customer choosing someone else.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card reveal reveal-delay-1">
+            <div class="problem-icon">📵</div>
+            <h3>Missed Calls</h3>
+            <p>When YOU don't answer, YOUR customers don't wait. They move on to whoever picks up first.</p>
+          </div>
+          <div class="problem-card reveal reveal-delay-2">
+            <div class="problem-icon">⏱</div>
+            <h3>Slow Response Times</h3>
+            <p>Studies show businesses that respond within 5 minutes convert leads at 9x the rate of those that wait an hour.</p>
+          </div>
+          <div class="problem-card reveal reveal-delay-3">
+            <div class="problem-icon">🔁</div>
+            <h3>Repetitive Manual Work</h3>
+            <p>YOUR team is answering the same questions every day. That time adds up — and it's time not spent growing YOUR business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section data-section="solution" id="what-it-does">
+      <div class="container">
+        <div class="solution-header">
+          <span class="eyebrow reveal">The Solution</span>
+          <h2 class="section-headline reveal reveal-delay-1">A YOUgent handles it — automatically, instantly, and exactly the way YOU would.</h2>
+          <p class="section-sub reveal reveal-delay-2">Not a generic chatbot. A custom AI built specifically for YOUR business — trained on YOUR services, YOUR tone, and how YOU actually work.</p>
+        </div>
+        <div class="solution-grid">
+          <div class="solution-card reveal reveal-delay-1">
+            <h3 class="solution-card-title">For YOUR Customers</h3>
+            <p class="solution-card-subtitle">What visitors and clients experience</p>
+            <ul class="solution-list">
+              <li>Answers common questions instantly</li>
+              <li>Guides customers to the right service</li>
+              <li>Captures leads before they leave</li>
+              <li>Books appointments inside the conversation</li>
+              <li>Responds at 2pm or 2am — always on</li>
+            </ul>
+          </div>
+          <div class="solution-card reveal reveal-delay-2">
+            <h3 class="solution-card-title">For YOUR Team</h3>
+            <p class="solution-card-subtitle">Internal support that never sleeps</p>
+            <ul class="solution-list">
+              <li>Answers HR and policy questions instantly</li>
+              <li>Handles payroll and PTO basics</li>
+              <li>Surfaces procedures and guides on demand</li>
+              <li>Onboards new hires without manager interruption</li>
+              <li>Frees up admin time for higher value work</li>
+            </ul>
+          </div>
+        </div>
+        <div class="solution-callout reveal">
+          "A YOUgent can support the outside of YOUR business, the inside — or both."
+        </div>
       </div>
 
-    </div>
+      <!-- WHAT WE BUILD SECTION inserted here as a sub-section visually separated -->
+    </section>
 
-    <div class="footer-bottom">
-      <p>© 2026 YOUgent. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+    <!-- WHAT WE BUILD -->
+    <section data-section="what-we-build" id="what-we-build" style="padding: 100px 0; background: var(--bg); border-top: 1px solid var(--border);">
+      <div class="container">
+        <div style="margin-bottom: 56px;">
+          <span class="eyebrow reveal">What We Build</span>
+          <h2 class="section-headline reveal reveal-delay-1">From a simple form to a full platform — YOUgent builds it.</h2>
+          <p class="section-sub reveal reveal-delay-2">Need a lead capture form? We build that. Need a website with an AI agent already on it? We build that too. Need a complete platform for YOUR organization? That's what we do.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="what-we-build-grid">
+
+          <!-- Card 1: AI Agents -->
+          <div class="reveal reveal-delay-1" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+            <div style="width: 48px; height: 48px; background: rgba(47,164,169,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;">🤖</div>
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; display: block;">Customer-Facing &amp; Internal</span>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--text); margin-bottom: 16px;">AI Agents</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 0;">A custom AI agent trained on YOUR business — YOUR services, YOUR tone, YOUR workflows. Responds to customers instantly, supports YOUR team internally, and never takes a day off.<br><br>Every conversation YOUR business has been missing? YOUR YOUgent captures it.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; padding-bottom: 24px;">
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Customer-Facing</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Internal Teams</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">24/7 Availability</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Lead Capture</span>
+            </div>
+            <button onclick="document.getElementById('ask-yougent-embed').scrollIntoView({behavior: 'smooth'})" style="margin-top: auto; width: 100%; background: var(--teal); color: #ffffff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 13px 26px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease; min-height: 44px; letter-spacing: 0.01em; display: flex; align-items: center; justify-content: center;">Ask the YOUgent →</button>
+          </div>
+
+          <!-- Card 2: Custom Websites -->
+          <div class="reveal reveal-delay-2" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+            <div style="width: 48px; height: 48px; background: rgba(47,164,169,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;">🖥️</div>
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; display: block;">Built for Your Business</span>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--text); margin-bottom: 16px;">Custom Websites</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 0;">A professionally built, mobile-ready website designed around YOUR brand and YOUR goals. Clean, fast, and built to convert — not a template, not generic. Yours.<br><br>Ready to launch in 5–7 business days.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; padding-bottom: 24px;">
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Mobile-Ready</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Custom Design</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Fast Turnaround</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">AI-Ready</span>
+            </div>
+            <button onclick="document.getElementById('ask-yougent-embed').scrollIntoView({behavior: 'smooth'})" style="margin-top: auto; width: 100%; background: var(--teal); color: #ffffff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 13px 26px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease; min-height: 44px; letter-spacing: 0.01em; display: flex; align-items: center; justify-content: center;">Ask the YOUgent →</button>
+          </div>
+
+          <!-- Card 3: Custom Forms & Assessments -->
+          <div class="reveal reveal-delay-3" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+            <div style="width: 48px; height: 48px; background: rgba(47,164,169,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;">📋</div>
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; display: block;">Capture What You've Been Missing</span>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--text); margin-bottom: 16px;">Custom Forms &amp; Assessments</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 0;">Most businesses are sitting on a goldmine of information they never collect. Custom forms, assessments, screenings, quizzes, surveys, and intake tools — built to capture the data YOUR business needs to make better decisions.<br><br>Standalone or embedded directly on YOUR website. Every response saved, organized, and ready to use.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; padding-bottom: 24px;">
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Lead Generation</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Assessments</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Screenings &amp; Quizzes</span>
+              <span style="background: transparent; border: 1px solid rgba(47,164,169,0.4); color: var(--teal); font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 100px;">Saves to Spreadsheet</span>
+            </div>
+            <button onclick="document.getElementById('ask-yougent-embed').scrollIntoView({behavior: 'smooth'})" style="margin-top: auto; width: 100%; background: var(--teal); color: #ffffff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 13px 26px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease; min-height: 44px; letter-spacing: 0.01em; display: flex; align-items: center; justify-content: center;">Ask the YOUgent →</button>
+          </div>
+
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section data-section="how-it-works" style="padding: 100px 0 20px;">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 0;">
+          <span class="eyebrow reveal">The Process</span>
+          <h2 class="section-headline reveal reveal-delay-1" style="max-width: 520px; margin: 0 auto 16px;">Up and running faster than YOU think.</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal reveal-delay-1">
+            <div class="step-number">01</div>
+            <h3>We learn YOUR business</h3>
+            <p>YOU tell us how YOU work — YOUR services, YOUR tone, YOUR most common questions. We handle the rest.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-2">
+            <div class="step-number">02</div>
+            <h3>We build YOUR YOUgent</h3>
+            <p>YOUR custom agent is built from scratch — not a template. It sounds like YOU, knows what YOU know, and works the way YOU work.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-3">
+            <div class="step-number">03</div>
+            <h3>YOU start converting more</h3>
+            <p>YOUR YOUgent goes live and starts responding, capturing leads, and saving YOUR team time from day one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLES -->
+    <section data-section="examples" id="examples" style="padding: 100px 0; background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <div class="examples-header" style="text-align: center;">
+          <span class="eyebrow reveal">See It In Action</span>
+          <h2 class="section-headline reveal reveal-delay-1" style="margin: 0 auto 16px;">What this actually looks like</h2>
+          <p class="section-sub reveal reveal-delay-2" style="margin: 0 auto;">Three real examples of what a YOUgent does behind the scenes.</p>
+        </div>
+        <div class="examples-grid" style="margin-top: 52px; align-items: stretch;">
+
+          <!-- Card 1: Customer Chat -->
+          <div class="example-card reveal reveal-delay-1" style="display: flex; flex-direction: column;">
+            <div class="example-card-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="example-card-body" style="flex: 1; display: flex; flex-direction: column;">
+              <p class="example-card-title">Customer Chat</p>
+              <div class="chat-bubbles" style="flex: 1;">
+                <div class="bubble bubble-user">Do you have openings this weekend?</div>
+                <div class="bubble bubble-agent">Yes — Saturday at 1pm or Sunday morning. Which works better for YOU?</div>
+                <div class="bubble bubble-user">Saturday at 1pm!</div>
+                <div class="bubble bubble-agent">Got it. Can I grab YOUR name and number to hold that spot?</div>
+              </div>
+            </div>
+            <div class="example-banner" style="margin-top: auto;">✓ Lead captured and appointment held</div>
+          </div>
+
+          <!-- Card 2: Manager Summary -->
+          <div class="example-card reveal reveal-delay-2" style="display: flex; flex-direction: column;">
+            <div class="example-card-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="example-card-body" style="flex: 1; display: flex; flex-direction: column;">
+              <p class="example-card-title">Manager Summary</p>
+              <div class="summary-card" style="flex: 1;">
+                <p class="summary-title">New Customer Inquiry</p>
+                <div class="summary-row">
+                  <span class="summary-row-label">Service requested</span>
+                  <span class="summary-row-value">Lawn maintenance — full yard</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-row-label">Preferred time</span>
+                  <span class="summary-row-value">Saturday morning</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-row-label">Customer notes</span>
+                  <span class="summary-row-value">Has a gate — needs code access</span>
+                </div>
+                <p class="summary-next">Next step: Call to confirm estimate →</p>
+              </div>
+            </div>
+            <div class="example-banner" style="margin-top: auto;">✓ Summary sent to manager automatically</div>
+          </div>
+
+          <!-- Card 3: Google Sheets -->
+          <div class="example-card reveal reveal-delay-3" style="display: flex; flex-direction: column;">
+            <div class="example-card-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="example-card-body" style="flex: 1; display: flex; flex-direction: column;">
+              <p class="example-card-title">Saved to Google Sheets</p>
+              <table class="data-table" style="flex: 1;">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Service</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sarah M.</td>
+                    <td>Massage</td>
+                    <td><span class="badge badge-green">Booked</span></td>
+                  </tr>
+                  <tr>
+                    <td>James T.</td>
+                    <td>Lawn</td>
+                    <td><span class="badge badge-amber">Follow Up</span></td>
+                  </tr>
+                  <tr>
+                    <td>Linda R.</td>
+                    <td>Consult</td>
+                    <td><span class="badge badge-gray">New</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="example-banner" style="margin-top: auto;">✓ Every conversation saved automatically</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILT FOR YOU -->
+    <section data-section="built-for-you" style="padding: 40px 0 100px;">
+      <div class="container">
+        <div class="built-grid">
+          <div class="built-left">
+            <span class="eyebrow reveal">Made for YOU</span>
+            <h2 class="reveal reveal-delay-1">Built to fit YOUR business</h2>
+            <p class="reveal reveal-delay-2">We've built AI solutions across healthcare, recruiting, and service industries. Every YOUgent is built from scratch — not a template, not generic.<br><br>It's trained on YOUR services, YOUR tone, and how YOUR business actually works.</p>
+            <div class="tag-pills reveal reveal-delay-3">
+              <span class="tag-pill">Tone &amp; Personality</span>
+              <span class="tag-pill">YOUR Brand Voice</span>
+              <span class="tag-pill">YOUR Workflows</span>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="tone-card">
+              <p class="tone-card-title">Same question. Different personalities.</p>
+              <p class="tone-card-subtitle">YOUR YOUgent sounds exactly like YOU want it to.</p>
+              <div class="tone-example">
+                <p class="tone-label">Professional</p>
+                <p class="tone-text">"Thank you for reaching out. Our service window is 8am–5pm, Monday through Friday. Would YOU like to schedule a consultation?"</p>
+              </div>
+              <div class="tone-example">
+                <p class="tone-label">Friendly</p>
+                <p class="tone-text">"Hey! We're open Monday through Friday, 8 to 5. Want me to help YOU get something set up?"</p>
+              </div>
+              <div class="tone-example">
+                <p class="tone-label">Southern Hospitality</p>
+                <p class="tone-text">"Well hey, we'd love to help! We're here Monday through Friday, 8 to 5. Y'all want to go ahead and get something on the books?"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section data-section="pricing" id="pricing" style="display: none; padding: 0; margin: 0; border: none;">
+  
+</section>
+
+    <!-- CONTACT -->
+    <section data-section="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <span class="eyebrow reveal">Ready When You Are</span>
+        <h2 class="reveal reveal-delay-1">Curious what a YOUgent could do for YOUR business?</h2>
+        <p class="reveal reveal-delay-2" style="margin-top: 16px;">Have a conversation with Ask YOUgent below — or reach us directly at <a href="mailto:support@tryyougent.com" style="color: var(--teal); text-decoration: none;">support@tryyougent.com</a></p>
+      </div>
+      <div class="reveal reveal-delay-2" id="ask-yougent-embed">
+        <div class="demo-card" style="background: var(--bg-card);">
+          <div class="demo-card-header">
+            <div class="demo-card-label">Ask YOUgent</div>
+            <div class="demo-card-subtitle" style="font-size:13px; color: var(--text-muted); font-style: italic; font-weight: 400; text-align: center; padding-top: 2px;">ASK YOUGENT</div>
+          </div>
+          <iframe src="https://paymegpt.com/agents/62463333/askyougent" width="100%" height="560" frameborder="0" allow="microphone" style="border-radius: 0 0 14px 14px; border: none; display: block;"></iframe>
+        </div>
       </div>
     </div>
   </div>
-</footer>
+</section>
 
-<!-- ============================================================ -->
-<!-- MODAL                                                        -->
-<!-- ============================================================ -->
-<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Book a Call">
-  <div class="modal" id="modal">
-    <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
-    <div class="gold-line" style="margin:0 0 16px;"></div>
-    <h3>Book a Call</h3>
-    <p>Fill out the form and we'll reach out to schedule a time — usually within one business day.</p>
+  </main>
 
-    <form action="https://formsubmit.co/support@tryyougent.com" method="POST">
-      <input type="hidden" name="_subject" value="Book a Call — YOUgent">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="modal-name">Your Name</label>
-          <input type="text" id="modal-name" name="name" placeholder="Jane Smith" required="">
+  <!-- FOOTER -->
+  <footer data-section="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://paymegpt.com/objects/quick-uploads/189/a19e012fb093d3d1.png" alt="YOUgent logo">
+          <p class="footer-tagline">Custom AI solutions built for businesses that want to do more — without adding overhead.</p>
         </div>
-        <div class="form-group">
-          <label for="modal-business">Business Name</label>
-          <input type="text" id="modal-business" name="business" placeholder="Acme Co.">
+        <div>
+          <p class="footer-col-title">Product</p>
+          <ul class="footer-links">
+            <li><a href="#what-it-is">What It Is</a></li>
+            <li><a href="#what-it-does">What It Does</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#what-we-build">What We Build</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="#what-it-is">Built for YOU</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
         </div>
       </div>
-
-      <div class="form-group">
-        <label for="modal-email">Email Address</label>
-        <input type="email" id="modal-email" name="email" placeholder="jane@yourbusiness.com" required="">
+      <div class="footer-bottom">
+        <p>© 2026 YOUgent. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
       </div>
+    </div>
+  </footer>
 
-      <div class="form-group">
-        <label for="modal-message">What are you hoping a YOUgent could help with?</label>
-        <textarea id="modal-message" name="message" placeholder="A quick overview is great — we'll dig into the details on the call." style="min-height:80px;"></textarea>
-      </div>
+  
 
-      <button type="submit" class="btn btn-gold form-submit">
-        Request a Call
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
-      </button>
-    </form>
-  </div>
-</div>
-
-<!-- ============================================================ -->
-<!-- JAVASCRIPT                                                   -->
-<!-- ============================================================ -->
-
-
-<!-- Chat widget -->
-<script src="https://paymegpt.com/widget.js" data-widget="62463333" async=""></script>
-
+  <script src="https://paymegpt.com/widget.js" data-widget="62463333" async=""></script>
 
   <script src="script.js"></script>
 </body></html>
