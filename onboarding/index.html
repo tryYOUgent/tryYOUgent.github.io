@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="Complete your ChurchCompass onboarding. Walk through the steps and we'll build a custom AI agent trained specifically on your church." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  
+
+<!-- SEO Meta Tags -->
+<title>CC - Onboarding</title>
+<meta property="og:title" content="CC - Onboarding" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CC - Onboarding" />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=3018');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='yL8u776HA';
+  var apiBase='https://paymegpt.com';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">Thank you for purchasing '+pName.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'.</p><button onclick="document.getElementById(\'payment-success-overlay\').remove();window.history.replaceState({},\'\',window.location.pathname);" style="padding:12px 32px;font-size:16px;font-weight:600;background:#16a34a;color:white;border:none;border-radius:8px;cursor:pointer;">Continue</button></div>';
+      document.body.appendChild(overlay);
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav data-section="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-logo">
+      <img src="https://paymegpt.com/objects/quick-uploads/189/8abd70bdc466076e.png" alt="ChurchCompass" />
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/how-it-works.html">How It Works</a></li>
+        <li><span class="pricing-label">Pricing</span></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/index.html">Home</a>
+    <a href="/how-it-works.html">How It Works</a>
+    <span class="pricing-label">Pricing</span>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section data-section="hero" class="page-header">
+  <div class="eyebrow-pill">Church Onboarding</div>
+  <h1>Let's Build Your ChurchCompass.</h1>
+  <p>Walk through the steps below and we'll use your responses to build a custom ChurchCompass agent trained specifically on your church — your voice, your ministry, your people.</p>
+</section>
+
+<!-- PROGRESS INDICATOR -->
+<div data-section="progress-indicator" class="progress-wrap" id="progressWrap">
+  <div class="progress-inner">
+    <div class="progress-dots" id="progressDots"></div>
+    <div class="progress-label" id="progressLabel">Step <strong>1</strong> of 12 — <strong>Church Information</strong></div>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="progressBar" style="width: 8.33%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- RESTORE BANNER -->
+<div class="restore-banner hidden" id="restoreBanner">
+  <div class="restore-banner-inner">
+    <p>✨ We saved your progress. Pick up where you left off.</p>
+    <button onclick="document.getElementById('restoreBanner').classList.add('hidden')">Dismiss</button>
+  </div>
+</div>
+
+<!-- FORM AREA -->
+<div data-section="onboarding-form" class="form-area" id="formArea">
+
+  <!-- SUCCESS STATE -->
+  <div class="success-state" id="successState">
+    <img src="https://paymegpt.com/objects/quick-uploads/189/148efeb9fd1a4937.png" alt="ChurchCompass" class="success-icon" />
+    <h2>You're all set.</h2>
+    <p>Thank you for completing your ChurchCompass onboarding. Our team will review your submission and be in touch within 1–2 business days to walk you through your custom agent setup. Keep an eye on your inbox.</p>
+    <p class="success-tagline">Clarity. Care. Connection.</p>
+  </div>
+
+  <!-- STEP 1: CHURCH INFORMATION -->
+  <div class="step-card active" data-step="1" id="step-1">
+    <div class="step-card-label">Step 1 of 12</div>
+    <h2>Tell us about your church.</h2>
+    <p class="step-intro">Start with the basics. This helps us understand who you are and where you serve.</p>
+
+    <div class="field-group">
+      <label>Church Name <span class="req">*</span></label>
+      <input type="text" id="churchName" placeholder="e.g. Grace Community Church" />
+      <div class="field-error" id="err-churchName">Please enter your church name.</div>
+    </div>
+    <div class="field-row">
+      <div class="field-group">
+        <label>City <span class="req">*</span></label>
+        <input type="text" id="city" placeholder="e.g. Nashville" />
+        <div class="field-error" id="err-city">Please enter your city.</div>
+      </div>
+      <div class="field-group">
+        <label>State <span class="req">*</span></label>
+        <input type="text" id="state" placeholder="e.g. TN" />
+        <div class="field-error" id="err-state">Please enter your state.</div>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>Street Address</label>
+      <input type="text" id="streetAddress" placeholder="123 Main Street" />
+    </div>
+    <div class="field-group">
+      <label>Website URL</label>
+      <input type="text" id="websiteUrl" placeholder="https://yourchurch.com" />
+    </div>
+    <div class="field-row">
+      <div class="field-group">
+        <label>Phone Number</label>
+        <input type="text" id="phoneNumber" placeholder="(615) 555-0100" />
+      </div>
+      <div class="field-group">
+        <label>Primary Contact Email <span class="req">*</span></label>
+        <input type="email" id="contactEmail" placeholder="pastor@yourchurch.com" />
+        <div class="field-error" id="err-contactEmail">Please enter a valid email.</div>
+      </div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-next" onclick="nextStep(1)">Continue →</button>
+    </div>
+    <div class="save-later-link">
+      <button onclick="saveLater()">Save &amp; Continue Later</button>
+    </div>
+  </div>
+
+  <!-- STEP 2: IDENTITY & VOICE -->
+  <div class="step-card" data-step="2" id="step-2">
+    <div class="step-card-label">Step 2 of 12</div>
+    <h2>Who is your church?</h2>
+    <p class="step-intro">This is how ChurchCompass will understand and represent your church in every conversation.</p>
+
+    <div class="field-group">
+      <label>Church Description <span class="req">*</span></label>
+      <textarea id="churchDescription" rows="4" placeholder="Describe your church in a few sentences..."></textarea>
+      <div class="field-helper">Describe your church in a few sentences — who you are, who you serve, and what makes your community unique.</div>
+      <div class="field-error" id="err-churchDescription">Please describe your church.</div>
+    </div>
+    <div class="field-group">
+      <label>Mission Statement</label>
+      <textarea id="missionStatement" rows="3" placeholder="What is the core mission driving everything your church does?"></textarea>
+      <div class="field-helper">What is the core mission driving everything your church does?</div>
+    </div>
+    <div class="field-group">
+      <label>Core Values</label>
+      <textarea id="coreValues" rows="4" placeholder="List your church's core values, one per line."></textarea>
+      <div class="field-helper">List your church's core values, one per line.</div>
+    </div>
+
+    <div class="step-divider"></div>
+    <div class="subsection-title">Communication Tone</div>
+    <div class="field-group">
+      <label>How should ChurchCompass communicate? <span class="req">*</span></label>
+      <div class="tone-cards" id="toneCards">
+        <div class="tone-card" data-tone="warm" onclick="selectTone('warm')">
+          <div class="tone-icon">😊</div>
+          <div class="tone-label">Warm &amp; Conversational</div>
+          <div class="tone-desc">Friendly, approachable, and personal — like talking to a member of your church family</div>
+        </div>
+        <div class="tone-card" data-tone="balanced" onclick="selectTone('balanced')">
+          <div class="tone-icon">⚖️</div>
+          <div class="tone-label">Balanced</div>
+          <div class="tone-desc">Professional yet warm — clear and helpful without being overly formal or casual</div>
+        </div>
+        <div class="tone-card" data-tone="formal" onclick="selectTone('formal')">
+          <div class="tone-icon">🏛️</div>
+          <div class="tone-label">More Formal</div>
+          <div class="tone-desc">Respectful, structured, and dignified — fitting for a more traditional church environment</div>
+        </div>
+      </div>
+      <input type="hidden" id="selectedTone" value="" />
+      <div class="field-error" id="err-tone">Please select a communication tone.</div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(2)">← Back</button>
+      <button class="btn-next" onclick="nextStep(2)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 3: SERVICES & VISITOR EXPERIENCE -->
+  <div class="step-card" data-step="3" id="step-3">
+    <div class="step-card-label">Step 3 of 12</div>
+    <h2>Help us welcome your visitors well.</h2>
+    <p class="step-intro">This information lets ChurchCompass guide first-time visitors through what to expect — before they ever walk through your doors.</p>
+
+    <div class="field-group">
+      <label>Sunday Service Times <span class="req">*</span></label>
+      <div id="serviceTimesContainer">
+        <div class="repeatable-item">
+          <input type="text" class="service-time-input" placeholder="e.g. 9:00 AM" />
+        </div>
+      </div>
+      <button class="add-link" onclick="addServiceTime()">+ Add Another Service Time</button>
+      <div class="field-error" id="err-serviceTimes">Please add at least one service time.</div>
+    </div>
+    <div class="field-group">
+      <label>Midweek Services</label>
+      <textarea id="midweekServices" rows="3" placeholder="List any midweek services, Bible studies, or regular gatherings..."></textarea>
+      <div class="field-helper">List any midweek services, Bible studies, or regular gatherings.</div>
+    </div>
+
+    <div class="subsection-title">The Visitor Experience</div>
+    <div class="field-group">
+      <label>What should a first-time visitor expect? <span class="req">*</span></label>
+      <textarea id="visitorExperience" rows="4" placeholder="Describe the feel, the flow, and what someone will experience..."></textarea>
+      <div class="field-helper">Describe the feel, the flow, and what someone will experience when they attend for the first time.</div>
+      <div class="field-error" id="err-visitorExperience">Please describe the visitor experience.</div>
+    </div>
+    <div class="field-row">
+      <div class="field-group">
+        <label>Typical Service Length</label>
+        <select id="serviceLength">
+          <option value="">Select length...</option>
+          <option>Under 60 minutes</option>
+          <option>60–75 minutes</option>
+          <option>75–90 minutes</option>
+          <option>90+ minutes</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label>Dress Style</label>
+        <select id="dressStyle">
+          <option value="">Select style...</option>
+          <option>Come as you are</option>
+          <option>Smart casual</option>
+          <option>Business casual</option>
+          <option>Traditional</option>
+          <option>Formal</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="subsection-title">First Visit Logistics</div>
+    <div class="field-group">
+      <label>Parking Instructions</label>
+      <textarea id="parkingInstructions" rows="3" placeholder="Where should they park? Any tips for finding the entrance?"></textarea>
+      <div class="field-helper">Where should they park? Any tips for finding the entrance?</div>
+    </div>
+    <div class="field-group">
+      <label>Where should first-time visitors go when they arrive?</label>
+      <textarea id="firstVisitDirections" rows="3" placeholder="e.g. Head to the Welcome Center in the main lobby..."></textarea>
+    </div>
+    <div class="field-group">
+      <div class="toggle-wrap">
+        <label class="toggle">
+          <input type="checkbox" id="hasGreeters" />
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label-text">Welcome desk or greeter team?</span>
+      </div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(3)">← Back</button>
+      <button class="btn-next" onclick="nextStep(3)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 4: BELIEFS & TEACHING -->
+  <div class="step-card" data-step="4" id="step-4">
+    <div class="step-card-label">Step 4 of 12</div>
+    <h2>Share what your church believes.</h2>
+    <p class="step-intro">ChurchCompass will use this to accurately represent your theology and answer doctrinal questions in alignment with your church's teaching.</p>
+
+    <div class="field-group">
+      <label>Denomination or Affiliation</label>
+      <input type="text" id="denomination" placeholder="e.g. Southern Baptist, Non-denominational, Methodist..." />
+      <div class="field-helper">e.g. Southern Baptist, Non-denominational, Methodist, Pentecostal, etc.</div>
+    </div>
+    <div class="field-group">
+      <label>Statement of Faith</label>
+      <textarea id="statementOfFaith" rows="4" placeholder="Paste your statement of faith, or provide a link to it..."></textarea>
+      <div class="field-helper">Paste your statement of faith directly, or provide a link to it on your website.</div>
+    </div>
+    <div class="field-group">
+      <label>Baptism Beliefs &amp; Practices</label>
+      <textarea id="baptismBeliefs" rows="3" placeholder="Describe your church's beliefs and practices around baptism..."></textarea>
+    </div>
+    <div class="field-group">
+      <label>Communion / Lord's Supper Practices</label>
+      <textarea id="communionPractices" rows="3" placeholder="How does your church practice communion?"></textarea>
+    </div>
+    <div class="field-group">
+      <label>How does your church explain salvation?</label>
+      <textarea id="salvationExplanation" rows="4" placeholder="Describe how your church explains the path to salvation..."></textarea>
+      <div class="field-helper">This helps ChurchCompass respond accurately when someone asks how to become a Christian.</div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(4)">← Back</button>
+      <button class="btn-next" onclick="nextStep(4)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 5: MINISTRIES -->
+  <div class="step-card" data-step="5" id="step-5">
+    <div class="step-card-label">Step 5 of 12</div>
+    <h2>What ministries does your church offer?</h2>
+    <p class="step-intro">Select all that apply. We'll ask for a few details about each one so ChurchCompass can guide people to the right place.</p>
+
+    <div class="field-group">
+      <label>Select all ministries <span class="req">*</span></label>
+      <div class="pill-grid" id="ministryPills">
+        <div class="pill-item" data-ministry="Children's Ministry" onclick="toggleMinistry(this)">Children's Ministry</div>
+        <div class="pill-item" data-ministry="Youth Ministry" onclick="toggleMinistry(this)">Youth Ministry</div>
+        <div class="pill-item" data-ministry="Small Groups" onclick="toggleMinistry(this)">Small Groups</div>
+        <div class="pill-item" data-ministry="Men's Ministry" onclick="toggleMinistry(this)">Men's Ministry</div>
+        <div class="pill-item" data-ministry="Women's Ministry" onclick="toggleMinistry(this)">Women's Ministry</div>
+        <div class="pill-item" data-ministry="Outreach & Missions" onclick="toggleMinistry(this)">Outreach &amp; Missions</div>
+        <div class="pill-item" data-ministry="Worship Team" onclick="toggleMinistry(this)">Worship Team</div>
+        <div class="pill-item" data-ministry="Counseling or Care Ministry" onclick="toggleMinistry(this)">Counseling or Care Ministry</div>
+        <div class="pill-item" data-ministry="Senior Adults" onclick="toggleMinistry(this)">Senior Adults</div>
+        <div class="pill-item" data-ministry="Young Adults" onclick="toggleMinistry(this)">Young Adults</div>
+        <div class="pill-item" data-ministry="Other" onclick="toggleMinistry(this)">Other</div>
+      </div>
+      <div class="field-error" id="err-ministries">Please select at least one ministry.</div>
+    </div>
+    <div class="field-group hidden" id="otherMinistryField">
+      <label>Other Ministry Name</label>
+      <input type="text" id="otherMinistryName" placeholder="Enter ministry name..." />
+    </div>
+
+    <div class="ministry-accordion" id="ministryAccordion"></div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(5)">← Back</button>
+      <button class="btn-next" onclick="nextStep(5)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 6: MEMBERSHIP & NEXT STEPS -->
+  <div class="step-card" data-step="6" id="step-6">
+    <div class="step-card-label">Step 6 of 12</div>
+    <h2>How do people take their next step?</h2>
+    <p class="step-intro">ChurchCompass will guide people through their journey — from first visit to full membership. Help us understand how that works at your church.</p>
+
+    <div class="field-group">
+      <label>How does someone become a member? <span class="req">*</span></label>
+      <textarea id="membershipProcess" rows="4" placeholder="Describe the membership process at your church..."></textarea>
+      <div class="field-error" id="err-membershipProcess">Please describe your membership process.</div>
+    </div>
+    <div class="field-group">
+      <label>Membership Class Details</label>
+      <textarea id="membershipClass" rows="3" placeholder="Name, frequency, length, what's covered..."></textarea>
+      <div class="field-helper">Name, frequency, length, what's covered.</div>
+    </div>
+    <div class="field-group">
+      <label>Baptism Process at Your Church</label>
+      <textarea id="baptismProcess" rows="3" placeholder="How does someone pursue baptism? What are the steps?"></textarea>
+      <div class="field-helper">How does someone pursue baptism? What are the steps?</div>
+    </div>
+    <div class="field-group">
+      <label>How can someone get more involved?</label>
+      <textarea id="getInvolved" rows="3" placeholder="How can someone deepen their involvement at your church?"></textarea>
+    </div>
+    <div class="field-group">
+      <label>How can someone serve at your church?</label>
+      <textarea id="serveOpportunities" rows="3" placeholder="Ministries, volunteer teams, sign-up process..."></textarea>
+      <div class="field-helper">Ministries, volunteer teams, sign-up process.</div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(6)">← Back</button>
+      <button class="btn-next" onclick="nextStep(6)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 7: PRAYER & CARE -->
+  <div class="step-card" data-step="7" id="step-7">
+    <div class="step-card-label">Step 7 of 12</div>
+    <h2>How does your church handle care and prayer?</h2>
+    <p class="step-intro">This is one of the most important parts of ChurchCompass. Help us understand how prayer requests and care needs are handled at your church so nothing falls through the cracks.</p>
+
+    <div class="field-group">
+      <label>Who receives prayer requests? <span class="req">*</span></label>
+      <input type="text" id="prayerReceiver" placeholder="e.g. Pastor John Smith, the care team..." />
+      <div class="field-helper">Name, role, or team — e.g. Pastor John Smith, the care team, etc.</div>
+      <div class="field-error" id="err-prayerReceiver">Please specify who receives prayer requests.</div>
+    </div>
+    <div class="field-group">
+      <div class="toggle-wrap">
+        <label class="toggle">
+          <input type="checkbox" id="prayerFollowup" onchange="toggleConditional('prayerFollowup', 'prayerFollowupFields')" />
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label-text">Is follow-up required for prayer requests?</span>
+      </div>
+    </div>
+    <div class="conditional-field" id="prayerFollowupFields">
+      <div class="field-group">
+        <label>Who is responsible for follow-up?</label>
+        <input type="text" id="followupResponsible" placeholder="Name, role, or team..." />
+      </div>
+    </div>
+    <div class="field-group">
+      <label>How quickly should someone expect follow-up?</label>
+      <select id="followupSpeed">
+        <option value="">Select timeframe...</option>
+        <option>Same day</option>
+        <option>Within 24 hours</option>
+        <option>Within 48 hours</option>
+        <option>Within the week</option>
+      </select>
+    </div>
+
+    <div class="step-divider"></div>
+    <div class="subsection-title">Prayer Request Categories</div>
+    <div class="field-group">
+      <label>Select all that apply</label>
+      <div class="pill-grid" id="prayerCategoryPills">
+        <div class="pill-item" data-cat="Health & Healing" onclick="togglePill(this, 'prayerCategories')">Health &amp; Healing</div>
+        <div class="pill-item" data-cat="Relationships & Marriage" onclick="togglePill(this, 'prayerCategories')">Relationships &amp; Marriage</div>
+        <div class="pill-item" data-cat="Mental Health & Anxiety" onclick="togglePill(this, 'prayerCategories')">Mental Health &amp; Anxiety</div>
+        <div class="pill-item" data-cat="Financial Need" onclick="togglePill(this, 'prayerCategories')">Financial Need</div>
+        <div class="pill-item" data-cat="Spiritual Growth" onclick="togglePill(this, 'prayerCategories')">Spiritual Growth</div>
+        <div class="pill-item" data-cat="Grief & Loss" onclick="togglePill(this, 'prayerCategories')">Grief &amp; Loss</div>
+        <div class="pill-item" data-cat="Family" onclick="togglePill(this, 'prayerCategories')">Family</div>
+        <div class="pill-item" data-cat="Custom" onclick="togglePill(this, 'prayerCategories'); toggleCustomPrayerCat(this)">Custom</div>
+      </div>
+      <input type="hidden" id="prayerCategories" value="" />
+    </div>
+    <div class="field-group hidden" id="customPrayerCatField">
+      <label>Custom Category Name</label>
+      <input type="text" id="customPrayerCat" placeholder="Enter custom category..." />
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(7)">← Back</button>
+      <button class="btn-next" onclick="nextStep(7)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 8: STAFF DIRECTORY -->
+  <div class="step-card" data-step="8" id="step-8">
+    <div class="step-card-label">Step 8 of 12</div>
+    <h2>Who is on your team?</h2>
+    <p class="step-intro">Add your key staff members so ChurchCompass knows who to reference and who to notify when specific needs arise.</p>
+
+    <div id="staffCardsContainer">
+      <!-- Staff cards rendered by JS -->
+    </div>
+    <button class="add-staff-btn" onclick="addStaffCard()">+ Add Another Staff Member</button>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(8)">← Back</button>
+      <button class="btn-next" onclick="nextStep(8)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 9: DATA & NOTIFICATIONS -->
+  <div class="step-card" data-step="9" id="step-9">
+    <div class="step-card-label">Step 9 of 12</div>
+    <h2>How should ChurchCompass store and share your data?</h2>
+    <p class="step-intro">Choose how you want conversation data organized and how your team gets notified when something needs attention.</p>
+
+    <div class="field-group">
+      <label>Data Storage Preference <span class="req">*</span></label>
+      <div class="storage-cards" id="storageCards">
+        <div class="storage-card" data-storage="sheets" onclick="selectStorage('sheets')">
+          <div class="storage-icon">📊</div>
+          <div class="storage-label">Google Sheets</div>
+          <div class="storage-desc">All data is organized into a connected Google Sheet your team can access</div>
+        </div>
+        <div class="storage-card" data-storage="crm" onclick="selectStorage('crm')">
+          <div class="storage-icon">🗄️</div>
+          <div class="storage-label">CRM Integration</div>
+          <div class="storage-desc">Data flows into your existing CRM or church management system</div>
+        </div>
+        <div class="storage-card" data-storage="other" onclick="selectStorage('other')">
+          <div class="storage-icon">🔧</div>
+          <div class="storage-label">Other / Not Sure</div>
+          <div class="storage-desc">We'll work with you to find the right solution during onboarding</div>
+        </div>
+      </div>
+      <input type="hidden" id="selectedStorage" value="" />
+      <div class="field-error" id="err-storage">Please select a data storage preference.</div>
+    </div>
+
+    <div class="step-divider"></div>
+    <div class="subsection-title">Notification Preferences</div>
+
+    <div class="notification-row">
+      <div>
+        <div class="notification-row-label">Email Notifications</div>
+        <div class="notification-row-helper">Receive email alerts when prayer requests or care needs are submitted</div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="emailNotifToggle" onchange="toggleConditional('emailNotifToggle', 'emailNotifField')" />
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="conditional-field" id="emailNotifField">
+      <div class="field-group" style="margin-top:14px;">
+        <label>Notification Email Address</label>
+        <input type="email" id="notifEmail" placeholder="notifications@yourchurch.com" />
+      </div>
+    </div>
+
+    <div class="notification-row">
+      <div>
+        <div class="notification-row-label">SMS / Text Notifications</div>
+        <div class="notification-row-helper">Receive text message alerts for urgent care needs</div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="smsNotifToggle" onchange="toggleConditional('smsNotifToggle', 'smsNotifField')" />
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="conditional-field" id="smsNotifField">
+      <div class="field-group" style="margin-top:14px;">
+        <label>Notification Phone Number</label>
+        <input type="text" id="notifPhone" placeholder="(615) 555-0100" />
+      </div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(9)">← Back</button>
+      <button class="btn-next" onclick="nextStep(9)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 10: DOCUMENT UPLOADS -->
+  <div class="step-card" data-step="10" id="step-10">
+    <div class="step-card-label">Step 10 of 12</div>
+    <h2>Upload your church documents.</h2>
+    <p class="step-intro">These documents help us build a more accurate and complete ChurchCompass agent. Upload what you have — nothing here is required, but the more you share, the better we can represent your church.</p>
+
+    <div class="field-group">
+      <label>Church Policies &amp; Procedures</label>
+      <div class="upload-zone" id="uploadZone1" ondragover="handleDragOver(event,'uploadZone1')" ondragleave="handleDragLeave(event,'uploadZone1')" ondrop="handleDrop(event,'uploadZone1','fileInfo1')">
+        <input type="file" accept=".pdf,.doc,.docx,.txt" onchange="handleFileSelect(event,'fileInfo1','uploadZone1')" />
+        <div class="upload-icon">📄</div>
+        <div class="upload-label">Church Policies &amp; Procedures</div>
+        <div class="upload-helper">Any internal policies, guidelines, or procedures your staff follows</div>
+      </div>
+      <div class="upload-file-info hidden" id="fileInfo1">
+        <div><span class="upload-file-name" id="fileName1"></span><span class="upload-file-size" id="fileSize1"></span></div>
+        <button class="upload-remove" onclick="removeFile('fileInfo1','uploadZone1')">✕</button>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>Bylaws</label>
+      <div class="upload-zone" id="uploadZone2" ondragover="handleDragOver(event,'uploadZone2')" ondragleave="handleDragLeave(event,'uploadZone2')" ondrop="handleDrop(event,'uploadZone2','fileInfo2')">
+        <input type="file" accept=".pdf,.doc,.docx,.txt" onchange="handleFileSelect(event,'fileInfo2','uploadZone2')" />
+        <div class="upload-icon">📋</div>
+        <div class="upload-label">Bylaws</div>
+        <div class="upload-helper">Your church's governing bylaws or constitution document</div>
+      </div>
+      <div class="upload-file-info hidden" id="fileInfo2">
+        <div><span class="upload-file-name" id="fileName2"></span><span class="upload-file-size" id="fileSize2"></span></div>
+        <button class="upload-remove" onclick="removeFile('fileInfo2','uploadZone2')">✕</button>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>Statement of Faith</label>
+      <div class="upload-zone" id="uploadZone3" ondragover="handleDragOver(event,'uploadZone3')" ondragleave="handleDragLeave(event,'uploadZone3')" ondrop="handleDrop(event,'uploadZone3','fileInfo3')">
+        <input type="file" accept=".pdf,.doc,.docx,.txt" onchange="handleFileSelect(event,'fileInfo3','uploadZone3')" />
+        <div class="upload-icon">✝️</div>
+        <div class="upload-label">Statement of Faith</div>
+        <div class="upload-helper">If you have a PDF version of your statement of faith</div>
+      </div>
+      <div class="upload-file-info hidden" id="fileInfo3">
+        <div><span class="upload-file-name" id="fileName3"></span><span class="upload-file-size" id="fileSize3"></span></div>
+        <button class="upload-remove" onclick="removeFile('fileInfo3','uploadZone3')">✕</button>
+      </div>
+    </div>
+    <div class="field-group">
+      <label>Sermon Notes or Teaching Documents</label>
+      <div class="upload-zone" id="uploadZone4" ondragover="handleDragOver(event,'uploadZone4')" ondragleave="handleDragLeave(event,'uploadZone4')" ondrop="handleDrop(event,'uploadZone4','fileInfo4')">
+        <input type="file" accept=".pdf,.doc,.docx,.txt" onchange="handleFileSelect(event,'fileInfo4','uploadZone4')" />
+        <div class="upload-icon">📖</div>
+        <div class="upload-label">Sermon Notes or Teaching Documents</div>
+        <div class="upload-helper">Recent sermon notes, teaching series outlines, or Bible study materials</div>
+      </div>
+      <div class="upload-file-info hidden" id="fileInfo4">
+        <div><span class="upload-file-name" id="fileName4"></span><span class="upload-file-size" id="fileSize4"></span></div>
+        <button class="upload-remove" onclick="removeFile('fileInfo4','uploadZone4')">✕</button>
+      </div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(10)">← Back</button>
+      <button class="btn-next" onclick="nextStep(10)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 11: BRANDING -->
+  <div class="step-card" data-step="11" id="step-11">
+    <div class="step-card-label">Step 11 of 12</div>
+    <h2>Let's match your church's look.</h2>
+    <p class="step-intro">Your ChurchCompass agent can reflect your church's visual identity. Upload your logo and choose your brand colors.</p>
+
+    <div class="field-group">
+      <label>Church Logo</label>
+      <div class="upload-zone" id="logoUploadZone" ondragover="handleDragOver(event,'logoUploadZone')" ondragleave="handleDragLeave(event,'logoUploadZone')" ondrop="handleLogoDropEvt(event)">
+        <input type="file" accept=".png,.jpg,.jpeg,.svg" onchange="handleLogoUpload(event)" id="logoFileInput" />
+        <div class="upload-icon">🖼️</div>
+        <div class="upload-label">Upload Your Logo</div>
+        <div class="upload-helper">PNG, JPG, or SVG — drag and drop or click to browse</div>
+      </div>
+      <img id="logoPreview" class="mock-logo-upload-preview" src="" alt="Logo Preview" />
+    </div>
+
+    <div class="field-row">
+      <div class="field-group">
+        <label>Primary Color</label>
+        <div class="color-picker-wrap">
+          <input type="color" id="primaryColor" value="#0F4C5C" oninput="updateBrandPreview()" />
+          <div class="color-swatch" id="primarySwatch" style="background:#0F4C5C;"></div>
+          <span class="color-value-text" id="primaryColorVal">#0F4C5C</span>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Secondary Color / Accent</label>
+        <div class="color-picker-wrap">
+          <input type="color" id="secondaryColor" value="#1FA3B3" oninput="updateBrandPreview()" />
+          <div class="color-swatch" id="secondarySwatch" style="background:#1FA3B3;"></div>
+          <span class="color-value-text" id="secondaryColorVal">#1FA3B3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-preview">
+      <div class="brand-preview-header">
+        <span>Live Brand Preview</span>
+      </div>
+      <div class="brand-preview-body">
+        <div class="mock-chat">
+          <div class="mock-chat-header">
+            <img id="mockLogoImg" src="https://paymegpt.com/objects/quick-uploads/189/148efeb9fd1a4937.png" alt="Logo" class="mock-logo-preview" />
+            <span class="mock-church-name" id="mockChurchName">Your Church</span>
+          </div>
+          <div class="mock-bubble agent" id="mockBubble1" style="background:#0F4C5C;">👋 Welcome! How can I help you today?</div>
+          <div class="mock-bubble user">What time are Sunday services?</div>
+          <div class="mock-bubble agent" id="mockBubble2" style="background:#1FA3B3;">We have services at 9:00 AM and 11:00 AM every Sunday. We'd love to see you!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn-back" onclick="prevStep(11)">← Back</button>
+      <button class="btn-next" onclick="nextStep(11)">Continue →</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+  <!-- STEP 12: REVIEW & SUBMIT -->
+  <div class="step-card" data-step="12" id="step-12">
+    <div class="step-card-label">Step 12 of 12</div>
+    <h2>Almost there. Take a look.</h2>
+    <p class="step-intro">Review your information below. You can go back and edit any section before submitting.</p>
+
+    <div id="reviewAccordions">
+      <!-- Rendered by JS -->
+    </div>
+
+    <div class="confirm-check-wrap">
+      <input type="checkbox" id="confirmAccuracy" onchange="toggleSubmitBtn()" />
+      <label for="confirmAccuracy">I confirm that the information above is accurate and I am authorized to submit this on behalf of my church.</label>
+    </div>
+
+    <button class="btn-submit" id="submitBtn" disabled onclick="submitForm()">Submit &amp; Build My ChurchCompass</button>
+
+    <div class="step-nav" style="margin-top:16px;">
+      <button class="btn-back" onclick="prevStep(12)">← Back</button>
+    </div>
+    <div class="save-later-link"><button onclick="saveLater()">Save &amp; Continue Later</button></div>
+  </div>
+
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Your progress has been saved.</div>
+
+<!-- FOOTER -->
+<footer data-section="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://paymegpt.com/objects/quick-uploads/189/8abd70bdc466076e.png" alt="ChurchCompass" />
+      <div class="footer-tagline">Clarity. Care. Connection.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/index.html">Home</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="#">Get Started</a>
+    </div>
+    <div class="footer-legal">
+      <p>© 2026 ChurchCompass. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://paymegpt.com/widget.js" data-widget="63058576" async></script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
