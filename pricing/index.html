@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="ChurchCompass pricing plans built for churches of every size. Simple, transparent pricing with no contracts. Starter, Growth, and Ministry Pro plans available." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  
+
+<!-- SEO Meta Tags -->
+<title>CC - Pricing</title>
+<meta property="og:title" content="CC - Pricing" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CC - Pricing" />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=3019');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='5hkJPW2RAq';
+  var apiBase='https://paymegpt.com';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">Thank you for purchasing '+pName.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'.</p><button onclick="document.getElementById(\'payment-success-overlay\').remove();window.history.replaceState({},\'\',window.location.pathname);" style="padding:12px 32px;font-size:16px;font-weight:600;background:#16a34a;color:white;border:none;border-radius:8px;cursor:pointer;">Continue</button></div>';
+      document.body.appendChild(overlay);
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav data-section="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo">
+        <img src="https://paymegpt.com/objects/quick-uploads/189/8abd70bdc466076e.png" alt="ChurchCompass" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/how-it-works.html">How It Works</a></li>
+        <li><a href="/pricing.html" class="active">Pricing</a></li>
+        <li><a href="/demo.html" class="nav-cta">Get Started</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/index.html">Home</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/pricing.html" class="active">Pricing</a>
+      <a href="/demo.html" class="mobile-cta-btn">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section data-section="page-header">
+    <div class="header-glow"></div>
+    <div class="header-content">
+      <div class="eyebrow-pill reveal">Simple, Transparent Pricing</div>
+      <h1 class="page-headline reveal">Invest in your congregation.<br />Not just software.</h1>
+      <p class="page-subhead reveal">ChurchCompass is priced to be accessible for churches of every size — with the features and support your ministry actually needs.</p>
+      <p class="pricing-note reveal">Pricing is built around features and support — not congregation size.</p>
+    </div>
+  </section>
+
+  <!-- BILLING TOGGLE -->
+  <section data-section="billing-toggle">
+    <div class="toggle-wrapper reveal" id="billingToggle">
+      <div class="toggle-slider" id="toggleSlider"></div>
+      <div class="toggle-option active" id="monthlyOption" data-mode="monthly">Monthly</div>
+      <div class="toggle-option" id="annualOption" data-mode="annual">
+        Annually <span class="gold-badge" id="saveBadge">Save 20%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING CARDS -->
+  <section data-section="pricing-cards">
+    <div class="cards-grid">
+
+      <!-- STARTER -->
+      <div class="pricing-card reveal">
+        <div class="card-plan-name">Starter</div>
+        <div class="card-description">Community engagement and care capture</div>
+        <div class="setup-fee">One-time setup: $497</div>
+        <div class="price-block">
+          <div class="price-main">
+            <span class="price-amount" data-monthly="97" data-annual="78">$97</span>
+            <span class="price-per">/mo</span>
+          </div>
+          <div class="price-billing-note" id="starterBillingNote"></div>
+        </div>
+        <div class="card-tagline">"Best for smaller churches ready to modernize their first-touch engagement."</div>
+        <hr class="card-divider" />
+        <ul class="feature-list">
+          <li class="feature-item included"><span class="feature-check">✓</span>External community-facing agent</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Visitor engagement and FAQ handling</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Prayer request capture and storage</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Basic data collection to Google Sheets</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Available 24/7 across connected channels</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Email support</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Internal leadership agent</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Staff notification system</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Insight dashboard</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Multi-channel deployment</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Priority support</li>
+        </ul>
+        <a href="/demo.html#signup" class="card-btn card-btn-outline">Get Started with Starter</a>
+      </div>
+
+      <!-- GROWTH (FEATURED) -->
+      <div class="pricing-card featured reveal">
+        <div class="popular-badge">Most Popular</div>
+        <div class="card-plan-name">Growth</div>
+        <div class="card-description">Full engagement, care, and leadership insight</div>
+        <div class="setup-fee">One-time setup: $797</div>
+        <div class="price-block">
+          <div class="price-main">
+            <span class="price-amount" data-monthly="197" data-annual="158">$197</span>
+            <span class="price-per">/mo</span>
+          </div>
+          <div class="price-billing-note" id="growthBillingNote"></div>
+        </div>
+        <div class="card-tagline">"Best for mid-size churches who want full visibility into congregation needs."</div>
+        <hr class="card-divider" />
+        <ul class="feature-list">
+          <li class="feature-item included"><span class="feature-check">✓</span>Everything in Starter</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Internal leadership agent</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Prayer request status tracking and updates</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Congregation insight dashboard via conversation</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Staff notification system</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Priority email support</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Multi-channel deployment</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Custom ministry flows</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Sermon companion integration</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Monthly insight report</li>
+          <li class="feature-item excluded"><span class="feature-x">✕</span>Dedicated onboarding specialist</li>
+        </ul>
+        <a href="/demo.html#signup" class="card-btn card-btn-primary">Get Started with Growth</a>
+      </div>
+
+      <!-- MINISTRY PRO -->
+      <div class="pricing-card reveal">
+        <div class="card-plan-name">Ministry Pro</div>
+        <div class="card-description">Full system with white-glove support</div>
+        <div class="setup-fee">One-time setup: $1,200</div>
+        <div class="price-block">
+          <div class="price-main">
+            <span class="price-amount" data-monthly="397" data-annual="318">$397</span>
+            <span class="price-per">/mo</span>
+          </div>
+          <div class="price-billing-note" id="proBillingNote"></div>
+        </div>
+        <div class="card-tagline">"Best for larger or fast-growing churches who want ChurchCompass across every touchpoint."</div>
+        <hr class="card-divider" />
+        <ul class="feature-list">
+          <li class="feature-item included"><span class="feature-check">✓</span>Everything in Growth</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Multi-channel deployment — website, SMS, and social</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Custom ministry flows and intake forms</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Sermon companion integration</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Monthly insight report delivered to leadership</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Dedicated onboarding specialist</li>
+          <li class="feature-item included"><span class="feature-check">✓</span>Phone and priority support</li>
+        </ul>
+        <a href="/demo.html#signup" class="card-btn card-btn-outline">Get Started with Ministry Pro</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SETUP INCLUDED -->
+  <section data-section="setup-included">
+    <div class="section-inner">
+      <div class="text-center" style="max-width:640px; margin: 0 auto 56px;">
+        <span class="section-tag reveal">What Your Setup Fee Covers</span>
+        <h2 class="section-headline reveal">Your setup fee is not just configuration. It is a custom build.</h2>
+        <p class="section-body reveal">Every ChurchCompass agent is built specifically for your church — trained on your beliefs, your voice, your ministries, and your people. The setup fee covers everything it takes to get that right.</p>
+      </div>
+      <div class="setup-grid">
+        <div class="setup-item reveal">
+          <span class="setup-icon">🎙️</span>
+          <div class="setup-title">Custom Agent Training</div>
+          <div class="setup-desc">Your agent is trained on your church's specific information — not a generic template. Your voice, your theology, your ministry.</div>
+        </div>
+        <div class="setup-item reveal">
+          <span class="setup-icon">🔗</span>
+          <div class="setup-title">Channel Connection</div>
+          <div class="setup-desc">We connect ChurchCompass to your website, social channels, and any other touchpoints included in your plan.</div>
+        </div>
+        <div class="setup-item reveal">
+          <span class="setup-icon">📊</span>
+          <div class="setup-title">Data System Configuration</div>
+          <div class="setup-desc">Your Google Sheet or integration is configured and tested so data flows cleanly from day one.</div>
+        </div>
+        <div class="setup-item reveal">
+          <span class="setup-icon">🚀</span>
+          <div class="setup-title">Launch &amp; Onboarding Call</div>
+          <div class="setup-desc">We walk your team through everything — how to use the internal agent, how to read your data, and how to get the most out of ChurchCompass.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section data-section="comparison-table">
+    <div class="section-inner">
+      <div style="max-width:640px; margin: 0 auto 48px;">
+        <span class="section-tag reveal">Plan Comparison</span>
+        <h2 class="section-headline reveal">Everything side by side.</h2>
+        <p class="section-body reveal">Not sure which plan is right for your church? Here is the full breakdown.</p>
+      </div>
+      <div class="table-wrapper reveal">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Starter</th>
+              <th>Growth</th>
+              <th>Ministry Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>External Community Agent</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Prayer Request Capture</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Google Sheets Integration</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>24/7 Availability</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Email Support</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Internal Leadership Agent</td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Prayer Request Status Tracking</td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Staff Notification System</td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Congregation Insight Dashboard</td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Priority Email Support</td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Multi-Channel Deployment</td><td><span class="dash-icon">—</span></td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Custom Ministry Flows</td><td><span class="dash-icon">—</span></td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Sermon Companion Integration</td><td><span class="dash-icon">—</span></td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Monthly Insight Report</td><td><span class="dash-icon">—</span></td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Dedicated Onboarding Specialist</td><td><span class="dash-icon">—</span></td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>Phone Support</td><td><span class="dash-icon">—</span></td><td><span class="dash-icon">—</span></td><td><span class="check-icon">✓</span></td></tr>
+            <tr><td>One-Time Setup Fee</td><td class="price-cell">$497</td><td class="price-cell">$797</td><td class="price-cell">$1,200</td></tr>
+            <tr><td>Monthly Price</td><td class="price-cell">$97/mo</td><td class="price-cell">$197/mo</td><td class="price-cell">$397/mo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CHURCH SIZE CALLOUT -->
+    <div class="church-size-callout">
+      <div class="callout-card reveal">
+        <p>ChurchCompass pricing is built around the features and level of support your team needs — not how many people sit in your pews. Whether you have 50 members or 5,000, there is a plan designed to serve your ministry well.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section data-section="faq">
+    <div class="section-inner">
+      <div style="max-width:640px; margin: 0 auto 48px;">
+        <span class="section-tag reveal">Common Questions</span>
+        <h2 class="section-headline reveal">Answers before you ask.</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">Is there a contract or long-term commitment?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">No. ChurchCompass is month-to-month. You can cancel at any time. The only upfront commitment is the one-time setup fee, which covers the cost of building your custom agent.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">What does the setup process look like?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">After signing up, you will receive a link to your onboarding form. Once you complete it, our team builds your custom agent — typically within 5–7 business days. We then schedule an onboarding call to walk your team through everything before you go live.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">Can we upgrade or downgrade our plan?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. You can change your plan at any time. Upgrades take effect immediately. Downgrades take effect at the start of your next billing cycle.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">Is ChurchCompass a chatbot?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">No. ChurchCompass is a full digital engagement and care system built specifically for churches. It captures structured data, tracks care needs, and gives your leadership real insight into what your congregation is experiencing — things a generic chatbot cannot do.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">What happens to our data?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Your data belongs to your church. It is stored securely and organized in a way your team can access and manage. We do not sell or share your congregation's information with any third party.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">Do we need technical experience to use ChurchCompass?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">None at all. The external agent runs on your website and channels automatically. The internal leadership agent works through simple conversation — your team just asks questions in plain language. No dashboards to learn, no spreadsheets to manage.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">What if we need help after we launch?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">All plans include email support. Growth and Ministry Pro include priority support. Ministry Pro also includes phone support and a dedicated onboarding specialist who remains available as your point of contact.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span class="faq-q-text">Can ChurchCompass be customized as our church grows?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. Your agent can be updated as your ministries, staff, and needs evolve. Ministry Pro includes ongoing customization as part of the plan. Starter and Growth churches can request updates which are handled on a per-request basis.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section data-section="final-cta" id="get-started">
+    <div style="max-width: 680px; margin: 0 auto;">
+      <span class="section-tag reveal">Ready to Get Started</span>
+      <h2 class="section-headline reveal">Your church deserves more than a chatbot.</h2>
+      <p class="section-body reveal" style="margin-bottom: 0;">ChurchCompass is a system built around care, clarity, and the real needs of your congregation. Pick a plan and let's build something meaningful for your church.</p>
+      <div class="cta-buttons reveal">
+        <a href="/demo.html" class="btn-primary">See It In Action</a>
+        <a href="/demo.html#signup" class="btn-secondary">Get in Touch</a>
+      </div>
+      <p class="cta-footnote reveal">No pressure. No long-term commitment. Just a real look at what ChurchCompass can do for your church.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-section="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="https://paymegpt.com/objects/quick-uploads/189/8abd70bdc466076e.png" alt="ChurchCompass" />
+        <div class="footer-tagline">Clarity. Care. Connection.</div>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/how-it-works.html">How It Works</a>
+        <a href="/pricing.html" class="active">Pricing</a>
+        <a href="/demo.html">Get Started</a>
+      </div>
+      <div class="footer-right">
+        <div class="footer-copy">
+          © 2026 ChurchCompass. All rights reserved.<br />
+          <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://paymegpt.com/widget.js" data-widget="63058576" async></script>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
