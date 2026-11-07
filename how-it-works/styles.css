@@ -941,9 +941,15 @@
     /* ── UTILITIES ── */
     @media (max-width: 768px) {
       section[data-section="hero"] {
-        min-height: auto;
-        padding: 100px 20px 44px;
+        min-height: 0;
+        height: auto;
+        justify-content: flex-start;
+        padding: 150px 20px 28px;
       }
+      section[data-section="hero"] .hero-eyebrow { margin-bottom: 16px; }
+      section[data-section="hero"] .hero-headline { margin-bottom: 20px; }
+      section[data-section="hero"] .hero-sub { margin-bottom: 26px; }
+      section[data-section="hero"] .hero-divider { margin-bottom: 0; }
       section[data-section="community"],
       section[data-section="how-it-works"],
       section[data-section="leadership"],
