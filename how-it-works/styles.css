@@ -98,15 +98,16 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 32px;
-      height: 72px;
+      min-height: 88px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
     }
     .nav-logo img {
-      height: 38px;
-      width: auto;
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
       display: block;
     }
     .nav-links {
@@ -224,6 +225,11 @@
     }
 
     @media (max-width: 768px) {
+      .nav-inner { min-height: 80px; }
+      .nav-logo img {
+        width: 66px;
+        height: 66px;
+      }
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: flex; }
