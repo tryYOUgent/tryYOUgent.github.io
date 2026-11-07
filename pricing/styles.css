@@ -88,12 +88,22 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 32px;
-      height: 68px;
+      height: 94px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .nav-logo img { height: 36px; width: auto; display: block; }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .nav-logo img {
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
+      display: block;
+    }
     .nav-links {
       display: flex;
       align-items: center;
@@ -208,8 +218,13 @@
     .mobile-cta-btn:hover { background: var(--light-teal) !important; }
 
     @media (max-width: 768px) {
+      .nav-inner { height: 82px; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
+      .nav-logo img {
+        width: 66px;
+        height: 66px;
+      }
     }
 
     /* ─── PAGE HEADER ─── */
