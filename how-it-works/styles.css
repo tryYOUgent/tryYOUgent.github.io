@@ -934,12 +934,15 @@
 
     /* ── UTILITIES ── */
     @media (max-width: 768px) {
-      section[data-section="hero"] { padding: 120px 20px 64px; }
+      section[data-section="hero"] {
+        min-height: auto;
+        padding: 100px 20px 44px;
+      }
       section[data-section="community"],
       section[data-section="how-it-works"],
       section[data-section="leadership"],
       section[data-section="features"],
-      section[data-section="signup"] { padding: 72px 0; }
+      section[data-section="signup"] { padding: 56px 0; }
       .signup-form { padding: 28px 20px; }
       .signup-inner { padding: 0 20px; }
       footer[data-section="footer"] { padding: 48px 20px 32px; }
