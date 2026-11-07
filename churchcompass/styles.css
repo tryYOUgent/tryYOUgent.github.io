@@ -124,14 +124,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 88px;
+      height: 94px;
       max-width: 1160px;
       margin: 0 auto;
       padding: 0 32px;
     }
     .nav-logo img {
-      height: 64px;
-      width: auto;
+      width: 76px;
+      height: 76px;
       object-fit: contain;
     }
     .nav-links {
@@ -250,8 +250,8 @@
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: flex; }
-      .nav-inner { height: 78px; }
-      .nav-logo img { height: 56px; }
+      .nav-inner { height: 82px; }
+      .nav-logo img { width: 66px; height: 66px; }
     }
 
     /* ======================== HERO ======================== */
