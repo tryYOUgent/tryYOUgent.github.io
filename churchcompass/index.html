@@ -753,9 +753,15 @@
     const formSubmitBtn = document.getElementById('formSubmitBtn');
     const formSuccess = document.getElementById('formSuccess');
     const formError = document.getElementById('formError');
+    const contactFormContainer = document.getElementById('contactFormContainer');
+    const webhookUrl = 'https://app.tryyougent.com/api/webhooks/flow/9086/ed2a44183bb12eb7d305934287ae1e21ff35db5ed9e3db2b3499066ff42f349c';
+    let isSubmitting = false;
 
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      e.stopPropagation();
+
+      if (isSubmitting) return;
 
       const emailValue = document.getElementById('email').value.trim();
       if (!emailValue) {
@@ -770,15 +776,16 @@
       const churchName = document.getElementById('churchName').value.trim();
       const messageValue = document.getElementById('message').value.trim();
 
+      isSubmitting = true;
       formSubmitBtn.disabled = true;
       formSubmitBtn.textContent = 'Sending…';
       formError.style.display = 'none';
 
-      const webhookUrl = window.__formWebhookUrl || (window.location.origin + window.location.pathname.replace(/\/$/, '') + '/submit');
-
       try {
         const response = await fetch(webhookUrl, {
           method: 'POST',
+          mode: 'cors',
+          cache: 'no-store',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             contactEmail: emailValue,
@@ -792,15 +799,18 @@
           })
         });
 
-        const result = await response.json();
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
 
-        contactForm.style.display = 'none';
+        contactFormContainer.style.display = 'none';
         formSuccess.style.display = 'block';
       } catch (err) {
-        formError.textContent = 'Something went wrong. Please try again.';
+        formError.textContent = 'Message could not be sent right now. Please check your connection and try again.';
         formError.style.display = 'block';
         formSubmitBtn.disabled = false;
         formSubmitBtn.textContent = 'Send Message';
+        isSubmitting = false;
       }
     });
   </script>
