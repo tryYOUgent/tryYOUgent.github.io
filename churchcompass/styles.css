@@ -124,14 +124,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 68px;
+      height: 88px;
       max-width: 1160px;
       margin: 0 auto;
       padding: 0 32px;
     }
     .nav-logo img {
-      height: 36px;
+      height: 64px;
       width: auto;
+      object-fit: contain;
     }
     .nav-links {
       display: flex;
@@ -209,14 +210,19 @@
       gap: 0;
       background: var(--nav-bg-scroll);
       border-top: 1px solid var(--border-color);
-      padding: 16px 32px 24px;
+      padding: 0 32px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
+      visibility: hidden;
+      pointer-events: none;
+      transition: max-height 0.4s ease, padding 0.3s ease, visibility 0s linear 0.4s;
     }
     .mobile-menu.open {
+      visibility: visible;
+      pointer-events: auto;
       max-height: 400px;
       padding: 16px 32px 24px;
+      transition: max-height 0.4s ease, padding 0.3s ease, visibility 0s;
     }
     .mobile-menu a, .mobile-menu span {
       display: block;
@@ -244,6 +250,8 @@
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: flex; }
+      .nav-inner { height: 78px; }
+      .nav-logo img { height: 56px; }
     }
 
     /* ======================== HERO ======================== */
